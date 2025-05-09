@@ -50,7 +50,8 @@ const products: MenuProps['items'] = [
   },
   {
     key: '5',
-    label: '一站式IT管理',
+    label:<Link href="/products/indesign" className="text-sm text-gray-500 hover:text-orange-500">一站式IT管理</Link>
+
   },
 ]
 
