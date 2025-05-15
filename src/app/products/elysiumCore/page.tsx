@@ -5,7 +5,7 @@ import a2 from '@/app/assets/products/a2.png'
 import a3 from '@/app/assets/products/a3.png'
 import a4 from '@/app/assets/products/a4.png'
 import a5 from '@/app/assets/products/a5.png'
-import p1 from '@/app/assets/home/web1.png'
+import p1 from '@/app/assets/home/web3.png'
 import f1 from '@/app/assets/products/b1.png'
 import f2 from '@/app/assets/products/b2.png'
 import f3 from '@/app/assets/products/b3.png'
@@ -15,29 +15,29 @@ import Footer from "@/app/components/footer";
 
 const functionList =[
   {
-    title:'实时同步监控',
+    title:'智能订单管理',
     img:a2,
-    desc:'对站点和设备进行数据收集和监控，实时同步到管理平台，用户可以通过平台仪表盘查看各站点和设备的状态及能源使用情况',
+    desc:'提供点餐和预约功能，优化顾客体验，减少传统下单等候时间，提高服务效率',
   },
   {
-    title:'故障预测诊断',
+    title:'实时库存更新',
     img:a1,
-    desc:'当站点设备故障或性能下降，系统可智能检测并及时告警，帮助用户快速定位问题',
+    desc:'即时更新库存，帮助管理者预测库存需求，及时采购，完善销售与供应链管理',
   },
   {
-    title:'数据分析报告',
+    title:'运营数据监控',
     img:a3,
-    desc:'提供各站点设备的状态和详尽的能源使用报告，帮助用户进行长期的能源趋势预测和成本控制',
+    desc:'全面监控运营数据，包括顾客流量、订单处理、库存动态、员工排班等，帮助管理者全面掌握运营情况',
   },
   {
-    title:'客户账单管理',
+    title:'快速账单结算',
     img:a4,
-    desc:'智能统计生成账单，及时更新客户付款状态，减少人工消耗',
+    desc:'集成账单管理模块，自动生成账单，智能打印，简化结算流程',
   },
   {
-    title:'可多平台兼容',
+    title:'灵活员工管理',
     img:a5,
-    desc:'支持不同能源供应商接入平台，提高系统兼容性，避免跨平台操作带来的资源消耗',
+    desc:'智能排班管理工具，优化人力资源配置，降低管理复杂性，提升团队协作效率',
   },
 ]
 
@@ -63,12 +63,12 @@ const scenariosList = [
     desc:'提高能源利用，降低管理成本',
   },
 ]
-const Home = () => {
+const ElysiumCore= () => {
   return (
     <div className="bg-white min-w-7xl">
       <Navbar />
       <h3 className="mt-26 mb-10 text-4xl font-bold text-black text-center">产品简介</h3>
-      <h5 className="mt-2 text-3xl text-black text-center pl-50 pr-50 leading-16">Solar是一款提供高效能源管理的先进能源管理解决方案。通过完善的功能模块，帮助用户收集，管理，监控能源的分配和使用，降低能源管理成本的同时，最大化效益，提高系统稳定性。</h5>
+      <h5 className="mt-2 text-3xl text-black text-center pl-50 pr-50 leading-16">ElysiumCore是一款专为餐饮与娱乐行业量身定制的智能管理平台。平台将运营过程中的各项业务模块融合在一起，提供全方位的数据支持与智能化工具。帮助企业实现精细化运营，简化管理流程，提高服务质量</h5>
 
      <h3 className="mt-36 mb-10 text-4xl font-bold mt-2 text-black 
      text-center">功能特点</h3>
@@ -88,7 +88,7 @@ const Home = () => {
         ))}
         
       </section>
-      <h3 className="mt-36 text-4xl font-bold text-black text-center">应用场景</h3>
+      <h3 className="mt-36 text-4xl font-bold text-black text-center">适用行业</h3>
       <section className="grid grid-cols-4 gap-6 p-15 pl-40 pr-40">
       {scenariosList.map((item=>
         <div className="bg-white p-8">
@@ -100,17 +100,17 @@ const Home = () => {
         </div>
         ))}
       </section>
-      <h3 className="mt-20 mb-10 text-4xl font-bold text-black text-center">成功案例</h3>
+      <h3 className="mt-20 mb-10 text-4xl font-bold text-black text-center">实用案例</h3>
         <section className="bg-white p-8 flex justify-around ">
           <Image src={p1} alt="AI设计" className="w-150 h-auto" />
           <div className="text-black ml-20">
-            <h3 className="mt-6 mb-4 text-3xl font-bold mt-2">YangSolar后台管理</h3>
-            <div>某太阳能公司接入我公司的智能能源管理平台后，通过平台实现了对太阳能电站和设备的统一管理，智能统计数据并生成账单，提高工作效率</div>
+            <h3 className="mt-6 mb-4 text-3xl font-bold mt-2">KTV娱乐系统平台接入</h3>
+            <div>与KTV娱乐系统进行深度整合，通过平台的智能化管理工具，高效地管理顾客订单、房间分配、账单结算等环节，进一步优化服务</div>
             <h1 className="font-bold py-2 text-2xl mt-20 mb-3">客户评价：</h1>
             <ol>
-            <li className="mb-5 text-lg">“使用智能能源管理平台以后，我们的管理效率提升了30%以上，运行状态一目了然，非常直观。”</li>
-            <li className="mb-5 text-lg">“平台的稳定性和可扩展性非常强，未来我们还计划接入更多的分布式能源设备。”</li>
-            <li className="mb-5 text-lg">“服务团队响应迅速，支持非常到位，期待未来更多合作。”</li>
+              <li className="mb-5 text-lg">“房间服务快速响应，点单和预订房间都非常快速，体验感很好.” – VIP顾客</li>
+              <li className="mb-5 text-lg">“系统升级以后，预订出单结算都很便捷，大大提高了我们的工作效率，不会出现手忙脚乱的情况。“ – 员工</li>
+              <li className="mb-5 text-lg">“平台的智能订单管理和实时数据监控让我们能够更好地掌握顾客需求和库存状态，让我们的运营流程更加顺畅” – 老板</li>
             </ol>
 
           </div>
@@ -121,4 +121,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default ElysiumCore;

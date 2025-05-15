@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { UserOutlined } from "@ant-design/icons";
 
 interface TeamMemberProps {
   image: any;
@@ -15,7 +16,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ image, name, position, experien
     <div className="flex flex-col items-center text-center w-full md:w-1/4 px-4">
       {/* 头像 */}
       <div className={`w-24 h-24 rounded-full overflow-hidden flex items-center justify-center ${bgColor}`}>
-        <Image src={image} alt={""} className="w-full h-full object-cover" />
+        <UserOutlined style={{fontSize:50}}/>
       </div>
       
       {/* 姓名 */}

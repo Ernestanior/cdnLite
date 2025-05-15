@@ -4,91 +4,89 @@ import a1 from '@/app/assets/products/a1.png'
 import a2 from '@/app/assets/products/a2.png'
 import a3 from '@/app/assets/products/a3.png'
 import a4 from '@/app/assets/products/a4.png'
+import p1 from '@/app/assets/home/web1.png'
+import p2 from '@/app/assets/home/web2.png'
 import f1 from '@/app/assets/products/b1.png'
 import f2 from '@/app/assets/products/b2.png'
 import f3 from '@/app/assets/products/b3.png'
 import f4 from '@/app/assets/products/b4.png'
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
-const Web = () => {
+const App = () => {
   const functionList =[
     {
-      title:'高度定制',
+      title:'深度定制',
       img:a2,
-      desc:'根据客户的个性化需求，量身定制，功能灵活，适配业务需要',
+      desc:'针对行业需求，设计打造专属数字化解决方案',
     },
     {
-      title:'可扩展性',
+      title:'技术支持',
       img:a1,
-      desc:'支持多端适配，支持未来升级扩展和优化',
+      desc:'涵盖前端、后端、移动端开发及系统集成等全栈技术支持',
     },
     {
-      title:'高质量交付',
+      title:'快速交付',
       img:a3,
-      desc:'完善的开发流程与项目管理，确保项目按时交付',
+      desc:'专业团队和开发流程，保障项目高效推进并按期交付',
     },
     {
-      title:'安全保障',
+      title:'可扩展架构',
       img:a4,
-      desc:'全面的数据加密与安全防护，保护企业信息安全',
+      desc:'系统架构灵活，支持后续功能拓展和业务规模增长需求',
     },
   ]
 
   const scenariosList = [
     {
-      title:'企业管理后台系统',
+      title:'自动化管理',
       img:f1,
-      desc:'实时设备监控，高效客户管理',
+      desc:'通过智能化工具实现业务流程自动化',
     },
     {
-      title:'自动化数据展示与分析平台',
+      title:'企业资源优化',
       img:f2,
-      desc:'城市能源优化，应急响应调控',
+      desc:'实现企业系统集成，数据互通与协同办公',
     },
     {
-      title:'在线商城与支付系统',
+      title:'供销链监控',
       img:f3,
-      desc:'能源统一调配，减少消耗浪费',
+      desc:'优化物流调度与供应链管理，实现精细化运营',
     },
     {
-      title:'订单与账单管理平台',
+      title:'运营数据支持',
       img:f4,
-      desc:'提高能源利用，降低管理成本',
-    },
-    {
-      title:'行业定制门户网站',
-      img:f1,
-      desc:'提高能源利用，降低管理成本',
+      desc:'提供数据管理、分析与运维服务',
     }
   ]
   const developFlow = [
     {
       title:'了解需求',
-      desc:'与客户沟通需求，明确项目目标'
+      desc:'详细沟通，深入了解，全面认识'
     },
     {
-      title:'原型开发',
-      desc:'创建项目原型，确认设计框架'
+      title:'设计方案',
+      desc:'分析需求，明确架构、规划模块，量身定制'
     },
     {
-      title:'代码创建',
-      desc:'规范化编写代码，实现功能'
+      title:'投入开发',
+      desc:'确定方案，快速投入，敏捷开发，按时交付'
     },
     {
-      title:'部署测试',
-      desc:'完成部署与测试，确保系统稳定运行'
+      title:'测试与部署',
+      desc:'全面测试性能及安全，成功部署到生产环境中'
     },
     {
-      title:'上线交付',
-      desc:'验收交付，提供售后支持服务'
+      title:'部署上线',
+      desc:'完成项目部署与上线，提供长期维护与支持服务'
     },
   ]
   return (
     <div className="bg-white min-w-7xl">
       <Navbar />
-      <h3 className="mt-26 text-4xl font-bold text-black text-center">网页服务简介</h3>
+      <h3 className="mt-26 text-4xl font-bold text-black text-center">企业定制开发服务简介</h3>
       <h5 className="mt-5 text-3xl text-black text-center pl-50 pr-50 leading-16">
-        我们提供专业的网页端软件定制开发服务，满足客户的个性化需求，帮助企业快速搭建高效、稳定且用户友好的网页端软件系统，助力业务在线化和数字化升级。
+        我们为企业提供数字化定制开发服务，涵盖自动化管理、系统集成、代码定制优化和数据运维等领域，集中解决企业运营的痛点，提升业务流程效率，降低运营成本，帮助企业实现从传统模式向现代化、智能化运营的全面转型。
+        无论是企业管理后台、自动化数据分析，还是业务流程的优化与集成，为您的业务量身打造高效、智能的数字化解决方案。帮助企业实现数字化升级和可持续发展目标
       </h5>
 
       <h3 className="mt-36 mb-10 text-4xl font-bold mt-2 text-black text-center">功能特点</h3>
@@ -108,7 +106,7 @@ const Web = () => {
           ))}
       </section>
       <h3 className="mt-36 text-4xl font-bold text-black text-center">适用行业</h3>
-      <section className="grid grid-cols-5 gap-6 p-15 pl-40 pr-40">
+      <section className="grid grid-cols-4 gap-6 p-15 pl-40 pr-40">
       {scenariosList.map((item=>
         <div className="bg-white p-8">
           <div className="p-8 rounded-full bg-blue-50">
@@ -128,7 +126,7 @@ const Web = () => {
               <div className="text-xs">{step.desc}</div>
             </div>
             
-              <div className="w-0 h-0 border-t-[38] border-t-transparent border-b-[38] border-b-transparent border-l-[30px] border-l-blue-700" />
+              <div className="w-0 h-0 border-t-[36] border-t-transparent border-b-[40] border-b-transparent border-l-[30px] border-l-blue-700" />
           </div>
         ))}
       </div>
@@ -139,4 +137,4 @@ const Web = () => {
   );
 };
 
-export default Web;
+export default App;

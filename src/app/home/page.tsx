@@ -7,6 +7,7 @@ import web1 from '@/app/assets/home/web1.png'
 import web2 from '@/app/assets/home/web2.png'
 import web3 from '@/app/assets/home/web3.png'
 import { ArrowRightOutlined, BookFilled, CloudFilled, EnvironmentOutlined, MailOutlined, PhoneOutlined, ProductFilled, StarFilled } from "@ant-design/icons";
+import Link from "next/link";
 
 const Home = () => {
 
@@ -43,33 +44,40 @@ const Home = () => {
             className="w-full h-auto"
         />
         <div className="absolute top-1/2 -translate-y-1/2 left-50 flex flex-col p-30 pl-20 text-white">
-            <h2 className="text-4xl font-bold text-stone-900 font-mono">智能能源管理平台11</h2>
+            <h2 className="text-4xl font-bold text-stone-900 font-mono">智能能源管理平台</h2>
             <h2 className="text-4xl mt-2 font-bold text-stone-900 font-mono" >(YangSolar)</h2>
-            <p className="text-gray-400 mt-12 ">为企业提供最先进的能源管理和优化解决方案</p>
+            <p className="text-gray-400 mt-12 ">提供最先进的能源管理和优化解决方案</p>
             <button className="mt-4 w-40 bg-amber-500 text-white px-4 py-2 rounded">了解更多</button>
         </div>
      </div>
-
+     <h3 className="mt-16 text-4xl font-bold text-black text-center">部分产品展示</h3>
       <section className="grid grid-cols-3 gap-6 p-10">
         <div className="bg-white p-8">
-          <Image src={web2} alt="AI设计" className="w-full h-auto" />
-          <h3 className="mt-6 text-lg font-bold mt-2 text-black">AI室内设计APP</h3>
-          <p className="mt-2 text-gray-600 text-sm">通过AI技术自动生成符合您需求的室内设计风格</p>
-          <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">了解更多</button>
-        </div>
-        <div className="bg-white p-8">
           <Image src={web1} alt="智能能源" className="w-full h-auto" />
-          <h3 className="mt-6 text-lg font-bold mt-2 text-black">智能能源管理平台</h3>
+          <h3 className="mt-6 text-lg font-bold mt-2 text-black">智能能源管理平台 (YangSolar)</h3>
           <p className="mt-2 text-gray-600 text-sm">提供高效能源管理的先进能源管理解决方案</p>
-          <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">了解更多</button>
+          <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">
+            <Link href="/products/solar" className="text-sm hover:text-orange-500 text-amber-500" >了解更多 <ArrowRightOutlined /></Link>
+          </button>
         </div>
         <div className="bg-white p-8">
           <Image src={web3} alt="数据可视化" className="w-full h-auto" />
-          <h3 className="mt-6 text-lg font-bold mt-2 text-black">餐娱运营云控平台</h3>
+          <h3 className="mt-6 text-lg font-bold mt-2 text-black">餐娱运营云控平台 (ElysiumCore)</h3>
           <p className="mt-2 text-gray-600 text-sm">专为餐饮与娱乐行业量身定制的智能管理平台</p>
-          <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">了解更多</button>
+          <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">
+            <Link href="/products/elysiumCore" className="text-sm hover:text-orange-500 text-amber-500" >了解更多 <ArrowRightOutlined /></Link>
+          </button>
+        </div>
+        <div className="bg-white p-8">
+          <Image src={web2} alt="AI设计" className="w-full h-auto" />
+          <h3 className="mt-6 text-lg font-bold mt-2 text-black">AI室内设计APP (KainoAI)</h3>
+          <p className="mt-2 text-gray-600 text-sm">通过AI技术自动生成符合您需求的室内设计风格</p>
+          <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">
+            <Link href="/products/kainoAi" className="text-sm hover:text-orange-500 text-amber-500" >了解更多 <ArrowRightOutlined /></Link>
+          </button>
         </div>
       </section>
+      <h3 className="mt-16 text-4xl font-bold text-black text-center">优势和亮点</h3>
       <div className="flex justify-center gap-8 px-24 py-12">
         {services.map((service, index) => (
             <div key={service.title} className="bg-white shadow-xl shadow-stone-200 rounded-lg p-6 text-center w-full max-w-xs">

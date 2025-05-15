@@ -15,17 +15,19 @@ const products: MenuProps['items'] = [
   {
     key: '2',
     label: (
-      <Link href="/products/ktv" className="text-sm text-gray-500 hover:text-orange-500">餐娱运营云控平台</Link>
+      <Link href="/products/elysiumCore" className="text-sm text-gray-500 hover:text-orange-500">餐娱运营云控平台</Link>
     ),
   },
   {
     key: '3',
     label: (
-      <Link href="https://www.kainoai.com/home" passHref legacyBehavior>
-        <a target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-orange-500">
-          AI室内设计app
-        </a>
-      </Link>
+      <Link href="/products/kainoAi" className="text-sm text-gray-500 hover:text-orange-500">AI室内设计app</Link>
+      //  <Link href="https://www.kainoai.com/home" passHref legacyBehavior>
+      //    <a target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-orange-500">
+      //      AI室内设计app
+      //    </a>
+      //  </Link>
+
 ),
   },
   {
@@ -44,13 +46,13 @@ const products: MenuProps['items'] = [
       },
       {
         key: '4-3',
-        label: <Link href="/services/both" className="text-sm text-gray-500 hover:text-orange-500">企业数字化定制</Link>,
+        label: <Link href="/services/oneStop" className="text-sm text-gray-500 hover:text-orange-500">企业数字化定制</Link>,
       },
     ],
   },
   {
     key: '5',
-    label:<Link href="/products/indesign" className="text-sm text-gray-500 hover:text-orange-500">一站式IT管理</Link>
+    label:<Link href="/services/oneStop" className="text-sm text-gray-500 hover:text-orange-500">一站式IT管理</Link>
 
   },
 ]

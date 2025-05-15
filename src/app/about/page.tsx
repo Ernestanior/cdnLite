@@ -77,7 +77,7 @@ const About = () => {
                     position="Software Development Manager"
                     experience="8+ years in software development and team leadership"
                     responsibility="Oversee development teams, ensure timely delivery of high-quality software solutions."
-                    bgColor="bg-gray-200"
+                    bgColor="bg-blue-400"
                 />
 
                 <TeamMember
@@ -86,21 +86,21 @@ const About = () => {
                     position="Project Manager"
                     experience="6+ years in data analytics and project management"
                     responsibility="Design project roadmaps and lead a team of analysts to drive data-driven strategies."
-                    bgColor="bg-yellow-300"
+                    bgColor="bg-blue-400"
                 />
 
                 <TeamMember
                     image={profile}
                     name="David Loh"
                     position="Backend Software Engineer"
-                    bgColor="bg-blue-300"
+                    bgColor="bg-blue-400"
                 />
 
                 <TeamMember
                     image={profile}
                     name="Jason Chong"
                     position="QA Automation Engineer"
-                    bgColor="bg-yellow-400"
+                    bgColor="bg-blue-400"
                 />
             </div>
 
