@@ -14,7 +14,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({ image, title, content,childre
     <div className={`flex flex-col pl-24 pr-24 md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center justify-around gap-8 px-6 py-12`}>
       {/* 图片 */}
       <div className="w-100">
-        <Image src={image} alt={title} className="rounded-lg shadow-md w-full object-cover" />
+        <Image src={image} alt={title} className="rounded-lg shadow-md w-full h-100 object-cover" />
       </div>
       {/* 文本 */}
       <div className="w-full md:w-1/2">

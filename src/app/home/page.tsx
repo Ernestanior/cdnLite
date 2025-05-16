@@ -3,9 +3,9 @@ import Image from "next/image";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import homebg from '@/app/assets/home/homebg.jpeg'
-import web1 from '@/app/assets/home/web1.png'
-import web2 from '@/app/assets/home/web2.png'
-import web3 from '@/app/assets/home/web3.png'
+import web1 from '@/app/assets/home/web1.jpg'
+import web2 from '@/app/assets/home/web2.jpg'
+import web3 from '@/app/assets/home/web3.jpg'
 import { ArrowRightOutlined, BookFilled, CloudFilled, EnvironmentOutlined, MailOutlined, PhoneOutlined, ProductFilled, StarFilled } from "@ant-design/icons";
 import Link from "next/link";
 
@@ -52,8 +52,9 @@ const Home = () => {
      </div>
      <h3 className="mt-16 text-4xl font-bold text-black text-center">部分产品展示</h3>
       <section className="grid grid-cols-3 gap-6 p-10">
+
         <div className="bg-white p-8">
-          <Image src={web1} alt="智能能源" className="w-full h-auto" />
+          <Image src={web1} alt="智能能源" className=" h-70" />
           <h3 className="mt-6 text-lg font-bold mt-2 text-black">智能能源管理平台 (YangSolar)</h3>
           <p className="mt-2 text-gray-600 text-sm">提供高效能源管理的先进能源管理解决方案</p>
           <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">
@@ -61,7 +62,7 @@ const Home = () => {
           </button>
         </div>
         <div className="bg-white p-8">
-          <Image src={web3} alt="数据可视化" className="w-full h-auto" />
+          <Image src={web3} alt="数据可视化" className="h-70" />
           <h3 className="mt-6 text-lg font-bold mt-2 text-black">餐娱运营云控平台 (ElysiumCore)</h3>
           <p className="mt-2 text-gray-600 text-sm">专为餐饮与娱乐行业量身定制的智能管理平台</p>
           <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">
@@ -69,7 +70,7 @@ const Home = () => {
           </button>
         </div>
         <div className="bg-white p-8">
-          <Image src={web2} alt="AI设计" className="w-full h-auto" />
+          <Image src={web2} alt="AI设计" className="h-70" />
           <h3 className="mt-6 text-lg font-bold mt-2 text-black">AI室内设计APP (KainoAI)</h3>
           <p className="mt-2 text-gray-600 text-sm">通过AI技术自动生成符合您需求的室内设计风格</p>
           <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">
@@ -80,11 +81,12 @@ const Home = () => {
       <h3 className="mt-16 text-4xl font-bold text-black text-center">优势和亮点</h3>
       <div className="flex justify-center gap-8 px-24 py-12">
         {services.map((service, index) => (
-            <div key={service.title} className="bg-white shadow-xl shadow-stone-200 rounded-lg p-6 text-center w-full max-w-xs">
-                <div className="w-16 h-16 text-2xl mx-auto flex items-center justify-center bg-amber-500 rounded-full">
+            <div key={service.title} className="bg-white shadow-xl shadow-stone-200 rounded-lg p-6 w-full max-w-xs">
+                <div className="w-16 h-16 text-2xl flex items-center justify-center bg-amber-500 rounded-full">
                   {service.icon}
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mt-4">{service.title}</h3>
+                <div className="h-1 w-15 bg-amber-500 mt-3 mb-4"></div>
                 <p className="text-gray-600 mt-2">{service.description}</p>
             </div>
         ))}

@@ -4,8 +4,6 @@ import a1 from '@/app/assets/products/a1.png'
 import a2 from '@/app/assets/products/a2.png'
 import a3 from '@/app/assets/products/a3.png'
 import a4 from '@/app/assets/products/a4.png'
-import p1 from '@/app/assets/home/web1.png'
-import p2 from '@/app/assets/home/web2.png'
 import f1 from '@/app/assets/products/b1.png'
 import f2 from '@/app/assets/products/b2.png'
 import f3 from '@/app/assets/products/b3.png'
@@ -76,8 +74,8 @@ const App = () => {
       desc:'全面测试性能及安全，成功部署到生产环境中'
     },
     {
-      title:'部署上线',
-      desc:'完成项目部署与上线，提供长期维护与支持服务'
+      title:'培训与维护',
+      desc:'提供培训，技术支持与系统维护'
     },
   ]
   return (
