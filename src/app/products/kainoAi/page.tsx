@@ -9,8 +9,7 @@ import avatar1 from '@/app/assets/products/avatar1.png'
 import avatar2 from '@/app/assets/products/avatar2.png'
 import avatar3 from '@/app/assets/products/avatar3.png'
 import img1 from './img1.png'
-import img2 from './img2.jpg'
-import img3 from '@/app/assets/products/desktop.png'
+import img2 from './img2.png'
 
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
@@ -113,23 +112,15 @@ const Home = () => {
       </section>
       <h3 className="mt-25 mb-15 text-4xl font-bold text-black text-center">成功案例</h3>
         <section className="bg-white flex justify-between">
-          <div className="relative flex-5">
-            <Image src={img3} alt="" className="absolute left-0 top-0 w-160 h-160" />
-            <div className="absolute left-28 top-34 w-107 h-61">
-              <Image
-                src={img2}
-                alt=""
-                fill
-                className="object-cover object-top"
-              />
-            </div>
+          <div className="flex-5">
+            <Image src={img2} alt="" className="w-full h-auto" />
           </div>
           <div className="box-border text-black ml-20 flex-2 flex flex-col items-center bg-stone-500 p-8 " style={{backgroundColor:"#f5f1e4"}}>
             <h3 className="mb-4 text-2xl font-bold">人工智能室内设计SaaS平台</h3>
             <div className="text-sm text-stone-600 text-center">用户A：原始户型一居室公寓，通过APP生成现代简约风格设计方案，满意度达98%。</div>
             <ol>
               {
-                commentList.map((item)=> <li className="mb-5 text-lg mt-15 ">
+                commentList.map((item,index)=> <li key={index} className="mb-5 text-lg mt-15 ">
                 <div className="flex justify-center">
                   <Image src={item.avatar} alt="" className="w-12 h-12 ml-3 mr-3" />
                   <div className="flex flex-col items-end">

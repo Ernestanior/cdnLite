@@ -10,7 +10,6 @@ import avatar2 from '@/app/assets/products/avatar2.png'
 import avatar3 from '@/app/assets/products/avatar3.png'
 import img1 from './img1.png'
 import img2 from './img2.png'
-import img3 from '@/app/assets/products/desktop.png'
 import f1 from '@/app/assets/products/b1.png'
 import f2 from '@/app/assets/products/b2.png'
 import f3 from '@/app/assets/products/b3.png'
@@ -102,9 +101,6 @@ const Home = () => {
         通过 Solar，用户不仅能够有效降低能源管理的运营成本，提升能效水平，还能增强整体系统的稳定性与安全性，助力企业实现绿色低碳发展目标。
       </div>
       <Image src={img1} alt={""} className="w-full h-auto mt-10" />
-
-
-
      <h3 className="mt-36 mb-5 text-4xl font-bold text-black 
      text-center">功能特点</h3>
       <section className="flex justify-center p-10">
@@ -140,23 +136,15 @@ const Home = () => {
       </section>
       <h3 className="mt-25 mb-15 text-4xl font-bold text-black text-center">成功案例</h3>
         <section className="bg-white flex justify-between">
-          <div className="relative flex-5">
-            <Image src={img3} alt="" className="absolute left-0 top-0 w-160 h-160" />
-            <div className="absolute left-28 top-34 w-107 h-61">
-              <Image
-                src={img2}
-                alt=""
-                fill
-                className="object-cover object-top"
-              />
-            </div>
+          <div className="flex-5">
+            <Image src={img2} alt="" className="w-full h-auto" />
           </div>
           <div className="box-border text-black ml-20 flex-2 flex flex-col items-center bg-stone-500 p-8 " style={{backgroundColor:"#f5f1e4"}}>
             <h3 className="mb-4 text-2xl font-bold">新能源综合管理平台</h3>
             <div className="text-sm text-stone-600 text-center">帮助客户端到端地管理数据生命周期，赋能从数据源、数据摄取、数据处理、数据存储、数据治理到数据分享的完整链路。既能满足实时监控与智能优化，又具备高可用、高安全、多租户、多接入场景的特点。</div>
             <ol>
               {
-                commentList.map((item)=> <li className="mb-5 text-lg mt-15 ">
+                commentList.map((item,index)=> <li key={index} className="mb-5 text-lg mt-15 ">
                 <div className="flex justify-center">
                   <Image src={item.avatar} alt="" className="w-12 h-12 ml-3 mr-3" />
                   <div>

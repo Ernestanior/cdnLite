@@ -9,8 +9,7 @@ import avatar1 from '@/app/assets/products/avatar1.png'
 import avatar2 from '@/app/assets/products/avatar2.png'
 import avatar3 from '@/app/assets/products/avatar3.png'
 import img1 from './img1.png'
-import img2 from './img2.jpg'
-import img3 from '@/app/assets/products/desktop.png'
+import img2 from './img2.png'
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 
@@ -106,16 +105,8 @@ const Home = () => {
       </section>
       <h3 className="mt-25 mb-15 text-4xl font-bold text-black text-center">成功案例</h3>
         <section className="bg-white flex justify-between">
-          <div className="relative flex-5">
-            <Image src={img3} alt="" className="absolute left-0 top-0 w-160 h-160" />
-            <div className="absolute left-28 top-34 w-107 h-61">
-              <Image
-                src={img2}
-                alt=""
-                fill
-                className="object-cover object-top"
-              />
-            </div>
+          <div className="flex-5">
+            <Image src={img2} alt="" className="w-full h-auto" />
           </div>
           <div className="box-border text-black ml-20 flex-2 flex flex-col items-center bg-stone-500 p-8 " style={{backgroundColor:"#f5f1e4"}}>
             <h3 className="mb-4 text-2xl font-bold">娱乐智能综合管理系统</h3>
