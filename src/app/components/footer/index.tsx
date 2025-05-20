@@ -1,4 +1,5 @@
 import { FacebookOutlined, InstagramOutlined, TwitterOutlined, EnvironmentOutlined, MailOutlined, PhoneOutlined} from "@ant-design/icons";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -38,14 +39,14 @@ const Footer = () => {
           </div>
           <div>
           <h3 className="font-semibold mb-5">产品</h3>
-          <p className="mb-2 text-sm">新能源管理平台</p>
-          <p className="mb-2 text-sm">餐娱运营云控平台</p>
-          <p className="mb-2 text-sm">AI室内设计APP</p>
+          <p className="mb-2 text-sm"><Link href="/products/solar" className="text-sm text-gray-500 hover:text-orange-500">新能源管理平台</Link></p>
+          <p className="mb-2 text-sm"><Link href="/products/elysiumCore" className="text-sm text-gray-500 hover:text-orange-500">餐娱运营云控平台</Link></p>
+          <p className="mb-2 text-sm"><Link href="/products/kainoAi" className="text-sm text-gray-500 hover:text-orange-500">AI室内设计APP</Link></p>
           </div>
           <div>
           <h3 className="font-semibold mb-5">解决方案</h3>
-          <p className="mb-2 text-sm">定制开发解决方案</p>
-          <p className="mb-2 text-sm">一站式IT解决方案</p>
+          <p className="mb-2 text-sm"><Link href="/services/enterprise" className="text-sm text-gray-500 hover:text-orange-500">定制开发解决方案</Link></p>
+          <p className="mb-2 text-sm"><Link href="/services/oneStop" className="text-sm text-gray-500 hover:text-orange-500">一站式IT解决方案</Link></p>
           </div>
       </div>
   </div>

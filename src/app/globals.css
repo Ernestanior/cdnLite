@@ -29,7 +29,6 @@ body {
   background-color: transparent;
   width: 200px;
   height: 200px;
-  border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -66,10 +65,10 @@ body {
 /* Style the back side */
 .flip-card-back {
   /* background-color: dodgerblue; */
-  color: black;
+  color: rgb(129, 129, 129);
+
   padding:20px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;

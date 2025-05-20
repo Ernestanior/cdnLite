@@ -100,7 +100,7 @@ const About = () => {
             </div>
         </div> */}
         <section className="py-10 px-4">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">业务领域</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 mt-8">业务领域</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-15">
             {businessList.map((item, index) => (
             <div
@@ -109,8 +109,11 @@ const About = () => {
             >
                 <Image src={item.img} alt={""} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                  />
-                <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center">
-                <span className="text-white text-lg font-bold">{item.title}</span>
+                <div className="absolute inset-0 bg-black opacity-20 ">
+                </div>
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">{item.title}</span>
                 </div>
             </div>
             ))}
@@ -140,7 +143,6 @@ const About = () => {
                     responsibility="Oversee development teams, ensure timely delivery of high-quality software solutions."
                     bgColor="bg-blue-400"
                 />
-
                 <TeamMember
                     image={profile}
                     name="Emily Lee"
