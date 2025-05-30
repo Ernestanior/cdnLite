@@ -1,6 +1,6 @@
 'use client';
 import { GlobalOutlined, SearchOutlined } from "@ant-design/icons";
-import { Button, Input, Menu, MenuProps } from "antd";
+import { Input, MenuProps } from "antd";
 import Link from "next/link";
 import { Dropdown } from 'antd';
 import { useLanguage } from '@/context/languageContext';
@@ -105,7 +105,7 @@ const Navbar = () => {
           </Dropdown>
         </li>
         <li>
-          <Link href="/about" className="text-sm text-gray-500 hover:text-orange-500">{t('CONTACT_US')}</Link>
+          <Link href="/contact" className="text-sm text-gray-500 hover:text-orange-500">{t('CONTACT_US')}</Link>
         </li>
         <li>
             <Input suffix={<SearchOutlined />}></Input>

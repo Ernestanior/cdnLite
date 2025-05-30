@@ -22,7 +22,7 @@ const Contact = () => {
       <div className="flex flex-col items-center">
         <h3 className="mt-26 mb-10 text-4xl font-bold text-black">{t("CONTACT_US")}</h3>
         <div className="mb-10 text-stone-500">{t("CONTACT_US_DESC")}</div>
-        <div className="relative flex">
+        <div className="relative flex shadow-lg ">
           <Image src={img1} alt={""} className="w-100 h-auto" />
           <div className="absolute top-10 left-10">
             <div className="font-bold text-2xl mb-20">{t("CONTACT_DETAIL")}</div>
@@ -43,7 +43,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="pt-10 pl-15 text-black">
+          <div className="pt-10 pl-15 text-black p-10">
             <div>{t("NAME")}</div>
             <Input style={{width:400,borderColor:"#ccc",marginTop:5}}></Input>
             <div className="pt-6">{t("EMAIL")}</div>
