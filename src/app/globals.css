@@ -25,6 +25,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.ant-dropdown-menu-item:hover {
+  background-color: #ffc499 !important;
+}
+
 .flip-card {
   background-color: transparent;
   width: 200px;

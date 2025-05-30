@@ -1,43 +1,50 @@
+'use client';
 
 import Image from "next/image";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
 import homebg from '@/app/assets/home/homebg.jpeg'
 import web1 from '@/app/assets/home/web1.jpg'
 import web2 from '@/app/assets/home/web2.jpg'
 import web3 from '@/app/assets/home/web3.jpg'
 import { ArrowRightOutlined, BookFilled, CloudFilled, EnvironmentOutlined, MailOutlined, PhoneOutlined, ProductFilled, StarFilled } from "@ant-design/icons";
 import Link from "next/link";
+import HomeCarousel from "./carousel";
+import { useLanguage } from "@/context/languageContext";
+
+
 
 const Home = () => {
+    const { t } = useLanguage();
 
     const services = [
         {
           icon:<StarFilled />,
-          title: "定制化服务",
-          description: "提供符合客户业务模式及技术架构的多样性解决方案，可高度契合客户定制化需求。",
+          title: t("TAILORED_SOLUTIONS"),
+          description: t("TAILORED_SOLUTIONS_DESC"),
         },
         {
           icon: <ProductFilled />,
-          title: "高质量产品交付",
-          description: "多年行业经验，帮助客户通过前沿算法实现技术突破和企业数字化转型。",
+          title: t("HIGH_QUALITY_DELIVERY"),
+          description: t("HIGH_QUALITY_DELIVERY_DESC"),
         },
         {
           icon: <BookFilled />,
-          title: "深厚的技术积累",
-          description: "高效的项目管理和团队协作，实现持续集成和交付，最大限度缩短开发周期。",
+          title: t("TECHNICAL_EXPERTISE"),
+          description: t("TECHNICAL_EXPERTISE_DESC"),
         },
         {
           icon: <CloudFilled />,
-          title: "创新能力突破",
-          description: "为客户提供长期的技术支持，包括系统维护、迭代优化等，确保交付产品的稳定性和延续性。",
+          title: t("INNOVATIVE_SUPPORT"),
+          description: t("INNOVATIVE_SUPPORT_DESC"),
         },
       ];
 
   return (
     <div className="bg-white min-w-7xl">
       <Navbar />
-      <div className="relative w-full bg-gray-100 flex flex-col justify-center items-center">
+      <HomeCarousel />
+      {/* <div className="relative w-full bg-gray-100 flex flex-col justify-center items-center">
         <Image
             src={homebg}
             alt="背景图"
@@ -47,38 +54,38 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-stone-900 font-mono">智能能源管理平台</h2>
             <h2 className="text-4xl mt-2 font-bold text-stone-900 font-mono" >(YangSolar)</h2>
             <p className="text-gray-400 mt-12 ">提供最先进的能源管理和优化解决方案</p>
-            <button className="mt-4 w-40 bg-amber-500 text-white px-4 py-2 rounded">了解更多</button>
+            <button className="mt-4 w-40 bg-amber-500 text-white px-4 py-2 rounded">{t('HOW_IT_WORKS')}</button>
         </div>
-     </div>
-     <h3 className="mt-16 text-4xl font-bold text-black text-center">部分产品展示</h3>
+     </div> */}
+     <h3 className="mt-16 text-4xl font-bold text-black text-center">{t('INDUSTRY_CASES')}</h3>
       <section className="grid grid-cols-3 gap-6 p-10">
 
         <div className="bg-white p-8">
-          <Image src={web1} alt="智能能源" className=" h-70" />
-          <h3 className="mt-6 text-lg font-bold mt-2 text-black">智能能源管理平台 (YangSolar)</h3>
-          <p className="mt-2 text-gray-600 text-sm">提供高效能源管理的先进能源管理解决方案</p>
+          <Image src={web1} alt="SolarEngy" className=" h-70" />
+          <h3 className="mt-6 text-lg font-bold mt-2 text-black">{t('SOLARENGY')}</h3>
+          <p className="mt-2 text-gray-600 text-base">{t('SMART_ENERGY_DESC')}</p>
           <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">
-            <Link href="/products/solar" className="text-sm hover:text-orange-500 text-amber-500" >了解更多 <ArrowRightOutlined /></Link>
+            <Link href="/products/solar" className="text-sm hover:text-orange-500 text-amber-500" >{t('HOW_IT_WORKS')} <ArrowRightOutlined /></Link>
           </button>
         </div>
         <div className="bg-white p-8">
-          <Image src={web3} alt="数据可视化" className="h-70" />
-          <h3 className="mt-6 text-lg font-bold mt-2 text-black">餐娱运营云控平台 (ElysiumCore)</h3>
-          <p className="mt-2 text-gray-600 text-sm">专为餐饮与娱乐行业量身定制的智能管理平台</p>
+          <Image src={web3} alt="ElysiumCore" className="h-70" />
+          <h3 className="mt-6 text-lg font-bold mt-2 text-black">{t('ELYSIUMCORE')}</h3>
+          <p className="mt-2 text-gray-600 text-base">{t('HOSPITALITY_DESC')}</p>
           <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">
-            <Link href="/products/elysiumCore" className="text-sm hover:text-orange-500 text-amber-500" >了解更多 <ArrowRightOutlined /></Link>
+            <Link href="/products/elysiumCore" className="text-sm hover:text-orange-500 text-amber-500" >{t('HOW_IT_WORKS')} <ArrowRightOutlined /></Link>
           </button>
         </div>
         <div className="bg-white p-8">
-          <Image src={web2} alt="AI设计" className="h-70" />
-          <h3 className="mt-6 text-lg font-bold mt-2 text-black">AI室内设计APP (KainoAI)</h3>
-          <p className="mt-2 text-gray-600 text-sm">通过AI技术自动生成符合您需求的室内设计风格</p>
+          <Image src={web2} alt="KainoAI" className="h-70" />
+          <h3 className="mt-6 text-lg font-bold mt-2 text-black">{t('KAINOAI')}</h3>
+          <p className="mt-2 text-gray-600 text-base">{t('INTERIOR_DESC')}</p>
           <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">
-            <Link href="/products/kainoAi" className="text-sm hover:text-orange-500 text-amber-500" >了解更多 <ArrowRightOutlined /></Link>
+            <Link href="/products/kainoAi" className="text-sm hover:text-orange-500 text-amber-500" >{t('HOW_IT_WORKS')} <ArrowRightOutlined /></Link>
           </button>
         </div>
       </section>
-      <h3 className="mt-16 text-4xl font-bold text-black text-center">优势和亮点</h3>
+      <h3 className="mt-16 text-4xl font-bold text-black text-center">{t('WHY_CHOOSE_US')}</h3>
       <div className="flex justify-center gap-8 px-24 py-12">
         {services.map((service, index) => (
             <div key={service.title} className="bg-white shadow-xl shadow-stone-200 rounded-lg p-6 w-full max-w-xs">

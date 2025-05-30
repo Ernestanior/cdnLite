@@ -1,4 +1,4 @@
-
+'use client'
 import Image from "next/image";
 import img1 from './img1.png'
 import o1 from '@/app/assets/service/o1.png'
@@ -12,66 +12,69 @@ import o8 from '@/app/assets/service/o8.png'
 import o9 from '@/app/assets/service/o9.png'
 import o10 from '@/app/assets/service/o10.png'
 import o11 from '@/app/assets/service/o11.png'
-import Navbar from "@/app/components/navbar";
-import Footer from "@/app/components/footer";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import { useLanguage } from "@/context/languageContext";
 const App = () => {
+  const { t } = useLanguage();
+
   const functionList =[
     {
-      title:'智能数据管理',
+      title:t("DATA_MANAGEMENT_VISUALIZATION"),
       img:o1,
-      desc:'大数据存储，可视化分析，自动化管理',
+      desc:t("BIG_DATA_STORAGE"),
     },
     {
-      title:'云计算与安全',
+      title:t("CLOUD_ENCRYPTION"),
       img:o2,
-      desc:'网络搭建，网站加速，数据加密',
+      desc:t("NETWORK_SETUP"),
     },
     {
-      title:'监控和预警',
+      title:t("MONITORING_ALERT"),
       img:o3,
-      desc:'安全监控，故障预警，实时报告',
+      desc:t("SECURITY_TRACKING"),
     },
     {
-      title:'系统维护优化',
+      title:t("MAINTENANCE_OPTIMIZATION"),
       img:o4,
-      desc:'定期更新，功能扩展，故障诊断，技术支持',
+      desc:t("REGULAR_UPDATES"),
     },
   ]
 
   const scenariosList = [
     {
-      title:'传统企业转型',
+      title:t("ENTERPRISE_TRANSFORMATION"),
       img:o5,
     },
     {
-      title:'企业部门协调',
+      title:t("CROSS_DEPARTMENT_COLLABORATION"),
       img:o6,
     },
     {
-      title:'高需求行业',
+      title:t("HIGH_DEMAND_SOLUTIONS"),
       img:o7,
     },
     {
-      title:'实时响应系统',
+      title:t("REALTIME_RESPONSE_SYSTEMS"),
       img:o8,
     },
   ]
 
   const advList =[
     {
-      title:'高集成性',
+      title:t("END_TO_END_INTEGRATION"),
       img:o9,
-      desc:'各功能之间无缝协作，一站式管理，无忧切换',
+      desc:t("END_TO_END_DESC"),
     },
     {
-      title:'高定制性',
+      title:t("FULL_SCALE_CUSTOMIZATION"),
       img:o10,
-      desc:'根据企业规模，行业特点，灵活配置，按需定制',
+      desc:t("FULL_SCALE_DESC"),
     },
     {
-      title:'高安全性',
+      title:t("COMPREHENSIVE_SECURITY"),
       img:o11,
-      desc:'分级保障，高度加密，确保数据安全和系统稳定',
+      desc:t("COMPREHENSIVE_SECURITY_DESC"),
     },
   ]
 
@@ -80,9 +83,7 @@ const App = () => {
       <Navbar />
       <div className="pl-25 pr-25 pt-14">
         <section className="flex">
-        <div
-          className={`relative overflow-hidden w-550 h-100`}
-        >
+        <div className={`relative overflow-hidden w-550 h-100`}>
           <Image
             src={img1}
             alt=""
@@ -90,47 +91,42 @@ const App = () => {
             className="object-cover object-bottom"
           />
         </div>
-          <div className="bg-stone-100 p-10">
-            <h3 className="text-3xl font-bold text-black">企业数字化转型方案服务</h3>
+          <div className="bg-stone-100 pl-10 pr-10 pt-10 w-500">
+            <h3 className="text-3xl font-bold text-black">{t("INFRASTRUCTURE_SOLUTIONS")}</h3>
             <p className="mt-5 text-sm text-black leading-7">
-            我们为企业提供数字化定制开发服务，涵盖自动化管理、系统集成、代码定制优化和数据运维等领域，集中解决企业运营的痛点，提升业务流程效率，降低运营成本，帮助企业实现从传统模式向现代化、智能化运营的全面转型。
-            </p>
-            <p className="mt-5 text-sm text-black leading-7">
-            无论是企业管理后台、自动化数据分析，还是业务流程的优化与集成，为您的业务量身打造高效、智能的数字化解决方案。帮助企业实现数字化升级和可持续发展目标。
+            {t("INFRASTRUCTURE_SOLUTIONS_DESC")}
             </p>
           </div>
         </section>
-
-
-        <h3 className="mt-36 mb-5 text-3xl font-bold mt-2 text-black text-center">功能特点</h3>
+        <h3 className="mt-36 mb-5 text-3xl font-bold mt-2 text-black text-center">{t("KEY_FEATURES")}</h3>
         <section className="flex justify-center p-10">
           {functionList.map((item=>
-          <div className="flex flex-col items-center ml-5 mr-5">
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <Image src={item.img} alt={item.title} className="w-full h-auto" />
-                </div>
-                <div className="flip-card-back">
-                  <div>{item.desc}</div>
+            <div className="flex flex-col items-center ml-5 mr-5">
+              <div className="flip-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <Image src={item.img} alt={item.title} className="w-full h-auto" />
+                  </div>
+                  <div className="flip-card-back">
+                    <div>{item.desc}</div>
+                  </div>
                 </div>
               </div>
+              <h3 className="text-base font-bold text-black text-center">{item.title}</h3>
             </div>
-            <h3 className="text-base font-bold text-black text-center">{item.title}</h3>
-          </div>
           ))}
           </section>
-          <h3 className="mt-36 mb-15 text-3xl font-bold text-black text-center">服务范围</h3>
+          <h3 className="mt-36 mb-15 text-3xl font-bold text-black text-center">{t("INDUSTRY_APPLICATIONS")}</h3>
           <section className="flex justify-between ">
           {scenariosList.map((item=>
             <div className="bg-white ml-5 mr-5">
                 <Image src={item.img} alt={item.title} className="w-full h-auto" />
                 <h3 className="mt-6 text-sm font-bold text-black text-center text-yellow-500">{item.title}</h3>
             </div>
-            ))}
+          ))}
           </section>
           <div className="w-full flex flex-col items-center py-10 bg-white">
-          <h2 className="mt-36 mb-5 text-3xl md:text-3xl font-bold text-gray-800 mb-12">开发流程</h2>
+          <h2 className="mt-36 mb-5 text-3xl md:text-3xl font-bold text-gray-800 mb-12">{t("DEV_FLOW")}</h2>
           <section className="flex justify-between">
           {advList.map((item=>
             <div className="bg-white mr-10 flex flex-col items-center ml-10 mr-10">
@@ -142,8 +138,6 @@ const App = () => {
           </section>
         </div>
       </div>
-
-
       <Footer/>
     </div>
   );

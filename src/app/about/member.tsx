@@ -1,6 +1,7 @@
+'use client'
 import React from "react";
-import Image from "next/image";
 import { UserOutlined } from "@ant-design/icons";
+import { useLanguage } from "@/context/languageContext";
 
 interface TeamMemberProps {
   image: any;
@@ -12,6 +13,8 @@ interface TeamMemberProps {
 }
 
 const TeamMember: React.FC<TeamMemberProps> = ({ image, name, position, experience, responsibility, bgColor }) => {
+  const { t } = useLanguage();
+  
   return (
     <div className="flex flex-col items-center text-center w-full md:w-1/4 px-4">
       {/* 头像 */}
@@ -26,12 +29,12 @@ const TeamMember: React.FC<TeamMemberProps> = ({ image, name, position, experien
       <h4 className="text-gray-900 font-bold">{position}</h4>
 
       {/* 经验 */}
-      {experience && <p className="text-gray-500 font-semibold mt-2 text-sm">Experience: <span className="font-normal">{experience}</span></p>}
+      {experience && <p className="text-gray-500 font-semibold mt-2 text-sm">{t('EXPERIENCE')}: <span className="font-normal">{experience}</span></p>}
 
       {/* 责任描述 */}
       {responsibility && (
         <p className="text-gray-500 font-semibold mt-1 text-sm">
-          Responsibility: <span className="font-normal">{responsibility}</span>
+          {t('RESPONSIBILITY')}: <span className="font-normal">{responsibility}</span>
         </p>
       )}
     </div>
