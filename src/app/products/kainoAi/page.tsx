@@ -11,6 +11,10 @@ import avatar3 from '@/app/assets/products/avatar3.png'
 import img1 from './img1.png'
 import img2 from './img2.png'
 import img3 from './img3.png'
+
+import i1 from './i1.png'
+import i2 from './i2.png'
+
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -77,10 +81,7 @@ const Home = () => {
       <div className="mt-8 text-base text-stone-500">
         {t('KAINOAI_DESC_3')}
       </div>
-
-
-      <Image src={img1} alt={""} className="w-full h-auto mt-10" />
-      <a 
+      {/* <a 
         href="https://www.kainoai.com/home"
         target="_blank"
         className="mt-10 w-full text-center py-3 rounded flex justify-center items-center cursor-pointer"
@@ -90,9 +91,11 @@ const Home = () => {
       >
         <Image src={icon} alt="" className="w-6 mr-4" />
         <h2 className="text-white text-xl font-semibold">{t('GET_STARTED')}</h2>
-      </a>
+      </a> */}
+    <div className="flex justify-center mt-8">
+    <ImageComparisonSlider leftImage={i1} rightImage={i2}/>
 
-      {/* <ImageComparisonSlider/> */}
+    </div>
      <h3 className="mt-36 mb-5 text-4xl font-bold text-black 
      text-center">{t('KEY_FEATURES')}</h3>
       <section className="flex justify-center p-10">
