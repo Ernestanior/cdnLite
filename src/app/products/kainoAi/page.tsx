@@ -15,6 +15,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 import { useLanguage } from "@/context/languageContext";
+import ImageComparisonSlider from "./display";
 
 
 const Home = () => {
@@ -91,7 +92,7 @@ const Home = () => {
         <h2 className="text-white text-xl font-semibold">{t('GET_STARTED')}</h2>
       </a>
 
-
+      {/* <ImageComparisonSlider/> */}
      <h3 className="mt-36 mb-5 text-4xl font-bold text-black 
      text-center">{t('KEY_FEATURES')}</h3>
       <section className="flex justify-center p-10">

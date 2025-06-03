@@ -17,9 +17,9 @@ export default function HomeCarousel() {
     const { t } = useLanguage();
 
     const banners = [
-        { src: s1, title: t('SOLARENGY'),subTitle:"(YangSolar)",desc:t('SOLAR_DESC'),page:"/products/solar" },
-        { src: s2, title: t('ELYSIUMCORE'),subTitle:"(ElysiumCore)",desc:t('KTV_DESC'),page:"/products/elysiumCore"},
-        { src: s3, title:t('KAINOAI'),subTitle:"(KainoAI)",desc:t('KAINO_DESC'),page:"/products/kainoAi"  },
+        { src: s1, title: t('SOLARENGY_EX'),subTitle:"(YangSolar)",desc:t('SOLAR_DESC'),page:"/products/solar" },
+        { src: s2, title: t('ELYSIUMCORE_EX'),subTitle:"(ElysiumCore)",desc:t('KTV_DESC'),page:"/products/elysiumCore"},
+        { src: s3, title:t('KAINOAI_EX'),subTitle:"(KainoAI)",desc:t('KAINO_DESC'),page:"/products/kainoAi"  },
       ];
 
   const settings = {
@@ -46,10 +46,10 @@ export default function HomeCarousel() {
               priority
             />
             <div className="absolute top-1/2 -translate-y-1/2 left-50 flex flex-col p-30 pl-20 text-white">
-                <h2 className="text-4xl font-bold text-stone-900 font-mono">{item.title}</h2>
-                <h2 className="text-4xl mt-2 font-bold text-stone-900 font-mono" >{item.subTitle}</h2>
-                <p className="text-gray-400 mt-12 ">{item.desc}</p>
-                <Link href={item.page} className="text-center mt-4 w-40 bg-amber-500 text-white px-4 py-2 rounded">{t('CAROUSEL_BTN')}</Link>
+                <h2 className="text-4xl font-bold text-stone-900 font-mono w-120 leading-13">{item.title}</h2>
+                {/* <h2 className="text-4xl mt-2 font-bold text-stone-900 font-mono" >{item.subTitle}</h2> */}
+                <p className="text-gray-400 mt-6 w-100">{item.desc}</p>
+                <Link href={item.page} className="text-center mt-4 w-40 bg-amber-500 text-white px-4 py-2 rounded ">{t('CAROUSEL_BTN')}</Link>
             </div>
           </div>
         ))}
