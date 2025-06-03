@@ -1,8 +1,8 @@
 'use client'
 import Image from "next/image";
-import a1 from '@/app/assets/products/a1.png'
+import a1 from '@/app/assets/products/a1.jpg'
 import a2 from '@/app/assets/products/a2.png'
-import a3 from '@/app/assets/products/a3.png'
+import a3 from '@/app/assets/products/a3.jpg'
 import a4 from '@/app/assets/products/a4.png'
 import a5 from '@/app/assets/products/a5.png'
 import avatar1 from '@/app/assets/products/avatar1.png'
@@ -25,7 +25,7 @@ const Home = () => {
 
   const functionList =[
     {
-      title:t('REALTIME_MONITORING'),
+      title:t('REALTIME_MONITORING_1'),
       img:a2,
       desc:t('REALTIME_MONITORING_DESC'),
     },
@@ -65,7 +65,7 @@ const Home = () => {
     {
       title:t('COMMERCIAL_BUILDINGS'),
       img:f2,
-      desc:t('CENTRALIZED_CONTROL'),
+      desc:t('COMMERCIAL_BUILDINGS_DESC'),
     },
     {
       title:t('INDUSTRIAL_PARKS'),
@@ -102,9 +102,6 @@ const Home = () => {
       <div className="mt-8 text-base text-stone-500">
         {t('SOLARENGY_PLATFORM_DESC4')}
       </div>
-      <div className="mt-8 text-base text-stone-500">
-        {t('SOLARENGY_PLATFORM_DESC5')}
-      </div>
       <Image src={img1} alt={""} className="w-full h-auto mt-10" />
      <h3 className="mt-36 mb-5 text-4xl font-bold text-black 
      text-center">{t('KEY_FEATURES')}</h3>
@@ -130,11 +127,9 @@ const Home = () => {
       <section className="flex justify-center mt-15">
       {scenariosList.map((item=>
         <div className="bg-white ml-10 mr-10">
-          <div className="p-8 rounded-full bg-blue-50">
             <Image src={item.img} alt={item.title} className="w-full h-auto" />
-          </div>
-          <h3 className="mt-6 text-2xl font-bold text-black text-center">{item.title}</h3>
-          <div className="mt-2 text-sm text-black text-center">{item.desc}</div>
+          <h3 className="mt-6 text-base font-bold text-amber-500 text-center">{item.title}</h3>
+          <div className="mt-2 text-base font-bold text-black text-center">{item.desc}</div>
         </div>
         ))}
       </section>
@@ -145,7 +140,7 @@ const Home = () => {
           </div>
           <div className="box-border text-black ml-20 flex-2 flex flex-col items-center bg-stone-500 p-8 " style={{backgroundColor:"#f5f1e4"}}>
             <h3 className="mb-4 text-2xl font-bold">{t('SOLAR_PLATFORM_INTEGRATION')}</h3>
-            <div className="text-sm text-stone-600 text-center">{t('FULL_CYCLE_DATA')}</div>
+            <div className="text-sm text-stone-600 text-center leading-6">{t('FULL_CYCLE_DATA')}</div>
             <ol>
               {
                 commentList.map((item,index)=> <li key={index} className="mb-5 text-lg mt-15 ">
@@ -159,7 +154,7 @@ const Home = () => {
                       <StarFilled style={{color:"#ffbb00",marginRight:8}}/>
                       <StarOutlined style={{color:"#ffbb00",marginRight:8}}/>
                     </div>
-                    <p className="text-xs mt-3 leading-5">
+                    <p className="text-sm mt-3 leading-6">
                       {item.comment}
                     </p>
                   </div>

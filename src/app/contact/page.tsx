@@ -28,8 +28,8 @@ const Contact = () => {
             <div className="font-bold text-2xl mb-20">{t("CONTACT_DETAIL")}</div>
             <div>
               <div className="mb-5 flex"><PhoneFilled className="mr-3 text-lg"/> +65 6284 6860</div>
-              <div className="mb-5 flex"><MailFilled className="mr-3 text-lg"/> contact@riftvalley.com</div>
-              <div className="mb-5 flex"><EnvironmentFilled className="mr-3 text-lg"/><span className="w-65"> 152 Beach Road #21-05/06 Singapore 187721</span></div>
+              <div className="mb-5 flex"><MailFilled className="mr-3 text-lg"/> sales@riftvalley.ai</div>
+              {/* <div className="mb-5 flex"><EnvironmentFilled className="mr-3 text-lg"/><span className="w-65"> 152 Beach Road #21-05/06 Singapore 187721</span></div> */}
             </div>
             <div className="flex mt-40">
               <div className="p-2 mr-5 rounded-3xl bg-orange-400" >

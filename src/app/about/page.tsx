@@ -11,41 +11,45 @@ import bus3 from '@/app/assets/about/bus3.jpg';
 import bus4 from '@/app/assets/about/bus4.png';
 import bus5 from '@/app/assets/about/bus5.jpg';
 import bus6 from '@/app/assets/about/bus6.jpg';
-import bus7 from '@/app/assets/about/bus7.jpg';
+import bus7 from '@/app/assets/about/bus7.png';
 import bus8 from '@/app/assets/about/bus8.png';
-import profile from '@/app/assets/about/profile.jpg';
-import Image from "next/image";
-import TeamMember from "./member";
-import { useLanguage } from "@/context/languageContext";
 
+import icon1 from '@/app/assets/icon/think.png';
+import icon2 from '@/app/assets/icon/user.png';
+import icon3 from '@/app/assets/icon/coop.png';
+import icon4 from '@/app/assets/icon/medal.png';
+import Image from "next/image";
+import { useLanguage } from "@/context/languageContext";
 
 const About = () => {
     const { t } = useLanguage();
+    
+    const valueList =[{icon:icon1,title:t('INNOVATION_DRIVEN'),desc:t('INNOVATION_DRIVEN_DESC')},{icon:icon2,title:t('CUSTOMER_CENTRIC'),desc:t('CUSTOMER_CENTRIC_DESC')},{icon:icon3,title:t('COLLABORATIVE_GROWTH'),desc:t('COLLABORATIVE_GROWTH_DESC')},{icon:icon4,title:t('INTEGRITY_TRANSPARENCY'),desc:t('INTEGRITY_TRANSPARENCY_DESC')},]
 
     const businessList=[{
         title:t('ENERGY_MANAGEMENT_PLATFORM'),
-        img:bus1
-    },{
-        title:t('AI_INTERIOR_DESIGN'),
-        img:bus2
+        img:bus8
     },{
         title:t('SMART_ENTERTAINMENT_PLATFORM'),
-        img:bus3
-    },{
-        title:t('IT_INFRASTRUCTURE_MANAGEMENT'),
         img:bus4
     },{
         title:t('STREAMING_LIVE_PLATFORM'),
+        img:bus6
+    },{
+        title:t('AI_INTERIOR_DESIGN'),
+        img:bus7
+    },{
+        title:t('WEB_MOBILE_SERVICE'),
         img:bus5
     },{
         title:t('ENTERPRISE_DIGITALIZATION_SOLUTIONS'),
-        img:bus6
+        img:bus2
     },{
-        title:t('WEB_MOBILE_SERVICE'),
-        img:bus7
+        title:t('IT_INFRASTRUCTURE_MANAGEMENT'),
+        img:bus1
     },{
         title:t('DDOS_WAF_SERVICE'),
-        img:bus8
+        img:bus3
     },]
 
   return (
@@ -56,7 +60,7 @@ const About = () => {
             <InfoSection
                 image={about1}
                 title={t('COMPANY_PROFILE')}
-                content={[t('COMPANY_PROFILE_DESC')]}
+                content={[t('COMPANY_PROFILE_DESC1'),t('COMPANY_PROFILE_DESC2')]}
             />
             {/* 第二部分 - 反向布局 */}
             <InfoSection
@@ -68,34 +72,23 @@ const About = () => {
                 ]}
                 reverse
             />
-
-            {/* 第三部分 */}
-            <InfoSection
-                image={about3}
-                title={t('CORE_VALUE')}
-                children={<div className="text-stone-900 pt-5">
-                    <ol>
-                        <li className="font-bold py-2">● {t('INNOVATION_DRIVEN')}</li>
-                        <p className="text-stone-400 pl-2 pb-5 text-sm"> {t('INNOVATION_DRIVEN_DESC')}</p>
-                        <li className="font-bold py-2">● {t('CUSTOMER_CENTRIC')}</li>
-                        <p className="text-stone-400 pl-2 pb-5 text-sm"> {t('CUSTOMER_CENTRIC_DESC')}</p>
-                        <li className="font-bold py-2">● {t('COLLABORATIVE_GROWTH')}</li>
-                        <p className="text-stone-400 pl-2 pb-5 text-sm"> {t('COLLABORATIVE_GROWTH_DESC')}</p>
-                        <li className="font-bold py-2">● {t('INTEGRITY_TRANSPARENCY')}</li>
-                        <p className="text-stone-400 pl-2 pb-5 text-sm"> {t('INTEGRITY_TRANSPARENCY_DESC')}</p>
-                    </ol>
-                </div>}
-            />
         </div>
-        {/* <div className="flex flex-col items-center bg-gray-50" >
-            <div className="text-stone-900 text-3xl font-black pb-10">合作的企业</div>
-            <div className="grid grid-cols-4 pb-3 w-full">
-                {businessList.map((item)=><div className="relative w-80 h-80 overflow-hidden bg-orange-500">
-                    <Image src={item.img} alt={""} className="w-50" />
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">{item.title}</div>
-                </div>)}
+        <div className="px-24 py-15 bg-slate-50">
+            <h3 className="text-4xl font-bold text-black text-center mb-10">{t('WHY_CHOOSE_US')}</h3>
+            <div className="grid grid-cols-2 gap-8">
+                {valueList.map((item, index) => (
+                    <div key={item.title} className="flex bg-white border-2 border-stone-200 rounded-lg p-6">
+                        <Image src={item.icon} alt={""} className="w-14 h-14 mr-6" />
+                        <div>
+                            <h3 className="text-base font-bold text-gray-900">{item.title}</h3>
+                            <p className="text-sm text-gray-600 mt-3">{item.desc}</p>
+                        </div>
+
+                    </div>
+                ))}
             </div>
-        </div> */}
+        </div>
+
         <section className="py-10 px-4">
         <h2 className="text-3xl font-bold text-center text-gray-800 mt-8">{t('EXPERTISE_AREAS')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-15">

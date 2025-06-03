@@ -60,7 +60,7 @@ const Web = () => {
     },
     {
       title:t('SCALABLE_ARCHITECTURE'),
-      img:w1,
+      img:w4,
       desc:t('SCALABLE_ARCHITECTURE_DESC'),
     },
     {
@@ -70,27 +70,27 @@ const Web = () => {
     },
     {
       title:t('SECURITY_ASSURANCE'),
-      img:w4,
+      img:w1,
       desc:t('SECURITY_ASSURANCE_DESC'),
     },
   ]
 
   const scenariosList = [
     {
-      title:t('ENTERPRISE_SOLUTIONS'),
-      img:w5,
+      title:t('ENTERPRISE_DEVELOP'),
+      img:w8,
     },
     {
       title:t('DATA_VISUALIZATION'),
-      img:w6,
-    },
-    {
-      title:t('ECOMMERCE_RETAIL'),
       img:w7,
     },
     {
+      title:t('ECOMMERCE_RETAIL'),
+      img:w6,
+    },
+    {
       title:t('LOGISTICS_OPERATIONS'),
-      img:w8,
+      img:w5,
     },
     {
       title:t('CUSTOM_PORTALS'),
@@ -124,7 +124,7 @@ const Web = () => {
         <h3 className="mt-36 mb-10 text-3xl font-bold mt-2 text-black text-center">{t('KEY_FEATURES')}</h3>
         <section className="flex justify-center p-10">
           {functionList.map((item=>
-          <div className="flex flex-col items-center ml-5 mr-5">
+          <div className="flex flex-col items-center ml-5 mr-5 border-2 border-stone-100 p-2">
             <div className="flip-card">
               <div className="flip-card-inner">
                 <div className="flip-card-front">

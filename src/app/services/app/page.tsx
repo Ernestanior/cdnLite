@@ -80,7 +80,7 @@ const App = () => {
     },
     {
       title:t('BUSINESS_MARKETING_PLATFORMS'),
-      img:p6,
+      img:p8,
       desc:t('BUSINESS_MARKETING_DESC'),
     },
     {
@@ -90,7 +90,7 @@ const App = () => {
     },
     {
       title:t('ORDER_BILLING_PORTALS'),
-      img:p8,
+      img:p6,
       desc:t('ORDER_BILLING_DESC'),
     },
   ]
@@ -108,7 +108,7 @@ const App = () => {
             className="object-cover object-bottom"
           />
         </div>
-          <div className="bg-stone-100 p-8 w-500">
+          <div className="bg-indigo-50 p-8 w-500">
             <h3 className="text-3xl font-bold text-black">{t('MOBILE_WEB_SERVICE')}</h3>
             <p className="mt-5 text-sm text-black leading-7">
             {t('MOBILE_WEB_DESC')}

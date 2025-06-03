@@ -129,8 +129,8 @@ const App = () => {
           <h2 className="mt-36 mb-5 text-3xl md:text-3xl font-bold text-gray-800 mb-12">{t("DEV_FLOW")}</h2>
           <section className="flex justify-between">
           {advList.map((item=>
-            <div className="bg-white mr-10 flex flex-col items-center ml-10 mr-10">
-                <Image src={item.img} alt={item.title} className="w-20 h-auto" />
+            <div className="bg-white mr-10 flex flex-col items-center ml-10 mr-10 shadow-xl shadow-stone-200 rounded-lg p-8">
+                <Image src={item.img} alt={item.title} className="w-20 h-auto text-orange-500" />
                 <h3 className="mt-3 text-sm font-bold text-black text-center ">{item.title}</h3>
                 <h3 className="mt-2 text-sm w-55 font-bold text-black text-center text-stone-400">{item.desc}</h3>
             </div>

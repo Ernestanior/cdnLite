@@ -20,7 +20,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({ image, title, content,childre
       <div className="w-full md:w-1/2">
         <h2 className="text-4xl font-mono font-bold text-gray-900">{title}</h2>
         {content?.map((paragraph, index) => (
-          <p key={index} className="mt-4 text-gray-400 leading-relaxed">
+          <p key={index} className="mt-4 text-gray-600 leading-relaxed">
             {paragraph}
           </p>
         ))}

@@ -21,12 +21,12 @@ const ElysiumCore = () => {
   const functionList =[
     {
       title:t('ORDERING_SYSTEM'),
-      img:g5,
+      img:g1,
       desc:t('ORDERING_SYSTEM_DESC'),
     },
     {
       title:t('INVENTORY_UPDATES'),
-      img:g1,
+      img:g2,
       desc:t('INVENTORY_UPDATES_DESC'),
     },
     {
@@ -41,7 +41,7 @@ const ElysiumCore = () => {
     },
     {
       title:t('ROLE_MANAGEMENT'),
-      img:g2,
+      img:g5,
       desc:t('ROLE_MANAGEMENT_DESC'),
     },
   ]
@@ -71,30 +71,26 @@ const ElysiumCore = () => {
 
       <h3 className="mt-26 mb-10 text-4xl font-bold text-black">{t('ELYSIUMCORE_TITLE')}</h3>
       <div className="mt-15 text-base text-stone-500">
-      {t('ELYSIUMCORE_DESC')} 
+      {t('ELYSIUMCORE_DESC_1')} 
       </div>
       <div className="mt-8 text-base text-stone-500">
-      {t('ELYSIUMCORE_FEATURES')} 
+      {t('ELYSIUMCORE_DESC_2')} 
       </div>
       <div className="mt-8 text-base text-stone-500">
-      {t('ELYSIUMCORE_BENEFITS')}
+      {t('ELYSIUMCORE_DESC_3')}
       </div>
-
 
       <Image src={img1} alt={""} className="w-full h-auto mt-10" />
-
-
-
-     <h3 className="mt-36 mb-6 text-4xl font-bold text-black 
+     <h3 className="mt-46 mb-6 text-4xl font-bold text-black 
      text-center">{t('KEY_FEATURES')}</h3>
-      <section className="flex justify-center p-10">
+      <section className="flex justify-center p-5">
         {functionList.map((item=>
         <div className="flex flex-col items-center ml-5 mr-5 ">
-          <div className="h-60 w-60">
+          <div className="h-50 w-50">
             <Image src={item.img} alt={item.title} className="w-100 h-auto" />
           </div>
           <h3 className="mt-4 text-xl font-bold text-black text-center">{item.title}</h3>
-          <div className="mt-4 text-base text-stone-900 text-center">{item.desc}</div>
+          <div className="mt-4 text-sm text-stone-900 text-center">{item.desc}</div>
 
         </div>
         ))}

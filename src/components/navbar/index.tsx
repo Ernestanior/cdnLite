@@ -47,7 +47,7 @@ const Navbar = () => {
         },
         {
           key: '4-3',
-          label: <Link href="/services/enterprise" className="text-sm text-gray-500 hover:text-orange-500">{t('ENTERPRISE_DIGITALIZATION_SOLUTIONS')}</Link>,
+          label: <Link href="/services/enterprise" className="text-sm text-gray-500 hover:text-orange-500">{t('ENTERPRISE_DIGITAL_SOLUTIONS')}</Link>,
         },
         {
           key: '4-4',

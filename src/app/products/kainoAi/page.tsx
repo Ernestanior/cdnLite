@@ -1,15 +1,16 @@
 'use client'
 import Image from "next/image";
-import a1 from '@/app/assets/products/a1.png'
-import a2 from '@/app/assets/products/a2.png'
-import a3 from '@/app/assets/products/a3.png'
-import a4 from '@/app/assets/products/a4.png'
+import k1 from '@/app/assets/products/k1.png'
+import k2 from '@/app/assets/products/k2.jpg'
+import k3 from '@/app/assets/products/k3.jpg'
+import k4 from '@/app/assets/products/k4.jpg'
 import icon from './icon.png'
 import avatar1 from '@/app/assets/products/avatar1.png'
 import avatar2 from '@/app/assets/products/avatar2.png'
 import avatar3 from '@/app/assets/products/avatar3.png'
 import img1 from './img1.png'
 import img2 from './img2.png'
+import img3 from './img3.png'
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -22,22 +23,22 @@ const Home = () => {
   const functionList =[
     {
       title:t('AI_DESIGN'),
-      img:a2,
+      img:k1,
       desc:t('AI_DESIGN_DESC'),
     },
     {
       title:t('STYLE_SWITCHING'),
-      img:a1,
+      img:k2,
       desc:t('STYLE_SWITCHING_DESC'),
     },
     {
       title:t('ONECLICK_DESIGN'),
-      img:a3,
+      img:k3,
       desc:t('ONECLICK_DESIGN_DESC'),
     },
     {
       title:t('CROSSDEVICE_SUPPORT'),
-      img:a4,
+      img:k4,
       desc:t('CROSSDEVICE_SUPPORT_DESC'),
     },
   ]
@@ -67,17 +68,15 @@ const Home = () => {
 
       <h3 className="mt-26 mb-10 text-4xl font-bold text-black">{t('KAINOAI_TITLE')}</h3>
       <div className="mt-15 text-base text-stone-500">
-        {t('KAINOAI_DESC')}  
+        {t('KAINOAI_DESC_1')}  
       </div>
       <div className="mt-8 text-base text-stone-500">
-        {t('KAINOAI_FEATURES')} 
+        {t('KAINOAI_DESC_2')} 
       </div>
       <div className="mt-8 text-base text-stone-500">
-        {t('KAINOAI_AI')}
+        {t('KAINOAI_DESC_3')}
       </div>
-      <div className="mt-8 text-base text-stone-500">
-        {t('KAINOAI_BENEFITS')} 
-      </div>
+
 
       <Image src={img1} alt={""} className="w-full h-auto mt-10" />
       <a 
@@ -137,9 +136,9 @@ const Home = () => {
               </li>)
               }
             </ol>
-
           </div>
         </section>
+        <Image src={img3} alt="" className="w-full h-auto mt-15 cursor-pointer" />
         </div>
 
       <Footer/>

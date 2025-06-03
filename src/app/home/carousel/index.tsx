@@ -47,7 +47,7 @@ export default function HomeCarousel() {
             />
             <div className="absolute top-1/2 -translate-y-1/2 left-50 flex flex-col p-30 pl-20 text-white">
                 <h2 className="text-4xl font-bold text-stone-900 font-mono">{item.title}</h2>
-                {/* <h2 className="text-4xl mt-2 font-bold text-stone-900 font-mono" >{item.subTitle}</h2> */}
+                <h2 className="text-4xl mt-2 font-bold text-stone-900 font-mono" >{item.subTitle}</h2>
                 <p className="text-gray-400 mt-12 ">{item.desc}</p>
                 <Link href={item.page} className="text-center mt-4 w-40 bg-amber-500 text-white px-4 py-2 rounded">{t('CAROUSEL_BTN')}</Link>
             </div>

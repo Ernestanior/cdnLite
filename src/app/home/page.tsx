@@ -60,7 +60,7 @@ const Home = () => {
      <h3 className="mt-16 text-4xl font-bold text-black text-center">{t('INDUSTRY_CASES')}</h3>
       <section className="grid grid-cols-3 gap-6 p-10">
 
-        <div className="bg-white p-8">
+        <div className="bg-white p-10">
           <Image src={web1} alt="SolarEngy" className=" h-70" />
           <h3 className="mt-6 text-lg font-bold mt-2 text-black">{t('SOLARENGY')}</h3>
           <p className="mt-2 text-gray-600 text-base">{t('SMART_ENERGY_DESC')}</p>
@@ -68,7 +68,7 @@ const Home = () => {
             <Link href="/products/solar" className="text-sm hover:text-orange-500 text-amber-500" >{t('HOW_IT_WORKS')} <ArrowRightOutlined /></Link>
           </button>
         </div>
-        <div className="bg-white p-8">
+        <div className="bg-white p-10">
           <Image src={web3} alt="ElysiumCore" className="h-70" />
           <h3 className="mt-6 text-lg font-bold mt-2 text-black">{t('ELYSIUMCORE')}</h3>
           <p className="mt-2 text-gray-600 text-base">{t('HOSPITALITY_DESC')}</p>
@@ -76,7 +76,7 @@ const Home = () => {
             <Link href="/products/elysiumCore" className="text-sm hover:text-orange-500 text-amber-500" >{t('HOW_IT_WORKS')} <ArrowRightOutlined /></Link>
           </button>
         </div>
-        <div className="bg-white p-8">
+        <div className="bg-white p-10">
           <Image src={web2} alt="KainoAI" className="h-70" />
           <h3 className="mt-6 text-lg font-bold mt-2 text-black">{t('KAINOAI')}</h3>
           <p className="mt-2 text-gray-600 text-base">{t('INTERIOR_DESC')}</p>
