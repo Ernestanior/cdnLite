@@ -4,11 +4,9 @@ import k1 from '@/app/assets/products/k1.png'
 import k2 from '@/app/assets/products/k2.jpg'
 import k3 from '@/app/assets/products/k3.jpg'
 import k4 from '@/app/assets/products/k4.jpg'
-import icon from './icon.png'
 import avatar1 from '@/app/assets/products/avatar1.png'
 import avatar2 from '@/app/assets/products/avatar2.png'
 import avatar3 from '@/app/assets/products/avatar3.png'
-import img1 from './img1.png'
 import img2 from './img2.png'
 import img3 from './img3.png'
 
@@ -69,8 +67,8 @@ const Home = () => {
   return (
     <div className="bg-white min-w-7xl">
     <Navbar />
-    <div className="bg-white min-w-7xl pl-30 pr-30">
-
+    <div className="bg-white min-w-7xl">
+    <div className="pl-30 pr-30">
       <h3 className="mt-26 mb-10 text-4xl font-bold text-black">{t('KAINOAI_TITLE')}</h3>
       <div className="mt-15 text-base text-stone-500">
         {t('KAINOAI_DESC_1')}  
@@ -81,26 +79,16 @@ const Home = () => {
       <div className="mt-8 text-base text-stone-500">
         {t('KAINOAI_DESC_3')}
       </div>
-      {/* <a 
-        href="https://www.kainoai.com/home"
-        target="_blank"
-        className="mt-10 w-full text-center py-3 rounded flex justify-center items-center cursor-pointer"
-        style={{
-          background: 'linear-gradient(to right, #06daff 45%, #bbf7d0 75%)',
-        }}
-      >
-        <Image src={icon} alt="" className="w-6 mr-4" />
-        <h2 className="text-white text-xl font-semibold">{t('GET_STARTED')}</h2>
-      </a> */}
-    <div className="flex justify-center mt-8">
-    <ImageComparisonSlider leftImage={i1} rightImage={i2}/>
-
+      <div className="flex justify-center mt-8">
+      <ImageComparisonSlider leftImage={i1} rightImage={i2}/>
+      </div>
     </div>
-     <h3 className="mt-36 mb-5 text-4xl font-bold text-black 
+    <div className="p-15 mt-26 bg-slate-100 mb-20">
+     <h3 className="mb-5 text-4xl font-bold text-black 
      text-center">{t('KEY_FEATURES')}</h3>
       <section className="flex justify-center p-10">
         {functionList.map((item=>
-        <div className="flex flex-col items-center ml-5 mr-5">
+        <div key={item.title} className="flex flex-col items-center ml-5 mr-5">
           <div className="flip-card">
             <div className="flip-card-inner">
               <div className="flip-card-front">
@@ -111,44 +99,45 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <h3 className="mt-4 text-xl font-bold text-black text-center">{item.title}</h3>
+          <h3 className="mt-6 text-xl font-bold text-black text-center">{item.title}</h3>
         </div>
         ))}
       </section>
+    </div>
+    <div className="pl-30 pr-30">
       <h3 className="mt-25 mb-15 text-4xl font-bold text-black text-center">{t('CUSTOMER_STORIES')}</h3>
-        <section className="bg-white flex justify-between">
-          <div className="flex-5">
-            <Image src={img2} alt="" className="w-full h-auto" />
-          </div>
-          <div className="box-border text-black ml-20 flex-2 flex flex-col items-center bg-stone-500 p-8 " style={{backgroundColor:"#f5f1e4"}}>
-            <h3 className="mb-4 text-2xl font-bold">{t('STYLE_RENDERING')}</h3>
-            <div className="text-sm text-stone-600 text-center">{t('STYLE_RENDERING_DESC')}</div>
-            <ol>
-              {
-                commentList.map((item,index)=> <li key={index} className="mb-5 text-lg mt-15 ">
-                <div className="flex">
-                  <Image src={item.avatar} alt="" className="w-12 h-12 ml-3 mr-3" />
-                  <div className="flex flex-col items-end">
-                    <p className="text-xs leading-5 ">
-                        {item.comment}
-                      </p>
-                    <p className="text-xs leading-5 text-stone-500">
-                        --{item.role}
+      <section className="bg-white flex justify-between">
+        <div className="flex-5">
+          <Image src={img2} alt="" className="w-full h-auto" />
+        </div>
+        <div className="box-border text-black ml-20 w-100 flex flex-col items-center bg-stone-500 p-8 " style={{backgroundColor:"#f5f1e4"}}>
+          <h3 className="mb-8 text-xl font-bold">{t('STYLE_RENDERING')}</h3>
+          <div className="text-sm text-stone-600">{t('STYLE_RENDERING_DESC')}</div>
+          <ol>
+            {
+              commentList.map((item,index)=> <li key={index} className="mb-5 text-lg mt-15 ">
+              <div className="flex">
+                <Image src={item.avatar} alt="" className="w-12 h-12 ml-3 mr-3" />
+                <div className="flex flex-col items-end">
+                  <p className="text-xs leading-5 ">
+                      {item.comment}
                     </p>
-                  </div>
+                  <p className="text-xs leading-5 text-stone-500">
+                      --{item.role}
+                  </p>
                 </div>
-              </li>)
-              }
-            </ol>
-          </div>
-        </section>
-        <a 
-        href="https://www.kainoai.com/home"
-        target="_blank"
-      >
-        <Image src={img3} alt="" className="w-full h-auto mt-15 cursor-pointer" />
-
+              </div>
+            </li>)
+            }
+          </ol>
+        </div>
+      </section>
+      <a href="https://www.kainoai.com/home" target="_blank">
+        <Image src={img3} alt="" className="w-full h-auto mt-15 mb-15 cursor-pointer" />
       </a>
+    </div>
+
+
         </div>
 
       <Footer/>

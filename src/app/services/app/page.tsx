@@ -5,6 +5,7 @@ import p2 from '@/app/assets/service/p2.png'
 import p3 from '@/app/assets/service/p3.png'
 import p4 from '@/app/assets/service/p4.png'
 import img1 from './img1.png'
+import icon from './icon.png'
 import p5 from '@/app/assets/service/p5.png'
 import p6 from '@/app/assets/service/p6.png'
 import p7 from '@/app/assets/service/p7.png'
@@ -98,9 +99,9 @@ const App = () => {
   return (
     <div className="bg-white" style={{minWidth:1400}}>
       <Navbar />
-      <div className="pl-25 pr-25 pt-14">
-        <section className="flex">
-        <div className={`relative overflow-hidden w-550 h-100`}>
+      <div className="pt-14">
+        <section className="flex pl-53 pr-53">
+        <div className={`relative overflow-hidden w-550 h-110`}>
           <Image
             src={img1}
             alt=""
@@ -108,7 +109,7 @@ const App = () => {
             className="object-cover object-bottom"
           />
         </div>
-          <div className="bg-indigo-50 p-8 w-500">
+          <div className="bg-indigo-50 p-8 w-550">
             <h3 className="text-3xl font-bold text-black">{t('MOBILE_WEB_SERVICE')}</h3>
             <p className="mt-5 text-sm text-black leading-7">
             {t('MOBILE_WEB_DESC')}
@@ -118,38 +119,35 @@ const App = () => {
             </p>
           </div>
         </section>
-        <h3 className="mt-36 mb-10 text-3xl font-bold mt-2 text-black text-center">{t('KEY_FEATURES')}</h3>
-        <section className="flex justify-center p-10">
-          {functionList.map((item=>
-          <div className="flex flex-col items-center ml-5 mr-5">
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <Image src={item.img} alt={item.title} className="w-full h-auto" />
+        <div className="p-15 mt-26 bg-slate-100 mb-20">
+          <h3 className="mb-6 text-4xl font-bold text-black text-center">{t('KEY_FEATURES')}</h3>
+          <section className="flex justify-center p-5">
+            {functionList.map((item =>
+              <div className="flex flex-col bg-white items-center ml-5 mr-5 shadow-xl overflow-hidden rounded-lg w-60 px-5 py-5">
+                <div className="h-50 w-full  flex items-center">
+                  <Image src={item.img} alt={item.title} className="w-100 h-auto" />
                 </div>
-                <div className="flip-card-back">
-                  <div>{item.desc}</div>
-                </div>
+                <h3 className="mt-4 text-lg font-bold text-black text-center h-13">{item.title}</h3>
+                <div className="mt-4 text-sm text-stone-500 text-center">{item.desc}</div>
               </div>
-            </div>
-            <h3 className="text-base font-bold text-black text-center">{item.title}</h3>
-          </div>
-          ))}
+            ))}
           </section>
-          <h3 className="mt-36 mb-15 text-3xl font-bold text-black text-center">{t('INDUSTRY_APPLICATIONS')}</h3>
-          <section className="flex justify-between ">
-          {scenariosList.map((item=>
-            <div className="bg-white ml-5 mr-5">
-              <Image src={item.img} alt={item.title} className="w-170 h-auto" />
-              <h3 className="mt-6 text-sm font-bold text-black text-center text-yellow-500">{item.title}</h3>
-              <h3 className="mt-2 text-sm font-bold text-black text-center ">{item.desc}</h3>
-            </div>
-          ))}
-          </section>
-          <div className="w-full flex flex-col items-center py-10 bg-white">
-          <h2 className="mt-36 text-3xl md:text-3xl font-bold text-gray-800 mb-2">{t('DEV_FLOW')}</h2>
-          <Timeline steps={steps}/>
         </div>
+          <div className="pl-40 pr-40">
+
+          <h3 className="mb-15 text-3xl font-bold text-black text-center">{t('INDUSTRY_APPLICATIONS')}</h3>
+          <section className="flex justify-around ">
+          {scenariosList.map((item=>
+            <div >
+              <Image src={item.img} alt={item.title} className="w-50 h-auto" />
+              <h3 className="mt-6 text-sm font-bold text-black text-center text-yellow-500">{item.title}</h3>
+              <h3 className="mt-2 text-sm font-bold text-black text-center w-50">{item.desc}</h3>
+            </div>
+          ))}
+          </section>
+          </div>
+
+          <Timeline steps={steps} icon={icon}/>
       </div>
       <Footer/>
     </div>

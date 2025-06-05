@@ -73,8 +73,8 @@ const About = () => {
                 reverse
             />
         </div>
-        <div className="px-24 py-15 bg-slate-50">
-            <h3 className="text-4xl font-bold text-black text-center mb-10">{t('WHY_CHOOSE_US')}</h3>
+        <div className="px-24 py-15 bg-slate-100">
+            <h3 className="text-4xl font-bold text-black text-center mb-10">{t('CORE_VALUE')}</h3>
             <div className="grid grid-cols-2 gap-8">
                 {valueList.map((item, index) => (
                     <div key={item.title} className="flex bg-white border-2 border-stone-200 rounded-lg p-6">
@@ -101,7 +101,6 @@ const About = () => {
                  />
                 <div className="absolute inset-0 bg-black opacity-20 ">
                 </div>
-
                 <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-white text-2xl font-bold text-center">{item.title}</span>
                 </div>

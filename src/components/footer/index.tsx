@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="py-12 px-24 mt-5 flex items-center bg-amber-500">
+      <div className="py-12 px-24 flex items-center bg-amber-500">
       {/* 联系方式 */}
       <div className="flex-2 text-white w-60">
           <h2 className="text-lg font-semibold mb-5">{t('CONTACT_US')}</h2>
@@ -35,9 +35,9 @@ const Footer = () => {
       {/* 底部导航 */}
       <div className="flex flex-3 mt-3 text-center text-white justify-around">
           <div>
-          <h3 className="font-semibold mb-5">{t('HOME')}</h3>
-          <p className="mb-2 text-sm">{t('ABOUT_US')}</p>
-          <p className="mb-2 text-sm">{t('CONTACT_US')}</p>
+          <h3 className="font-semibold mb-5"><Link href="/home" className="text-sm text-white hover:text-orange-500">{t('HOME')}</Link></h3>
+          <p className="mb-2 text-sm"><Link href="/about" className="text-sm text-white hover:text-orange-500">{t('ABOUT_US')}</Link></p>
+          <p className="mb-2 text-sm"><Link href="/contact" className="text-sm text-white hover:text-orange-500">{t('CONTACT_US')}</Link></p>
           </div>
           <div>
           <h3 className="font-semibold mb-5">{t('PRODUCTS')}</h3>
