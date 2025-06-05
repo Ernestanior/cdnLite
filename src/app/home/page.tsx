@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
-import homebg from '@/app/assets/home/homebg.jpeg'
 import web1 from '@/app/assets/home/web1.jpg'
 import web2 from '@/app/assets/home/web2.jpg'
 import web3 from '@/app/assets/home/web3.jpg'

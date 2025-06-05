@@ -86,7 +86,7 @@ const ElysiumCore = () => {
         text-center">{t('KEY_FEATURES')}</h3>
         <section className="flex justify-center p-10">
           {functionList.map((item=>
-          <div className="flex flex-col items-center ml-5 mr-5">
+          <div key={item.title} className="flex flex-col items-center ml-5 mr-5">
             <div className="flip-card">
               <div className="flip-card-inner">
                 <div className="flip-card-front">
@@ -97,7 +97,7 @@ const ElysiumCore = () => {
                 </div>
               </div>
             </div>
-            <h3 className="mt-4 text-xl font-bold text-black text-center">{item.title}</h3>
+            <h3 className="mt-6 text-xl font-bold text-black text-center">{item.title}</h3>
           </div>
           ))}
         </section>

@@ -132,9 +132,9 @@ const Home = () => {
           </ol>
         </div>
       </section>
-      <a href="https://www.kainoai.com/home" target="_blank">
+      {/* <a href="https://www.kainoai.com/home" target="_blank">
         <Image src={img3} alt="" className="w-full h-auto mt-15 mb-15 cursor-pointer" />
-      </a>
+      </a> */}
     </div>
 
 

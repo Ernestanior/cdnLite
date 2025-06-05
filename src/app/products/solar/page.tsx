@@ -133,7 +133,7 @@ const Home = () => {
         <h3 className=" text-4xl font-bold text-black text-center">{t('INDUSTRY_APPLICATIONS')}</h3>
         <section className="flex justify-center mt-15">
         {scenariosList.map((item=>
-          <div className="bg-white ml-10 mr-10">
+          <div key={item.title} className="bg-white ml-10 mr-10">
               <Image src={item.img} alt={item.title} className="w-full h-auto" />
             <h3 className="mt-6 text-base font-bold text-amber-500 text-center">{item.title}</h3>
             <div className="mt-2 text-base font-bold text-black text-center">{item.desc}</div>

@@ -124,7 +124,7 @@ const Web = () => {
           <h3 className="mb-6 text-4xl font-bold text-black text-center">{t('KEY_FEATURES')}</h3>
           <section className="flex justify-center p-5">
             {functionList.map((item =>
-              <div className="flex flex-col bg-white items-center ml-5 mr-5 shadow-xl overflow-hidden rounded-lg w-60 px-5 pb-5">
+              <div key={item.title} className="flex flex-col bg-white items-center ml-5 mr-5 shadow-xl overflow-hidden rounded-lg w-60 px-5 pb-5">
                 <div className="h-50 w-60  flex items-center">
                   <Image src={item.img} alt={item.title} className="w-100 h-auto" />
                 </div>
@@ -134,11 +134,11 @@ const Web = () => {
             ))}
           </section>
         </div>
-        <div className="pl-50 pr-50">
+        <div className="pl-50 pr-50 flex flex-col items-center">
           <h3 className="mb-15 text-3xl font-bold text-black text-center">{t('INDUSTRY_APPLICATIONS')}</h3>
           <section className="flex justify-center">
             {scenariosList.map((item =>
-              <div className="bg-white ml-5 mr-5 flex flex-col items-center ">
+              <div key={item.title} className="bg-white ml-5 mr-5 flex flex-col items-center ">
                 <Image src={item.img} alt={item.title} className="w-50 h-auto" />
                 <h3 className="mt-6 text-sm font-bold text-black text-center text-yellow-500 w-35">{item.title}</h3>
               </div>
