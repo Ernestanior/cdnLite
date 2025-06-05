@@ -122,7 +122,7 @@ const App = () => {
         </section>
 
         <div className="p-15 mt-26 bg-slate-100 mb-20">
-          <h3 className="mb-6 text-4xl font-bold text-black text-center">{t('KEY_FEATURES')}</h3>
+          <h3 className="mb-6 text-3xl font-bold text-black text-center">{t('KEY_FEATURES')}</h3>
           <section className="flex justify-center p-5">
             {functionList.map((item =>
               <div key={item.title} className="flex flex-col bg-white items-center ml-5 mr-5 shadow-xl overflow-hidden rounded-lg w-60 p-5">
