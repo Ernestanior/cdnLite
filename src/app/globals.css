@@ -94,3 +94,8 @@ body {
 .slick-dots li.slick-active div {
   @apply bg-white opacity-100 w-5;
 }
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}

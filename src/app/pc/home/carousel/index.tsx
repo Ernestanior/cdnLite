@@ -30,8 +30,6 @@ export default function HomeCarousel() {
     autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <div />,
-    prevArrow: <div />,
       appendDots: (dots: React.ReactNode) => (
     <div style={{ position: 'absolute', bottom: '20px', width: '100%' }}>
       <ul className="flex justify-center">{dots}</ul>
