@@ -49,25 +49,31 @@ const Home = () => {
           <Image src={web2} alt="KainoAI" className="h-60" />
           <h3 className="mt-6 text-lg font-bold mt-2 text-black">{t('KAINOAI_CASE')}</h3>
           <p className="mt-2 text-gray-600 text-base h-13">{t('SMART_ENERGY_DESC')}</p>
-          <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">
-            <Link href="/products/kainoAi" className="text-sm hover:text-orange-500 text-amber-500" >{t('HOW_IT_WORKS')} <ArrowRightOutlined /></Link>
-          </button>
+          <Link href="/contact" className="text-sm  text-amber-500" >
+            <button className="mt-8 w-full border-1 pointer-cursor text-sm hover:text-orange-500 border-amber-500 text-amber-500 py-3 rounded">
+              {t('HOW_IT_WORKS')} <ArrowRightOutlined />
+            </button>
+          </Link>
         </div>
         <div className="bg-white w-90">
           <Image src={web1} alt="SolarEngy" className="h-60" />
           <h3 className="mt-6 text-lg font-bold mt-2 text-black">{t('SOLARENGY_CASE')}</h3>
           <p className="mt-2 text-gray-600 text-base h-13">{t('HOSPITALITY_DESC')}</p>
-          <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">
-            <Link href="/products/solar" className="text-sm hover:text-orange-500 text-amber-500" >{t('HOW_IT_WORKS')} <ArrowRightOutlined /></Link>
-          </button>
+          <Link href="/contact" className="text-sm hover:text-orange-500 text-amber-500" >
+            <button className="mt-8 w-full border-1 text-sm border-amber-500 hover:text-orange-500 text-amber-500 py-3 rounded">
+              {t('HOW_IT_WORKS')} <ArrowRightOutlined />
+            </button>
+          </Link>
         </div>
         <div className="bg-white w-90">
           <Image src={web3} alt="ElysiumCore" className="h-60" />
           <h3 className="mt-6 text-lg font-bold mt-2 text-black ">{t('ELYSIUMCORE_CASE')}</h3>
           <p className="mt-2 text-gray-600 text-base h-13">{t('INTERIOR_DESC')}</p>
-          <button className="mt-8 w-full border-1 text-sm border-amber-500 text-amber-500 py-3 rounded">
-            <Link href="/products/elysiumCore" className="text-sm hover:text-orange-500 text-amber-500" >{t('HOW_IT_WORKS')} <ArrowRightOutlined /></Link>
-          </button>
+          <Link href="/contact" className="text-sm hover:text-orange-500 text-amber-500" >
+            <button className="mt-8 w-full border-1 text-sm border-amber-500 hover:text-orange-500 text-amber-500 py-3 rounded">
+              {t('HOW_IT_WORKS')} <ArrowRightOutlined />
+            </button>
+          </Link>
         </div>
 
       </section>

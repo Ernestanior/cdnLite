@@ -97,10 +97,10 @@ const App = () => {
   ]
 
   return (
-    <div className="bg-white" style={{minWidth:1400}}>
+    <div className="bg-white" style={{minWidth: 1500}}>
       <Navbar />
       <div className="pt-14">
-        <section className="flex pl-53 pr-53">
+        <section className="flex pl-30 pr-30">
         <div className={`relative overflow-hidden w-550 h-110`}>
           <Image
             src={img1}
@@ -119,29 +119,29 @@ const App = () => {
             </p>
           </div>
         </section>
-        <div className="p-15 mt-26 bg-slate-100 mb-20">
+        <div className="py-15 mt-26 bg-slate-100 mb-20">
           <h3 className="mb-6 text-3xl font-bold text-black text-center">{t('KEY_FEATURES')}</h3>
           <section className="flex justify-center p-5">
             {functionList.map((item =>
-              <div key={item.title} className="flex flex-col bg-white items-center ml-5 mr-5 shadow-xl overflow-hidden rounded-lg w-60 px-5 py-5">
+              <div key={item.title} className="flex flex-col bg-white items-center ml-5 mr-5 shadow-xl overflow-hidden rounded-lg w-75 px-5 py-5">
                 <div className="h-50 w-full  flex items-center">
                   <Image src={item.img} alt={item.title} className="w-100 h-auto" />
                 </div>
-                <h3 className="mt-4 text-lg font-bold text-black text-center h-13">{item.title}</h3>
+                <h3 className="mt-8 text-lg font-bold text-black text-center h-13">{item.title}</h3>
                 <div className="mt-4 text-sm text-stone-500 text-center">{item.desc}</div>
               </div>
             ))}
           </section>
         </div>
-          <div className="pl-40 pr-40 flex flex-col items-center">
+          <div className="flex flex-col items-center">
 
           <h3 className="mb-15 text-3xl font-bold text-black text-center">{t('INDUSTRY_APPLICATIONS')}</h3>
           <section className="flex justify-around ">
           {scenariosList.map((item=>
-            <div key={item.title} className="mx-8 ">
-              <Image src={item.img} alt={item.title} className="w-50 h-auto" />
+            <div key={item.title} className="mx-8 flex flex-col items-center">
+              <Image src={item.img} alt={item.title} className="w-65 h-auto" />
               <h3 className="mt-6 text-sm font-bold text-black text-center text-yellow-500">{item.title}</h3>
-              <h3 className="mt-2 text-sm font-bold text-black text-center w-50">{item.desc}</h3>
+              <h3 className="mt-2 text-sm font-bold text-black text-center w-70">{item.desc}</h3>
             </div>
           ))}
           </section>

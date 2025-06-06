@@ -8,7 +8,7 @@ export default function Timeline({ steps,icon }: any) {
   const { t } = useLanguage();
 
   return (
-    <div className="p-15 pl-50 pr-50 bg-slate-100 mt-15 flex flex-col items-center">
+    <div className="p-15 pl-30 pr-30 bg-slate-100 mt-15 flex flex-col items-center">
       <div className="w-full flex flex-col items-center mb-5">
         <h2 className="text-3xl md:text-3xl font-bold text-gray-800">{t('DEV_FLOW')}</h2>
       </div>
@@ -20,16 +20,16 @@ export default function Timeline({ steps,icon }: any) {
             {steps.map((step: any, index: number) => (
               <div key={index} className="relative flex flex-col items-center ">
                 {step.position === 'top' && (
-                  <div className="bg-white mb-48 rounded-xl w-73 h-30 border p-5 text-sm shadow-md relative mr-[-80]">
+                  <div className="bg-white mb-48 rounded-xl w-75 h-30 border p-5 text-sm shadow-md relative mr-[-80]">
                     <div className="absolute bg-orange-400 h-7 w-1 bottom-[-39] left-[50%]"></div>
-                    <div className=" font-bold mb-1 text-base"><span className="text-amber-500 mr-2">{step.number}</span> <span className="text-black">{step.title}</span> </div>
+                    <div className="font-bold mb-1 text-base"><span className="text-amber-500 mr-2">{step.number}</span> <span className="text-black">{step.title}</span> </div>
                     <div className="text-gray-600">{step.description}</div>
                   </div>
                 )}
                 {step.position === 'bottom' && (
-                  <div className="bg-white mt-48 rounded-xl w-70 h-30 border p-5  text-sm shadow-md relative mr-[-80]">
+                  <div className="bg-white mt-48 rounded-xl w-75 h-30 border p-5  text-sm shadow-md relative mr-[-80]">
                     <div className="absolute bg-orange-400 h-7 w-1 top-[-34] left-[50%]"></div>
-                    <div className=" font-bold mb-1 text-base"><span className="text-amber-500 mr-2">{step.number}</span> <span className="text-black">{step.title}</span> </div>
+                    <div className="font-bold mb-1 text-base"><span className="text-amber-500 mr-2">{step.number}</span> <span className="text-black">{step.title}</span> </div>
                     <div className="text-gray-600">{step.description}</div>
                   </div>
                 )}

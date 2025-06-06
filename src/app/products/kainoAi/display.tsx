@@ -23,7 +23,7 @@ export default function ImageComparison({ leftImage, rightImage }: ImageComparis
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-4xl aspect-video overflow-hidden rounded-lg "
+      className="relative w-full max-w-5xl aspect-video overflow-hidden rounded-lg "
       onMouseMove={handleMouseMove}
     >
       {/* 右图：背景层始终完整展示 */}

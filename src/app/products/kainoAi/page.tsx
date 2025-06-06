@@ -9,6 +9,7 @@ import avatar2 from '@/app/assets/products/avatar2.png'
 import avatar3 from '@/app/assets/products/avatar3.png'
 import img2 from './img2.png'
 import img3 from './img3.png'
+import img4 from './img4.png'
 
 import i1 from './i1.png'
 import i2 from './i2.png'
@@ -79,10 +80,11 @@ const Home = () => {
       <div className="mt-8 text-base text-stone-500">
         {t('KAINOAI_DESC_3')}
       </div>
-      <div className="flex justify-center mt-8">
+
+    </div>
+    <div className="flex justify-center mt-8">
       <ImageComparisonSlider leftImage={i1} rightImage={i2}/>
       </div>
-    </div>
     <div className="p-15 mt-26 bg-slate-100 mb-20">
      <h3 className="mb-5 text-4xl font-bold text-black 
      text-center">{t('KEY_FEATURES')}</h3>
@@ -132,9 +134,20 @@ const Home = () => {
           </ol>
         </div>
       </section>
-      {/* <a href="https://www.kainoai.com/home" target="_blank">
-        <Image src={img3} alt="" className="w-full h-auto mt-15 mb-15 cursor-pointer" />
-      </a> */}
+      <div className="h-60 overflow-hidden relative mb-10">
+        <Image src={img3} alt="" className="w-320 h-auto mt-15 mb-15 cursor-pointer" />
+        <div className="absolute left-15 top-29 h-20 flex w-full">
+          <div className="text-stone-950">
+            <div className="mb-5">{t('KAINO_BTN_DESC_1')}</div>
+            <div className="w-170">{t('KAINO_BTN_DESC_2')}</div>
+          </div>
+          <a href="https://www.kainoai.com/home" target="_blank">
+            <div className="absolute top-[-100] right-80">
+              <div className="w-40 rounded-lg py-3 text-center bg-amber-500 text-white absolute top-28 left-[20%]  text-sm font-bold cursor-pointer">{t('GET_YOUR_DESIGN')}</div>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
 
 

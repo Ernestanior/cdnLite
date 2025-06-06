@@ -98,11 +98,11 @@ const App = () => {
   ]
 
   return (
-    <div className="bg-white" style={{ minWidth: 1400 }}>
+    <div className="bg-white" style={{ minWidth: 1500 }}>
       <Navbar />
       <div className=" pt-14">
-        <section className="flex pl-50 pr-50">
-          <div className={`relative overflow-hidden w-550 h-100`}>
+        <section className="flex pl-30 pr-30">
+          <div className={`relative overflow-hidden w-600 h-100`}>
             <Image
               src={img1}
               alt=""
@@ -125,7 +125,7 @@ const App = () => {
           <h3 className="mb-6 text-3xl font-bold text-black text-center">{t('KEY_FEATURES')}</h3>
           <section className="flex justify-center p-5">
             {functionList.map((item =>
-              <div key={item.title} className="flex flex-col bg-white items-center ml-5 mr-5 shadow-xl overflow-hidden rounded-lg w-60 p-5">
+              <div key={item.title} className="flex flex-col bg-white items-center ml-5 mr-5 shadow-xl overflow-hidden rounded-lg w-73 p-5">
                 <div className="h-50 w-full  flex items-center">
                   <Image src={item.img} alt={item.title} className="w-100 h-auto" />
                 </div>
@@ -135,15 +135,14 @@ const App = () => {
             ))}
           </section>
         </div>
-        <div className="pl-40 pr-40 flex flex-col items-center">
-
+        <div className="flex flex-col items-center">
           <h3 className="mb-15 text-3xl font-bold text-black text-center">{t("INDUSTRY_APPLICATIONS")}</h3>
           <section className="flex justify-between ">
             {scenariosList.map((item =>
               <div key={item.title} className="flex flex-col items-center mx-5">
-                <Image src={item.img} alt={item.title} className="w-50 h-auto" />
+                <Image src={item.img} alt={item.title} className="w-70 h-auto" />
                 <h3 className="mt-6 text-sm font-bold text-black text-center text-yellow-500">{item.title}</h3>
-                <h3 className="mt-2 text-sm font-bold text-black text-center w-45">{item.desc}</h3>
+                <h3 className="mt-2 text-sm font-bold text-black text-center w-60">{item.desc}</h3>
               </div>
             ))}
           </section>
