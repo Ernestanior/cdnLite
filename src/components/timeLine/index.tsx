@@ -20,14 +20,14 @@ export default function Timeline({ steps,icon }: any) {
             {steps.map((step: any, index: number) => (
               <div key={index} className="relative flex flex-col items-center ">
                 {step.position === 'top' && (
-                  <div className="bg-white mb-48 rounded-xl w-75 h-30 border p-5 text-sm shadow-md relative mr-[-80]">
+                  <div className="bg-white mb-48 rounded-xl w-75 h-30 border p-5 text-sm shadow-md relative mr-[-100]">
                     <div className="absolute bg-orange-400 h-7 w-1 bottom-[-39] left-[50%]"></div>
                     <div className="font-bold mb-1 text-base"><span className="text-amber-500 mr-2">{step.number}</span> <span className="text-black">{step.title}</span> </div>
                     <div className="text-gray-600">{step.description}</div>
                   </div>
                 )}
                 {step.position === 'bottom' && (
-                  <div className="bg-white mt-48 rounded-xl w-75 h-30 border p-5  text-sm shadow-md relative mr-[-80]">
+                  <div className="bg-white mt-48 rounded-xl w-75 h-30 border p-5  text-sm shadow-md relative mr-[-100]">
                     <div className="absolute bg-orange-400 h-7 w-1 top-[-34] left-[50%]"></div>
                     <div className="font-bold mb-1 text-base"><span className="text-amber-500 mr-2">{step.number}</span> <span className="text-black">{step.title}</span> </div>
                     <div className="text-gray-600">{step.description}</div>

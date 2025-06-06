@@ -172,7 +172,8 @@
     "CUSTOM_PORTALS": "Custom Portals",
     "REQUIREMENT_GATHERING": "Requirement Gathering",
     "REQUIREMENT_GATHERING_DESC": "Understand client objectives and define project goals.",
-    "DEV_FLOW": "Solution Benefits",
+    "DEV_FLOW": "Development Flow",
+    "BENEFIT_SOLUTION": "Solution Benefits",
     "PROTOTYPING": "Prototyping",
     "PROTOTYPING_DESC": "Create and confirm design prototypes and structure.",
     "CODE_DEVELOPMENT": "Code Development",
@@ -266,7 +267,7 @@
     "COMPREHENSIVE_SECURITY": "Comprehensive Security",
     "COMPREHENSIVE_SECURITY_DESC": "Layered protection and strong encryption ensuring data safety and system stability.",
     "FEED_BACK":"Thank you for your feedback. Our team will contact you shortly.",
-    "KAINO_BTN_DESC_1":"Utilize artificial intelligence technology to transform your home into a smarter one.",
-    "KAINO_BTN_DESC_2":"By leveraging artificial intelligence technology, you can make your home space more efficient, making daily life simpler and more comfortable",
-    "GET_YOUR_DESIGN":"Get Your Design"
+    "KAINO_BTN_DESC_1":"Use AI technology to transform your home into a smarter,",
+    "KAINO_BTN_DESC_2":"more efficient space—making everyday life simpler and more comfortable.",
+    "GET_YOUR_DESIGN":"Design Your Space"
 }

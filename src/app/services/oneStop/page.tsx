@@ -127,7 +127,7 @@ const App = () => {
         </div>
 
         <div className="mt-26 bg-slate-100 w-full flex flex-col items-center py-15">
-          <h2 className="mb-10 text-3xl md:text-3xl font-bold text-gray-800 mb-12">{t("DEV_FLOW")}</h2>
+          <h2 className="mb-10 text-3xl md:text-3xl font-bold text-gray-800 mb-12">{t("BENEFIT_SOLUTION")}</h2>
           <section className="flex justify-between">
             {advList.map((item =>
               <div key={item.title} className="bg-white flex flex-col items-center ml-10 mr-10 shadow-xl shadow-stone-200 rounded-lg p-8">

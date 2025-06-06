@@ -79,10 +79,10 @@ const ElysiumCore = () => {
           <div className="mt-8 text-base text-stone-500">
             {t('ELYSIUMCORE_DESC_3')}
           </div>
-          <Image src={img1} alt={""} className="w-full h-auto mt-10 pl-30 pr-30" />
+          <Image src={img1} alt={""} className="w-full h-auto mt-10 pl-20 pr-20" />
         </div>
         <div className="p-15 mt-26 bg-slate-100 mb-20">
-        <h3 className="text-4xl font-bold text-black 
+        <h3 className="text-3xl font-bold text-black 
         text-center">{t('KEY_FEATURES')}</h3>
         <section className="flex justify-center p-10">
           {functionList.map((item=>
