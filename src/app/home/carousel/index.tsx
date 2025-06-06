@@ -17,9 +17,9 @@ export default function HomeCarousel() {
     const { t } = useLanguage();
 
     const banners = [
-        { src: s3, title: t('SOLARENGY_EX'),subTitle:"(YangSolar)",desc:t('SOLAR_DESC'),page:"/products/solar" },
-        { src: s2, title: t('ELYSIUMCORE_EX'),subTitle:"(ElysiumCore)",desc:t('KTV_DESC'),page:"/products/elysiumCore"},
-        { src: s1, title:t('KAINOAI_EX'),subTitle:"(KainoAI)",desc:t('KAINO_DESC'),page:"/products/kainoAi"  },
+        { src: s3, title: t('SOLARENGY_EX'),subTitle:"(YangSolar)",desc:t('SOLAR_DESC'),page:"/contact" },
+        { src: s2, title: t('ELYSIUMCORE_EX'),subTitle:"(ElysiumCore)",desc:t('KTV_DESC'),page:"/contact"},
+        { src: s1, title:t('KAINOAI_EX'),subTitle:"(KainoAI)",desc:t('KAINO_DESC'),page:"/contact"  },
       ];
 
   const settings = {
