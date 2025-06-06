@@ -43,10 +43,10 @@ const Home = () => {
     <div className="bg-white min-w-7xl">
       <Navbar />
       <HomeCarousel />
-     <h3 className="mt-16 text-4xl font-bold text-black text-center">{t('INDUSTRY_CASES')}</h3>
+     <h3 className="mt-16 mb-5 text-4xl font-bold text-black text-center">{t('INDUSTRY_CASES')}</h3>
       <section className="flex justify-around gap-6 p-10">
-        <div className="bg-white w-90">
-          <Image src={web2} alt="KainoAI" className="h-60" />
+        <div className="bg-white w-96">
+          <Image src={web2} alt="KainoAI" className="h-65" />
           <h3 className="mt-6 text-lg font-bold mt-2 text-black">{t('KAINOAI_CASE')}</h3>
           <p className="mt-2 text-gray-600 text-base h-13">{t('SMART_ENERGY_DESC')}</p>
           <Link href="/products/kainoAi" className="text-sm  text-amber-500" >
@@ -55,8 +55,8 @@ const Home = () => {
             </button>
           </Link>
         </div>
-        <div className="bg-white w-90">
-          <Image src={web1} alt="SolarEngy" className="h-60" />
+        <div className="bg-white w-96">
+          <Image src={web1} alt="SolarEngy" className="h-65" />
           <h3 className="mt-6 text-lg font-bold mt-2 text-black">{t('SOLARENGY_CASE')}</h3>
           <p className="mt-2 text-gray-600 text-base h-13">{t('HOSPITALITY_DESC')}</p>
           <Link href="/products/solar" className="text-sm hover:text-orange-500 text-amber-500" >
@@ -65,8 +65,8 @@ const Home = () => {
             </button>
           </Link>
         </div>
-        <div className="bg-white w-90">
-          <Image src={web3} alt="ElysiumCore" className="h-60" />
+        <div className="bg-white w-96">
+          <Image src={web3} alt="ElysiumCore" className="h-65" />
           <h3 className="mt-6 text-lg font-bold mt-2 text-black ">{t('ELYSIUMCORE_CASE')}</h3>
           <p className="mt-2 text-gray-600 text-base h-13">{t('INTERIOR_DESC')}</p>
           <Link href="/products/elysiumCore" className="text-sm hover:text-orange-500 text-amber-500" >
