@@ -22,10 +22,10 @@ export default function Timeline({ steps,icon }: any) {
           <div className="flex flex-col">
             {steps.map((step: any, index: number) => (
               <div key={index} className="relative flex flex-col items-center mb-10">
-                  <div className="bg-white rounded-xl border p-5 text-sm shadow-md relative">
+                  <div className="bg-white rounded-xl p-5 text-sm shadow-md relative">
                     <div className="absolute bg-orange-400 h-1 w-7 left-[-29] top-[50%]"></div>
                     <div className="font-bold mb-1 text-base"><span className="text-amber-500 mr-2">{step.number}</span> <span className="text-black">{step.title}</span> </div>
-                    <div className="text-gray-600">{step.description}</div>
+                    <div className="text-gray-600 w-60">{step.description}</div>
                   </div>
               </div>
             ))}
