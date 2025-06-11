@@ -68,7 +68,7 @@ const About = () => {
                 ]}
             />
         <div className="px-6 py-15 bg-slate-100">
-            <h3 className="text-4xl font-bold text-black text-center mb-10">{t('CORE_VALUE')}</h3>
+            <h3 className="text-3xl font-bold text-black text-center mb-10">{t('CORE_VALUE')}</h3>
             <div className="grid grid-cols-1 gap-8">
                 {valueList.map((item, index) => (
                     <div key={item.title} className="flex bg-white border-2 border-stone-200 rounded-lg p-6">

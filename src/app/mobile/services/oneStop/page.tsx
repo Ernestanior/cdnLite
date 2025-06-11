@@ -111,7 +111,7 @@ const App = () => {
           <h2 className="mb-10 text-3xl md:text-3xl font-bold text-gray-800 mb-12">{t("BENEFIT_SOLUTION")}</h2>
           <section className="flex flex-col  justify-between">
             {advList.map((item =>
-              <div key={item.title} className="bg-white mb-10 flex flex-col items-center ml-10 mr-10 shadow-lg shadow-stone-200 rounded-lg p-8">
+              <div key={item.title} className="bg-white mb-10 flex flex-col items-center shadow-lg shadow-stone-200 rounded-lg p-8">
                 <Image src={item.img} alt={item.title} className="w-25 h-auto text-orange-500" />
                 <h3 className="mt-5 text-lg font-bold text-black text-center ">{item.title}</h3>
                 <h3 className="mt-5 text-base w-73 font-bold text-black text-center text-stone-400">{item.desc}</h3>

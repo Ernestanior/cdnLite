@@ -80,7 +80,7 @@ const Home = () => {
         <div className="flex flex-col items-center gap-6 ">
           {services.map((service, index) => (
               <div key={service.title} className="bg-white shadow-xl shadow-stone-200 rounded-lg p-6 w-full ">
-                  <div className="w-16 h-16 text-2xl flex items-center justify-center bg-amber-500 rounded-full">
+                  <div className="w-16 h-16 text-2xl flex text-white items-center justify-center bg-amber-500 rounded-full">
                     {service.icon}
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mt-4">{service.title}</h3>
