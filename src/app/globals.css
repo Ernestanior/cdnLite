@@ -91,11 +91,21 @@ body {
   align-items: center;
 }
 
-.slick-dots li.slick-active div {
+/* .slick-dots li.slick-active div {
   @apply bg-white opacity-100 w-5;
-}
+} */
 
 .slick-prev,
 .slick-next {
   display: none !important;
+}
+
+/* .nav-menu .ant-menu-item,
+.nav-menu .ant-menu-submenu-title {
+  color: grey !important;
+} */
+
+/* 改变子菜单背景为白色 */
+.nav-menu .ant-menu-submenu .ant-menu {
+  background-color: white !important;
 }

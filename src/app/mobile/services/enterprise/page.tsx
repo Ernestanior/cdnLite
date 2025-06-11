@@ -10,10 +10,11 @@ import e7 from '@/app/assets/service/enterprise/e7.png'
 import e8 from '@/app/assets/service/enterprise/e8.png'
 import img1 from '@/app/assets/service/enterprise/img1.jpg'
 import icon from '@/app/assets/service/enterprise/icon1.png'
-import Navbar from "@/app/pc/components/navbar";
-import Footer from "@/app/pc/components/footer";
+import Navbar from "@/app/mobile/components/navbar";
+import Footer from "@/app/mobile/components/footer";
 import { useLanguage } from "@/context/languageContext";
-import Timeline from "@/app/pc/components/timeLine";
+import Timeline from "@/app/mobile/components/timeLine";
+import CardCarousel from "../crousel";
 const App = () => {
   const { t } = useLanguage();
 
@@ -50,7 +51,7 @@ const App = () => {
     },
   ];
 
-  const functionList = [
+  const cards = [
     {
       title: t("INDUSTRY_CUSTOMIZATION"),
       img: e1,
@@ -97,19 +98,14 @@ const App = () => {
   ]
 
   return (
-    <div className="bg-white" style={{ minWidth: 1500 }}>
+    <div className="bg-white">
       <Navbar />
-      <div className=" pt-14">
-        <section className="flex pl-30 pr-30">
-          <div className={`relative overflow-hidden w-600 h-100`}>
+        <section className="flex flex-col px-5 pt-10">
             <Image
               src={img1}
               alt=""
-              fill
-              className="object-cover object-bottom"
             />
-          </div>
-          <div className="bg-stone-100 w-600 p-8">
+          <div className="my-10">
             <h3 className="text-3xl font-bold text-black">{t("ENTERPRISE_DIGITAL_SOLUTIONS")}</h3>
             <p className="mt-5 text-sm text-black leading-7">
               {t("ENTERPRISE_DIGITAL_DESC")}
@@ -120,35 +116,22 @@ const App = () => {
           </div>
         </section>
 
-        <div className="p-15 mt-26 bg-slate-100 mb-20">
-          <h3 className="mb-6 text-3xl font-bold text-black text-center">{t('KEY_FEATURES')}</h3>
-          <section className="flex justify-center p-5">
-            {functionList.map((item =>
-              <div key={item.title} className="flex flex-col bg-white items-center ml-5 mr-5 shadow-xl overflow-hidden rounded-lg w-73 p-5">
-                <div className="h-50 w-full  flex items-center">
-                  <Image src={item.img} alt={item.title} className="w-100 h-auto" />
+        <CardCarousel cards={cards}/>
+
+        <section className="py-15">
+          <h3 className="mb-5 text-3xl font-bold text-black text-center">{t('INDUSTRY_APPLICATIONS')}</h3>
+          <div className="grid grid-cols-2 place-items-center">
+              {scenariosList.map(((item,index) =>
+                <div key={item.title} className={` bg-white mt-10 mx-5 flex flex-col items-center `}>
+                  <Image src={item.img} alt={item.title} className="w-40 h-auto" />
+                  <h3 className="mt-6 text-sm font-bold text-black text-center text-yellow-500 w-40">{item.title}</h3>
+                  <h3 className="mt-2 text-sm font-bold text-black text-center w-40">{item.desc}</h3>
                 </div>
-                <h3 className="mt-4 text-lg font-bold text-black text-center h-13">{item.title}</h3>
-                <div className="mt-4 text-sm text-stone-500 text-center">{item.desc}</div>
-              </div>
-            ))}
-          </section>
-        </div>
-        <div className="flex flex-col items-center">
-          <h3 className="mb-15 text-3xl font-bold text-black text-center">{t("INDUSTRY_APPLICATIONS")}</h3>
-          <section className="flex justify-between ">
-            {scenariosList.map((item =>
-              <div key={item.title} className="flex flex-col items-center mx-5">
-                <Image src={item.img} alt={item.title} className="w-70 h-auto" />
-                <h3 className="mt-6 text-sm font-bold text-black text-center text-yellow-500">{item.title}</h3>
-                <h3 className="mt-2 text-sm font-bold text-black text-center w-60">{item.desc}</h3>
-              </div>
-            ))}
-          </section>
-        </div>
+              ))}
+          </div>
+        </section>
         <Timeline steps={steps} icon={icon}/>
 
-      </div>
       <Footer />
     </div>
   );

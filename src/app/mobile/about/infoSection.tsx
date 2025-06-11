@@ -9,18 +9,18 @@ interface InfoSectionProps {
   reverse?: boolean;
 }
 
-const InfoSection: React.FC<InfoSectionProps> = ({ image, title, content,children, reverse = false }) => {
+const InfoSection: React.FC<InfoSectionProps> = ({ image, title, content,children}) => {
   return (
-    <div className={`flex flex-col pl-24 pr-24 md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center justify-around gap-8 px-6 py-12`}>
+    <div className={`flex flex-col px-6 items-center justify-around gap-8 py-12`}>
       {/* 图片 */}
-      <div className="w-140">
-        <Image src={image} alt={title} className="rounded-lg shadow-md w-full h-100 object-cover" />
+      <div className="w-85">
+        <Image src={image} alt={title} className="rounded-lg shadow-md w-full h-110 object-cover" />
       </div>
       {/* 文本 */}
-      <div className="w-full md:w-1/2">
-        <h2 className="text-4xl font-bold text-gray-900">{title}</h2>
+      <div className="w-full ">
+        <h2 className="text-3xl mb-5 font-bold text-gray-900">{title}</h2>
         {content?.map((paragraph, index) => (
-          <p key={index} className="mt-4 text-gray-600 leading-relaxed">
+          <p key={index} className="mt-4 text-gray-500 leading-relaxed">
             {paragraph}
           </p>
         ))}

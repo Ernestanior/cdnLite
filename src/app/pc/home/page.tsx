@@ -11,8 +11,6 @@ import Link from "next/link";
 import HomeCarousel from "./carousel";
 import { useLanguage } from "@/context/languageContext";
 
-
-
 const Home = () => {
     const { t } = useLanguage();
 

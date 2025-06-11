@@ -59,7 +59,7 @@ const About = () => {
             {/* 第一部分 */}
             <InfoSection
                 image={about1}
-                title={t('COMPANY_PROFILE')}
+                title={t('ABOUT_US')}
                 content={[t('COMPANY_PROFILE_DESC1'),t('COMPANY_PROFILE_DESC2')]}
             />
             {/* 第二部分 - 反向布局 */}

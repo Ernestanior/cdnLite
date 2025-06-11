@@ -97,7 +97,7 @@ const Navbar = () => {
           <Link href="/home" className="text-base text-amber-500 hover:text-stone-500">{t('HOME')}</Link>
         </li>
         <li>
-          <Link href="/about" className="text-base text-amber-500 hover:text-stone-500">{t('ABOUT_US')}</Link>
+          <Link href="/about" className="text-base text-amber-500 hover:text-stone-500">{t('COMPANY_PROFILE')}</Link>
         </li>
         <li>
           <Dropdown menu={{ items:products }}>

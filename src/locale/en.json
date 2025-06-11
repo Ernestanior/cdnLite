@@ -98,6 +98,8 @@
     "INDUSTRY_APPLICATIONS": "Industry Applications",
     "UTILITY_COMPANIES": "Utility Companies",
     "UTILITY_COMPANIES_DESC":"Real-Time monitoring, client management",
+    "UTILITY_COMPANIES_DESC1":"Real-Time monitoring",
+    "UTILITY_COMPANIES_DESC2":"Client management",
     "SMART_CITIES": "Smart Cities",
     "SOLAR_PLATFORM_INTEGRATION":"Solar Energy Platform Integration",
     "QUOTE_1":"“Management efficiency improved by over 30%, with clear and intuitive system monitoring.”",

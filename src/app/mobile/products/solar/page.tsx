@@ -1,29 +1,30 @@
 'use client'
 import Image from "next/image";
-import a1 from '@/app/assets/products/solar/a1.jpg'
-import a2 from '@/app/assets/products/solar/a2.png'
-import a3 from '@/app/assets/products/solar/a3.jpg'
-import a4 from '@/app/assets/products/solar/a4.png'
-import a5 from '@/app/assets/products/solar/a5.png'
 import avatar1 from '@/app/assets/products/avatar1.png'
 import avatar2 from '@/app/assets/products/avatar2.png'
 import avatar3 from '@/app/assets/products/avatar3.png'
 import img1 from '@/app/assets/products/solar/img1.png'
 import img2 from '@/app/assets/products/solar/img2.png'
+import a1 from '@/app/assets/products/solar/a1.jpg'
+import a2 from '@/app/assets/products/solar/a2.png'
+import a3 from '@/app/assets/products/solar/a3.jpg'
+import a4 from '@/app/assets/products/solar/a4.png'
+import a5 from '@/app/assets/products/solar/a5.png'
 import f1 from '@/app/assets/products/solar/b1.png'
 import f2 from '@/app/assets/products/solar/b2.png'
 import f3 from '@/app/assets/products/solar/b3.png'
 import f4 from '@/app/assets/products/solar/b4.png'
-import Navbar from "@/app/pc/components/navbar";
-import Footer from "@/app/pc/components/footer";
+import Navbar from "@/app/mobile/components/navbar";
+import Footer from "@/app/mobile/components/footer";
 import { StarFilled, StarOutlined } from "@ant-design/icons";
 import { useLanguage } from "@/context/languageContext";
+import CardCarousel from "../crousel";
 
 
 const Home = () => {
   const { t } = useLanguage();
 
-  const functionList =[
+  const cards =[
     {
       title:t('REALTIME_MONITORING_1'),
       img:a2,
@@ -50,7 +51,7 @@ const Home = () => {
       desc:t('CROSS_PLATFORM_COMPATIBILITY_DESC'),
     },
   ]
-  
+
   const scenariosList = [
     {
       title:t('UTILITY_COMPANIES'),
@@ -73,6 +74,29 @@ const Home = () => {
       desc:t('EFFICIENCY_ENERGY_USAGE'),
     },
   ]
+
+  // const scenariosList = [
+  //   {
+  //     title:t('UTILITY_COMPANIES'),
+  //     img:f1,
+  //     desc:[t('UTILITY_COMPANIES_DESC1'),t('UTILITY_COMPANIES_DESC2')],
+  //   },
+  //   {
+  //     title:t('SMART_CITIES'),
+  //     img:f3,
+  //     desc:[t('URBAN_OPT1'),t('URBAN_OPT2')],
+  //   },
+  //   {
+  //     title:t('COMMERCIAL_BUILDINGS'),
+  //     img:f2,
+  //     desc:[t('COMMERCIAL_BUILDINGS_DESC1'),t('COMMERCIAL_BUILDINGS_DESC2')],
+  //   },
+  //   {
+  //     title:t('INDUSTRIAL_PARKS'),
+  //     img:f4,
+  //     desc:[t('EFFICIENCY_ENERGY_USAGE1'),t('EFFICIENCY_ENERGY_USAGE2')],
+  //   },
+  // ]
   
   const commentList=[
     {
@@ -89,12 +113,12 @@ const Home = () => {
     },
   ]
   return (
-    <div className="bg-white min-w-7xl">
-    <Navbar />
-    <div className="bg-white min-w-7xl ">
-      <div className="pl-30 pr-30">
-        <h3 className="mt-26 text-4xl font-bold text-black">{t('SOLARENGY_PLATFORM_DESC1')}</h3>
-        <div className="mt-15 text-base text-stone-500">
+    <div className="bg-white">
+      <Navbar />
+      <div className="p-6">
+        <Image src={img1} alt={""} className="h-auto " />
+        <h3 className="mt-8 text-3xl font-bold text-black">{t('SOLARENGY_PLATFORM_DESC1')}</h3>
+        <div className="mt-8 text-base text-stone-500">
           {t('SOLARENGY_PLATFORM_DESC2')}
         </div>
         <div className="mt-8 text-base text-stone-500">
@@ -106,49 +130,25 @@ const Home = () => {
         <div className="mt-8 text-base text-stone-500">
           {t('SOLARENGY_PLATFORM_DESC5')}
         </div>
-        <Image src={img1} alt={""} className="h-auto mt-10 pl-20 pr-20" />
       </div>
-      <div className="p-15 mt-26 bg-slate-100 mb-20">
-        <h3 className="text-4xl font-bold text-black 
-        text-center">{t('KEY_FEATURES')}</h3>
-        <section className="flex justify-center p-10">
-          {functionList.map((item=>
-          <div key={item.title} className="flex flex-col items-center ml-5 mr-5">
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <Image src={item.img} alt={item.title} className="w-full h-auto" />
-                </div>
-                <div className="flip-card-back">
-                  <div>{item.desc}</div>
-                </div>
-              </div>
-            </div>
-            <h3 className="mt-6 text-xl font-bold text-black text-center">{item.title}</h3>
-          </div>
-          ))}
-        </section>
-      </div>
-      <div className="pl-30 pr-30">
-        <h3 className=" text-4xl font-bold text-black text-center">{t('INDUSTRY_APPLICATIONS')}</h3>
-        <section className="flex justify-center mt-15">
+      <CardCarousel cards={cards}/>
+      <div className="px-12 py-15 ">
+        <h3 className="text-3xl font-bold text-black text-center">{t('INDUSTRY_APPLICATIONS')}</h3>
+        <section className="grid grid-cols-2 gap-16 items-center mt-15">
         {scenariosList.map((item=>
-          <div key={item.title} className="bg-white ml-10 mr-10">
+          <div key={item.title} className="h-65 bg-white ">
               <Image src={item.img} alt={item.title} className="w-full h-auto" />
-            <h3 className="mt-6 text-base font-bold text-amber-500 text-center">{item.title}</h3>
+            <h3 className="mt-6 text-base font-bold text-amber-500 text-center h-13">{item.title}</h3>
             <div className="mt-2 text-base font-bold text-black text-center">{item.desc}</div>
           </div>
           ))}
         </section>
       </div>
-      <div className="pl-30 pr-30 mb-10">
-
-      <h3 className="mt-25 mb-15 text-4xl font-bold text-black text-center">{t('CUSTOMER_STORIES')}</h3>
-        <section className="bg-white flex justify-between">
-          <div className="flex-5">
+      <div className="px-5 py-15 bg-stone-100" >
+        <h3 className="mb-15 text-3xl font-bold text-black text-center">{t('CUSTOMER_STORIES')}</h3>
+        <section className="flex flex-col items-between ">
             <Image src={img2} alt="" className="w-full h-auto" />
-          </div>
-          <div className="box-border text-black ml-20 w-100 flex flex-col items-center bg-stone-500 p-8 " style={{backgroundColor:"#f5f1e4"}}>
+          <div className="bg-white box-border text-black flex flex-col items-center bg-stone-500 p-8 " >
             <h3 className="mb-4 text-xl font-bold">{t('SOLAR_PLATFORM_INTEGRATION')}</h3>
             <div className="text-sm text-stone-600 leading-6">{t('FULL_CYCLE_DATA')}</div>
             <ol>
@@ -176,9 +176,6 @@ const Home = () => {
           </div>
         </section>
       </div>
-
-        </div>
-
       <Footer/>
     </div>
   );

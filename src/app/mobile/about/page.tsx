@@ -4,7 +4,6 @@ import Footer from "../components/footer";
 import InfoSection from "./infoSection";
 import about1 from '@/app/assets/about/about1.jpg';
 import about2 from '@/app/assets/about/about2.jpg';
-import about3 from '@/app/assets/about/about3.jpg';
 import bus1 from '@/app/assets/about/bus1.jpg';
 import bus2 from '@/app/assets/about/bus2.png';
 import bus3 from '@/app/assets/about/bus3.jpg';
@@ -53,16 +52,13 @@ const About = () => {
     },]
 
   return (
-    <div className="bg-white min-w-7xl">
+    <div className="bg-white ">
         <Navbar />
-        <div >
-            {/* 第一部分 */}
             <InfoSection
                 image={about1}
-                title={t('COMPANY_PROFILE')}
+                title={t('ABOUT_US')}
                 content={[t('COMPANY_PROFILE_DESC1'),t('COMPANY_PROFILE_DESC2')]}
             />
-            {/* 第二部分 - 反向布局 */}
             <InfoSection
                 image={about2}
                 title={t('STRATEGIC_VISION')}
@@ -70,12 +66,10 @@ const About = () => {
                     t('STRATEGIC_VISION_DESC1'),
                     t('STRATEGIC_VISION_DESC2')
                 ]}
-                reverse
             />
-        </div>
-        <div className="px-24 py-15 bg-slate-100">
+        <div className="px-6 py-15 bg-slate-100">
             <h3 className="text-4xl font-bold text-black text-center mb-10">{t('CORE_VALUE')}</h3>
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 gap-8">
                 {valueList.map((item, index) => (
                     <div key={item.title} className="flex bg-white border-2 border-stone-200 rounded-lg p-6">
                         <Image src={item.icon} alt={""} className="w-14 h-14 mr-6" />
@@ -88,10 +82,9 @@ const About = () => {
                 ))}
             </div>
         </div>
-
-        <section className="py-10 px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mt-8">{t('EXPERTISE_AREAS')}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-15">
+        <section className="py-5">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mt-8 mb-4">{t('EXPERTISE_AREAS')}</h2>
+        <div className="grid grid-cols-2 gap-4 p-4">
             {businessList.map((item, index) => (
             <div
                 key={index}
@@ -102,61 +95,12 @@ const About = () => {
                 <div className="absolute inset-0 bg-black opacity-20 ">
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-white text-2xl font-bold text-center">{item.title}</span>
+                    <span className="text-white text-lg font-bold text-center">{item.title}</span>
                 </div>
             </div>
             ))}
         </div>
         </section>
-        {/* <div className="flex flex-col items-center p-10 bg-gray-50" >
-            <div className="text-stone-900 text-3xl font-black pb-10">合作的企业</div>
-            <div className="flex justify-around w-250 pb-3">
-                <Image src={brand5} alt={""} className="h-10 object-contain" />
-                <Image src={brand1} alt={""} className="h-15 object-contain" />
-                <Image src={brand2} alt={""} className="h-15 object-contain" />
-                <Image src={brand3} alt={""} className="h-10 object-contain" />
-                <Image src={brand4} alt={""} className="h-15 object-contain" />
-            </div>
-        </div> */}
-        {/* <div className=" p-10" >
-
-        </div> */}
-        {/* <div className="flex flex-col items-center gap-8 px-26 py-12">
-            <div className="text-stone-900 text-3xl font-black pb-10">技术团队</div>
-            <div className="flex">
-                <TeamMember
-                    image={profile}
-                    name="Michael Wong"
-                    position="Software Development Manager"
-                    experience="8+ years in software development and team leadership"
-                    responsibility="Oversee development teams, ensure timely delivery of high-quality software solutions."
-                    bgColor="bg-blue-400"
-                />
-                <TeamMember
-                    image={profile}
-                    name="Emily Lee"
-                    position="Project Manager"
-                    experience="6+ years in data analytics and project management"
-                    responsibility="Design project roadmaps and lead a team of analysts to drive data-driven strategies."
-                    bgColor="bg-blue-400"
-                />
-
-                <TeamMember
-                    image={profile}
-                    name="David Loh"
-                    position="Backend Software Engineer"
-                    bgColor="bg-blue-400"
-                />
-
-                <TeamMember
-                    image={profile}
-                    name="Jason Chong"
-                    position="QA Automation Engineer"
-                    bgColor="bg-blue-400"
-                />
-            </div>
-
-        </div> */}
         <Footer/>
     </div>
   );

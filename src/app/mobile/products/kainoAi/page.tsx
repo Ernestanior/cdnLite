@@ -12,17 +12,18 @@ import img3 from '@/app/assets/products/kainoAi/img3.png'
 import i1 from '@/app/assets/products/kainoAi/i1.png'
 import i2 from '@/app/assets/products/kainoAi/i2.png'
 
-import Navbar from "@/app/pc/components/navbar";
-import Footer from "@/app/pc/components/footer";
+import Navbar from "@/app/mobile/components/navbar";
+import Footer from "@/app/mobile/components/footer";
 
 import { useLanguage } from "@/context/languageContext";
 import ImageComparisonSlider from "./display";
+import CardCarousel from "../crousel";
 
 
 const Home = () => {
   const { t } = useLanguage();
 
-  const functionList =[
+  const cards =[
     {
       title:t('AI_DESIGN'),
       img:k1,
@@ -64,12 +65,12 @@ const Home = () => {
   ]
 
   return (
-    <div className="bg-white min-w-7xl">
+    <div className="bg-white">
     <Navbar />
-    <div className="bg-white min-w-7xl">
-    <div className="pl-30 pr-30">
-      <h3 className="mt-26 mb-10 text-4xl font-bold text-black">{t('KAINOAI_TITLE')}</h3>
-      <div className="mt-15 text-base text-stone-500">
+    <div className="px-6 py-10">
+      <ImageComparisonSlider leftImage={i1} rightImage={i2}/>
+      <h3 className="mt-10 mb-10 text-3xl font-bold text-black">{t('KAINOAI_TITLE')}</h3>
+      <div className="text-base text-stone-500">
         {t('KAINOAI_DESC_1')}  
       </div>
       <div className="mt-8 text-base text-stone-500">
@@ -81,36 +82,15 @@ const Home = () => {
 
     </div>
     <div className="flex justify-center mt-8">
-      <ImageComparisonSlider leftImage={i1} rightImage={i2}/>
       </div>
-    <div className="p-15 mt-26 bg-slate-100 mb-20">
-     <h3 className="mb-5 text-4xl font-bold text-black 
-     text-center">{t('KEY_FEATURES')}</h3>
-      <section className="flex justify-center p-10">
-        {functionList.map((item=>
-        <div key={item.title} className="flex flex-col items-center ml-5 mr-5">
-          <div className="flip-card">
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
-                <Image src={item.img} alt={item.title} className="w-full h-auto" />
-              </div>
-              <div className="flip-card-back">
-                <div>{item.desc}</div>
-              </div>
-            </div>
-          </div>
-          <h3 className="mt-6 text-xl font-bold text-black text-center">{item.title}</h3>
-        </div>
-        ))}
-      </section>
-    </div>
-    <div className="pl-30 pr-30">
-      <h3 className="mt-25 mb-15 text-4xl font-bold text-black text-center">{t('CUSTOMER_STORIES')}</h3>
-      <section className="bg-white flex justify-between">
+    <CardCarousel cards={cards}/>
+    <div className="px-5 py-15 bg-stone-100">
+      <h3 className="mb-15 text-3xl font-bold text-black text-center">{t('CUSTOMER_STORIES')}</h3>
+      <section className="flex flex-col items-between">
         <div className="flex-5">
           <Image src={img2} alt="" className="w-full h-auto" />
         </div>
-        <div className="box-border text-black ml-20 w-100 flex flex-col items-center bg-stone-500 p-8 " style={{backgroundColor:"#f5f1e4"}}>
+        <div className="bg-white box-border text-black flex flex-col items-center bg-stone-500 p-8">
           <h3 className="mb-8 text-xl font-bold">{t('STYLE_RENDERING')}</h3>
           <div className="text-sm text-stone-600">{t('STYLE_RENDERING_DESC')}</div>
           <ol>
@@ -132,25 +112,19 @@ const Home = () => {
           </ol>
         </div>
       </section>
-      <div className="h-60 overflow-hidden relative mb-10">
-        <Image src={img3} alt="" className="w-320 h-auto mt-15 mb-15 cursor-pointer" />
-        <div className="absolute left-15 top-29 h-20 flex w-full">
-          <div className="text-stone-950">
+      <div className="h-50 overflow-hidden relative mt-10">
+        <Image src={img3} alt="" className="w-220 h-50 cursor-pointer" />
+        <div className="absolute left-0 top-0 h-full flex flex-col w-full items-center justify-center">
+          {/* <div className="text-stone-950">
             <div className="mb-5">{t('KAINO_BTN_DESC_1')}</div>
             <div className="w-170">{t('KAINO_BTN_DESC_2')}</div>
-          </div>
+          </div> */}
           <a href="https://www.kainoai.com/home" target="_blank">
-            <div className="absolute top-[-100] right-80">
-              <div className="w-40 rounded-lg py-3 text-center bg-amber-500 text-white absolute top-28 left-[20%]  text-sm font-bold cursor-pointer">{t('GET_YOUR_DESIGN')}</div>
-            </div>
+              <div className="w-40 rounded-lg py-3 text-center bg-amber-500 text-white text-sm font-bold cursor-pointer">{t('GET_YOUR_DESIGN')}</div>
           </a>
         </div>
       </div>
     </div>
-
-
-        </div>
-
       <Footer/>
     </div>
   );

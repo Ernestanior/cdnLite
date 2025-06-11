@@ -36,7 +36,7 @@ const Footer = () => {
       <div className="flex flex-3 mt-3 text-center text-white justify-around">
           <div>
           <h3 className="font-semibold mb-5"><Link href="/home" className="text-sm text-white hover:text-orange-500">{t('HOME')}</Link></h3>
-          <p className="mb-2 text-sm"><Link href="/about" className="text-sm text-white hover:text-orange-500">{t('ABOUT_US')}</Link></p>
+          <p className="mb-2 text-sm"><Link href="/about" className="text-sm text-white hover:text-orange-500">{t('COMPANY_PROFILE')}</Link></p>
           <p className="mb-2 text-sm"><Link href="/contact" className="text-sm text-white hover:text-orange-500">{t('CONTACT_US')}</Link></p>
           </div>
           <div>
@@ -55,7 +55,7 @@ const Footer = () => {
       </div>
   </div>
     <div className="p-4 bg-gray-50 flex justify-between">
-      <span className="text-stone-500 text-xs">riftvalley@2024 Copyright</span>
+      <span className="text-stone-500 text-xs font-semibold">riftvalley@2024 Copyright</span>
       <div className="text-white grid grid-cols-3 text-xl">
         <FacebookOutlined className="mr-5"/>
         <TwitterOutlined />

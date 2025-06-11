@@ -12,13 +12,13 @@ import o8 from '@/app/assets/service/it/o8.png'
 import o9 from '@/app/assets/service/it/o9.png'
 import o10 from '@/app/assets/service/it/o10.png'
 import o11 from '@/app/assets/service/it/o11.png'
-import Navbar from "@/app/pc/components/navbar";
-import Footer from "@/app/pc/components/footer";
+import Navbar from "@/app/mobile/components/navbar";
+import Footer from "@/app/mobile/components/footer";
 import { useLanguage } from "@/context/languageContext";
+import CardCarousel from "../crousel";
 const App = () => {
   const { t } = useLanguage();
-
-  const functionList = [
+  const cards = [
     {
       title: t("DATA_MANAGEMENT_VISUALIZATION"),
       img: o1,
@@ -79,66 +79,46 @@ const App = () => {
   ]
 
   return (
-    <div className="bg-white min-w-7xl " style={{ minWidth: 1500 }}>
+    <div className="bg-white" >
       <Navbar />
-      <div className="pt-14">
-        <section className="flex pl-30 pr-30">
-          <div className={`relative overflow-hidden w-550 h-100`}>
+        <section className="flex flex-col px-5 pt-10">
             <Image
               src={img1}
               alt=""
-              fill
-              className="object-cover object-bottom"
             />
-          </div>
-          <div className="bg-stone-100 pl-10 pr-10 pt-10 w-500">
+          <div className="my-10">
             <h3 className="text-3xl font-bold text-black">{t("INFRASTRUCTURE_SOLUTIONS")}</h3>
             <p className="mt-5 text-sm text-black leading-7">
               {t("INFRASTRUCTURE_SOLUTIONS_DESC")}
             </p>
           </div>
         </section>
-        <div className="py-15 mt-26 bg-slate-100 mb-20">
-          <h3 className="mb-6 text-3xl font-bold text-black text-center">{t('KEY_FEATURES')}</h3>
-          <section className="flex justify-center p-5">
-            {functionList.map((item =>
-              <div key={item.title} className="flex flex-col bg-white items-center ml-5 mr-5 shadow-xl overflow-hidden rounded-lg w-73 p-5">
-                <div className="h-50 w-full  flex items-center">
-                  <Image src={item.img} alt={item.title} className="w-100 h-auto" />
-                </div>
-                <h3 className="mt-4 text-lg font-bold text-black text-center h-18">{item.title}</h3>
-                <ol>
-                  {item.desc.map((item)=><li className="mt-2 text-sm text-stone-500 text-center">· {item}</li>)}
-                </ol>
-              </div>
-            ))}
-          </section>
-        </div>
-        <div className="flex flex-col items-center">
-          <h3 className=" mb-15 text-3xl font-bold text-black text-center">{t("INDUSTRY_APPLICATIONS")}</h3>
-          <section className="flex justify-between">
-            {scenariosList.map((item =>
-              <div key={item.title} className="bg-white ml-7 mr-7 ">
-                <Image src={item.img} alt={item.title} className="w-65 h-auto" />
-                <h3 className="mt-6 text-sm font-bold text-black text-center text-yellow-500 w-65">{item.title}</h3>
-              </div>
-            ))}
-          </section>
-        </div>
+        <CardCarousel cards={cards}/>
 
-        <div className="mt-26 bg-slate-100 w-full flex flex-col items-center py-15">
+        <section className="py-15">
+          <h3 className="mb-5 text-3xl font-bold text-black text-center">{t('INDUSTRY_APPLICATIONS')}</h3>
+          <div className="grid grid-cols-2 place-items-center">
+              {scenariosList.map(((item,index) =>
+                <div key={item.title} className={` bg-white mt-10 mx-5 flex flex-col items-center `}>
+                  <Image src={item.img} alt={item.title} className="w-40 h-auto" />
+                  <h3 className="mt-6 text-sm font-bold text-black text-center text-yellow-500 w-40">{item.title}</h3>
+                </div>
+              ))}
+          </div>
+        </section>
+
+        <div className="bg-slate-100 w-full flex flex-col items-center py-15">
           <h2 className="mb-10 text-3xl md:text-3xl font-bold text-gray-800 mb-12">{t("BENEFIT_SOLUTION")}</h2>
-          <section className="flex justify-between">
+          <section className="flex flex-col  justify-between">
             {advList.map((item =>
-              <div key={item.title} className="bg-white flex flex-col items-center ml-10 mr-10 shadow-xl shadow-stone-200 rounded-lg p-8">
+              <div key={item.title} className="bg-white mb-10 flex flex-col items-center ml-10 mr-10 shadow-lg shadow-stone-200 rounded-lg p-8">
                 <Image src={item.img} alt={item.title} className="w-25 h-auto text-orange-500" />
-                <h3 className="mt-5 text-sm font-bold text-black text-center ">{item.title}</h3>
-                <h3 className="mt-5 text-sm w-73 font-bold text-black text-center text-stone-400">{item.desc}</h3>
+                <h3 className="mt-5 text-lg font-bold text-black text-center ">{item.title}</h3>
+                <h3 className="mt-5 text-base w-73 font-bold text-black text-center text-stone-400">{item.desc}</h3>
               </div>
             ))}
           </section>
         </div>
-      </div>
       <Footer />
     </div>
   );
