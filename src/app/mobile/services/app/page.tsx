@@ -121,9 +121,9 @@ const App = () => {
           <h3 className="mb-5 text-3xl font-bold text-black text-center">{t('INDUSTRY_APPLICATIONS')}</h3>
           <div className="grid grid-cols-2 place-items-center">
               {scenariosList.map(((item,index) =>
-                <div key={item.title} className={` bg-white mt-10 mx-5 flex flex-col items-center `}>
+                <div key={item.title} className={`h-80 bg-white mt-10 mx-5 flex flex-col items-center `}>
                   <Image src={item.img} alt={item.title} className="w-40 h-auto" />
-                  <h3 className="mt-6 text-sm font-bold text-black text-center text-yellow-500 w-40">{item.title}</h3>
+                  <h3 className="mt-6 text-sm font-bold text-black text-center text-yellow-500 w-40 h-10">{item.title}</h3>
                   <h3 className="mt-2 text-sm font-bold text-black text-center w-40">{item.desc}</h3>
                 </div>
               ))}
