@@ -6,6 +6,8 @@ import { MailFilled, PhoneFilled } from "@ant-design/icons";
 import { Button, Input, notification, NotificationArgsProps } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { useState } from "react";
+import Image from "next/image";
+import img1 from '@/app/assets/contact/img1.png'
 
 type NotificationPlacement = NotificationArgsProps['placement'];
 const Contact = () => {
@@ -33,14 +35,17 @@ const Contact = () => {
         <div className="mb-10 flex shadow-lg ">
           {/* <Image src={img1} alt={""} className="w-100 h-auto" /> */}
           <div className="p-10 w-100 bg-sky-950 rounded-tl-xl rounded-bl-xl ">
-            <div className="h-110 bg-amber-500 rounded-lg flex items-center flex-col p-5 py-15">
-              <div className="text-white font-bold text-2xl mb-20 rounded-4xl bg-sky-950 px-10 py-2 shadow-xl">{t("CONTACT_DETAIL")}</div>
+            <div className="h-110 bg-amber-500 rounded-lg flex items-center flex-col py-8">
+              <div className="text-white font-bold text-2xl mb-10 rounded-4xl bg-sky-950 px-10 py-2 shadow-xl">{t("CONTACT_DETAIL")}</div>
               <div>
                 <div className="mb-5 flex text-white font-bold text-lg items-center"><PhoneFilled className="mr-3 text-lg bg-sky-950 p-2 rounded-2xl" /> +65 6284 6860</div>
-                <div className="mb-5 flex text-white font-bold text-lg  items-center"><MailFilled className="mr-3 text-lg bg-sky-950 p-2 rounded-2xl" /> sales@riftvalley.ai</div>
+                <div className="flex text-white font-bold text-lg  items-center"><MailFilled className="mr-3 text-lg bg-sky-950 p-2 rounded-2xl" /> sales@riftvalley.ai</div>
                 {/* <div className="mb-5 flex"><EnvironmentFilled className="mr-3 text-lg"/><span className="w-65"> 152 Beach Road #21-05/06 Singapore 187721</span></div> */}
               </div>
+              <Image src={img1} alt="" className="w-full h-auto" />
+
             </div>
+
 
             {/* <div className="flex mt-40">
               <div className="p-2 mr-5 rounded-3xl bg-orange-400" >
