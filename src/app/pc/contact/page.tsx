@@ -43,21 +43,7 @@ const Contact = () => {
                 {/* <div className="mb-5 flex"><EnvironmentFilled className="mr-3 text-lg"/><span className="w-65"> 152 Beach Road #21-05/06 Singapore 187721</span></div> */}
               </div>
               <Image src={img1} alt="" className="w-full h-auto" />
-
             </div>
-
-
-            {/* <div className="flex mt-40">
-              <div className="p-2 mr-5 rounded-3xl bg-orange-400" >
-                <Image src={icon1} alt={""} className="w-5 h-auto" />
-              </div>
-              <div className="p-2 mr-5 rounded-3xl bg-white" >
-                <Image src={icon2} alt={""} className="w-5 h-auto" />
-              </div>
-              <div className="p-2 mr-5 rounded-3xl bg-orange-400" >
-                <Image src={icon3} alt={""} className="w-5 h-auto" />
-              </div>
-            </div> */}
           </div>
           <div className="pt-10 pl-15 text-black p-10">
             <div>{t("NAME")}</div>

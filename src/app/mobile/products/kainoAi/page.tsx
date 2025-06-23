@@ -115,10 +115,10 @@ const Home = () => {
       <div className="h-50 overflow-hidden relative mt-10">
         <Image src={img3} alt="" className="w-220 h-50 cursor-pointer" />
         <div className="absolute left-0 top-0 h-full flex flex-col w-full items-center justify-center">
-          <div className="text-stone-950 text-center text-sm">
+          {/* <div className="text-stone-950  text-sm w-60">
             <div className="mb-2">{t('KAINO_BTN_DESC_1')}</div>
             <div className="w-170 mb-6">{t('KAINO_BTN_DESC_2')}</div>
-          </div>
+          </div> */}
           <a href="https://www.kainoai.com/home" target="_blank">
               <div className="w-40 rounded-lg py-3 text-center bg-amber-500 text-white text-sm font-bold cursor-pointer">{t('GET_YOUR_DESIGN')}</div>
           </a>
