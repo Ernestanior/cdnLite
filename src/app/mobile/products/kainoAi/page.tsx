@@ -119,7 +119,6 @@ const Home = () => {
             <div className="mb-2">{t('KAINO_BTN_DESC_1')}</div>
             <div className="w-170 mb-6">{t('KAINO_BTN_DESC_2')}</div>
           </div> */}
-          
           <a href="https://www.kainoai.com/home" target="_blank">
               <div className="w-40 rounded-lg py-3 text-center bg-amber-500 text-white text-sm font-bold cursor-pointer">{t('GET_YOUR_DESIGN')}</div>
           </a>
