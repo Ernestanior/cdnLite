@@ -4,7 +4,7 @@ import Navbar from "@/app/pc/components/navbar";
 import Footer from "@/app/pc/components/footer";
 import { useLanguage } from "@/context/languageContext";
 
-const Contact = () => {
+const Terms = () => {
   const { t } = useLanguage();
 
   return (
@@ -54,4 +54,4 @@ const Contact = () => {
   )
 }
 
-export default Contact;
+export default Terms;

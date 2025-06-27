@@ -3,6 +3,7 @@
     "ABOUT_US": "关于我们",
     "PRODUCTS_SOLUTIONS": "产品与解决方案",
     "CONTACT_US": "联系我们",
+    "TERMS_CONDITION":"条款和隐私政策",
     "SUPPORT": "支持",
     "CORPORATE_NEWS": "企业新闻",
     "PRODUCTS": "产品",
@@ -266,6 +267,73 @@
     "FEED_BACK":"感谢您的反馈，我们将尽快与您联系。",
     "KAINO_BTN_DESC_1":"利用人工智能技术，将您的家打造为更智能，",
     "KAINO_BTN_DESC_2":"更高效的空间，让日常生活更简单，更舒适",
-    "GET_YOUR_DESIGN":"获取您的设计"
+    "GET_YOUR_DESIGN":"获取您的设计",
+
+    
+      "TERMS_TITLE": "RIFTVALLEY网站服务条款与隐私声明",
+      "TERMS_LAST_UPDATED": "最后更新日期：2025年6月30日",
+      "TERMS_INTRO": "欢迎访问本公司官网（以下简称“本网站”）。请仔细阅读以下服务条款与隐私声明（以下简称“本条款”）。访问或使用本网站，即表示用户（以下简称“您”）已阅读、理解并同意遵守以下条款以及相关法律法规。",
+    
+      "TERMS_SECTION1_TITLE": "1.网站用途",
+      "TERMS_SECTION1_BODY": "本网站由RIFTVALLEY（以下简称“RV”）运营，用于介绍本公司的业务服务，本网站仅用于提供信息参考，并不构成任何形式的合同要约或承诺。",
+    
+      "TERMS_SECTION2_TITLE": "2.网站使用规范",
+      "TERMS_SECTION2_RULE1": "遵守相关法律法规；",
+      "TERMS_SECTION2_RULE2": "• 不从事干扰或破坏网站功能、安全性或可访问性的行为；",
+      "TERMS_SECTION2_RULE3": "• 不传播任何病毒、恶意代码或垃圾信息；",
+      "TERMS_SECTION2_RULE4": "• 不复制、传播、重用网站内容用于商业用途，除非已获得授权。",
+    
+      "TERMS_SECTION3_TITLE": "3.知识产权",
+      "TERMS_SECTION3_BODY": "本网站上的所有内容（包括但不限于文字、图片、图标、视频、设计、源代码等）均为RV或其许可方依法享有相关知识产权。未经书面授权，您不得以任何方式使用、复制、修改或转载。",
+    
+      "TERMS_SECTION4_TITLE": "4.用户提交信息与隐私声明",
+    
+      "TERMS_SECTION4_1_TITLE": "4.1 信息提交",
+      "TERMS_SECTION4_1_BODY": "当您通过本网站的“联系我们”表单等方式主动提交信息时，RV可能收集以下类型的信息：",
+      "TERMS_SECTION4_1_RULE_1":"• 个人信息：姓名、电子邮件地址、联系方式、公司名称、职位或其他相关信息。",
+      "TERMS_SECTION4_1_RULE_2":"• 使用数据：交互数据，例如您在RV网站的互动。",
+
+      "TERMS_SECTION4_2_TITLE": "4.2信息用途",
+      "TERMS_SECTION4_2_BODY": "RV收集的信息将仅用于：",
+      "TERMS_SECTION4_2_RULE_1":"• 回应您的业务咨询或联系请求；",
+      "TERMS_SECTION4_2_RULE_2":"• 提供后续服务或业务沟通；",
+      "TERMS_SECTION4_2_RULE_3":"• 进行内部统计、业务改进；",
+      "TERMS_SECTION4_2_RULE_4":"• 法律允许的其他合理用途。",
+
+      "TERMS_SECTION4_3_TITLE": "4.3 数据保护承诺（依据PDPA最新修订）",
+      "TERMS_SECTION4_3_BODY": "RV依据《新加坡个人资料保护法令》（Personal Data Protection Act，简称PDPA）及其最新修订条文处理您的个人信息，包括但不限于：",
+      "TERMS_SECTION4_3_RULE_1":"• 仅为明确合法目的收集必要数据；",
+      "TERMS_SECTION4_3_RULE_2":"• 基于同意、合同履行、法律义务或合法利益处理数据；",
+      "TERMS_SECTION4_3_RULE_3":"• 限制收集范围，确保数据不被滥用；",
+      "TERMS_SECTION4_3_RULE_4":"• 未经授权不得向第三方披露个人信息（除法律要求外）;",
+      "TERMS_SECTION4_3_RULE_5":"• 实施合理的技术和管理措施，防止资料泄露、篡改或未经授权访问。",
+      
+      "TERMS_SECTION4_4_TITLE": "4.4 网站Cookie的使用",
+      "TERMS_SECTION4_4_BODY": "RV网站和服务会使用Cookie来增强您的浏览体验并收集使用信息。您可以调整浏览器设置以管理Cookie偏好。",
+
+      "TERMS_SECTION4_5_TITLE": "4.5 您的权利",
+      "TERMS_SECTION4_5_BODY": "您可随时联系RV，申请：",
+      "TERMS_SECTION4_5_RULE_1":"• 查询或更正您提交的个人资料；",
+      "TERMS_SECTION4_5_RULE_2":"• 停止接受营销通信；",
+      "TERMS_SECTION4_5_RULE_3":"• 提出异议或限制数据处理。",
+      "TERMS_SECTION4_5_RULE_4":"如需行使上述权利，请通过以下方式联系：",
+      "TERMS_SECTION4_5_RULE_5":"邮箱：sales@riftvalley.ai",
+
+      "TERMS_SECTION4_6_TITLE": "4.6 数据保留",
+      "TERMS_SECTION4_6_BODY": "RV将在达成资料收集目的所需的合理时间内保留您的数据。超出保留期限后将进行安全删除或匿名化处理。",
+    
+      "TERMS_SECTION5_TITLE": "5.第三方链接",
+      "TERMS_SECTION5_BODY": "本网站可能包含指向第三方网站的链接。相关内容由第三方维护，RV不对其内容、政策或安全性承担责任。",
+    
+      "TERMS_SECTION6_TITLE": "6.免责声明",
+      "TERMS_SECTION6_BODY": "RV努力确保本网站内容的准确性和更新性，但：",
+      "TERMS_SECTION6_RULE_1":"• 本网站信息不构成任何专业建议或法律建议；",
+      "TERMS_SECTION6_RULE_2":"• RV不对因使用本网站信息而产生的任何直接或间接损失承担责任；",
+      "TERMS_SECTION6_RULE_3":"• RV保留随时更改网站内容而不另行通知的权利。",
+ 
+      "TERMS_SECTION7_TITLE": "7.条款更新",
+      "TERMS_SECTION7_BODY": "RV保留随时修改本条款与隐私声明的权利，更新将通过本页发布。您继续使用本网站即视为接受更新后的条款。"
+    
+    
   }
   

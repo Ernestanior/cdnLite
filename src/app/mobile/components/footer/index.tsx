@@ -32,6 +32,7 @@ const Footer = () => {
             <h3 className="font-semibold mb-3"><Link href="/home" className="text-white hover:text-orange-500">{t('HOME')}</Link></h3>
             <p className="mb-2 text-sm"><Link href="/about" className="text-sm text-white hover:text-orange-500">{t('COMPANY_PROFILE')}</Link></p>
             <p className="mb-2 text-sm"><Link href="/contact" className="text-sm text-white hover:text-orange-500">{t('CONTACT_US')}</Link></p>
+            <p className="mb-2 text-sm"><Link href="/terms" className="text-sm text-white hover:text-orange-500">{t('TERMS_CONDITION')}</Link></p>
           </div>
           <div>
             <h3 className="font-semibold mb-3 mt-8">{t('PRODUCTS')}</h3>

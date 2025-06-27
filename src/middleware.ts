@@ -7,10 +7,9 @@ export function middleware(request: NextRequest) {
   const isMobile = /Mobi|Android|iPhone/i.test(ua);
 
   const pathname = request.nextUrl.pathname;
-    console.log(pathname,'ddd');
     
       // 只处理顶级路径 /home /about /contact 等
-  const targetPaths = ['/home', '/about', '/contact', '/products', '/services', '/policy'];
+  const targetPaths = ['/home', '/about', '/contact', '/products', '/services', '/terms'];
 
   for (const path of targetPaths) {
     if (pathname === path || pathname.startsWith(path + '/')) {
@@ -29,5 +28,5 @@ export function middleware(request: NextRequest) {
 
 // 监听所有这些路径的请求
 export const config = {
-  matcher: ['/home/:path*', '/about/:path*', '/contact/:path*', '/products/:path*', '/services/:path*', '/policy/:path*'],
+  matcher: ['/home/:path*', '/about/:path*', '/contact/:path*', '/products/:path*', '/services/:path*', '/terms/:path*'],
 };
