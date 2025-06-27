@@ -11,7 +11,6 @@ export default function ImageComparison({ leftImage, rightImage }: ImageComparis
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(50); // 初始位置 50%
   const [isDragging, setIsDragging] = useState(false); // 控制是否正在拖动
-    console.log(position);
     
   const handleTouchStart = (e: React.TouchEvent) => {
 
