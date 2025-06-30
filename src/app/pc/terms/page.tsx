@@ -33,19 +33,19 @@ const Terms = () => {
 
         <div className="text-lg text-black mt-10" >{t('TERMS_SECTION4_TITLE')}</div>
 
-        <div className="text-lg text-black mt-10" >{t('TERMS_SECTION4_1_TITLE')}</div>
+        <div className="text-lg text-black mt-4" >{t('TERMS_SECTION4_1_TITLE')}</div>
         <div>{t('TERMS_SECTION4_1_BODY')}</div>
         <div>{t('TERMS_SECTION4_1_RULE_1')}</div>
         <div>{t('TERMS_SECTION4_1_RULE_2')}</div>
 
-        <div className="text-lg text-black mt-10" >{t('TERMS_SECTION4_2_TITLE')}</div>
+        <div className="text-lg text-black mt-4" >{t('TERMS_SECTION4_2_TITLE')}</div>
         <div>{t('TERMS_SECTION4_2_BODY')}</div>
         <div>{t('TERMS_SECTION4_2_RULE_1')}</div>
         <div>{t('TERMS_SECTION4_2_RULE_2')}</div>
         <div>{t('TERMS_SECTION4_2_RULE_3')}</div>
         <div>{t('TERMS_SECTION4_2_RULE_4')}</div>
 
-        <div className="text-lg text-black mt-10" >{t('TERMS_SECTION4_3_TITLE')}</div>
+        <div className="text-lg text-black mt-4" >{t('TERMS_SECTION4_3_TITLE')}</div>
         <div>{t('TERMS_SECTION4_3_BODY')}</div>
         <div>{t('TERMS_SECTION4_3_RULE_1')}</div>
         <div>{t('TERMS_SECTION4_3_RULE_2')}</div>
@@ -53,11 +53,11 @@ const Terms = () => {
         <div>{t('TERMS_SECTION4_3_RULE_4')}</div>
         <div>{t('TERMS_SECTION4_3_RULE_5')}</div>
 
-        <div className="text-lg text-black mt-10" >{t('TERMS_SECTION4_4_TITLE')}</div>
+        <div className="text-lg text-black mt-4" >{t('TERMS_SECTION4_4_TITLE')}</div>
         <div>{t('TERMS_SECTION4_4_BODY')}</div>
 
 
-        <div className="text-lg text-black mt-10" >{t('TERMS_SECTION4_5_TITLE')}</div>
+        <div className="text-lg text-black mt-4" >{t('TERMS_SECTION4_5_TITLE')}</div>
         <div>{t('TERMS_SECTION4_5_BODY')}</div>
         <div>{t('TERMS_SECTION4_5_RULE_1')}</div>
         <div>{t('TERMS_SECTION4_5_RULE_2')}</div>
@@ -65,7 +65,7 @@ const Terms = () => {
         <div>{t('TERMS_SECTION4_5_RULE_4')}</div>
         <div>{t('TERMS_SECTION4_5_RULE_5')}</div>
 
-        <div className="text-lg text-black mt-10" >{t('TERMS_SECTION4_6_TITLE')}</div>
+        <div className="text-lg text-black mt-4" >{t('TERMS_SECTION4_6_TITLE')}</div>
         <div>{t('TERMS_SECTION4_6_BODY')}</div>
 
         <div className="text-lg text-black mt-10" >{t('TERMS_SECTION5_TITLE')}</div>
