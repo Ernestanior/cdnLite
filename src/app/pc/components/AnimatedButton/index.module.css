@@ -1,0 +1,69 @@
+.borderSpan {
+    position: absolute;
+    display: block;
+    background: #03e9f4;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  /* Top */
+  .one {
+    height: 2px;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(to right, transparent, #03f4a4);
+    animation: line1 1.5s linear infinite;
+  }
+  
+  /* Right */
+  .two {
+    width: 2px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+    background: linear-gradient(to bottom, transparent, #03e9f4);
+    animation: line2 1.2s linear infinite;
+  }
+  
+  /* Bottom */
+  .three {
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 100%;
+    background: linear-gradient(to left, transparent, #03f4a4);
+    animation: line3 1.5s linear infinite;
+  }
+  
+  /* Left */
+  .four {
+    width: 2px;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(to top, transparent, #03e9f4);
+    animation: line4 1.2s linear infinite;
+  }
+  
+  @keyframes line1 {
+    50%, 100% {
+      left: 100%;
+    }
+  }
+  @keyframes line2 {
+    50%, 100% {
+      top: 100%;
+    }
+  }
+  @keyframes line3 {
+    50%, 100% {
+      left: -100%;
+    }
+  }
+  @keyframes line4 {
+    50%, 100% {
+      top: -100%;
+    }
+  }
+  

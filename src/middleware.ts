@@ -9,7 +9,7 @@ export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
     
       // 只处理顶级路径 /home /about /contact 等
-  const targetPaths = ['/home', '/about', '/contact', '/products', '/services', '/terms'];
+  const targetPaths = ['/home', '/about', '/contact', '/security', '/cdn', '/terms'];
 
   for (const path of targetPaths) {
     if (pathname === path || pathname.startsWith(path + '/')) {
@@ -28,5 +28,5 @@ export function middleware(request: NextRequest) {
 
 // 监听所有这些路径的请求
 export const config = {
-  matcher: ['/home/:path*', '/about/:path*', '/contact/:path*', '/products/:path*', '/services/:path*', '/terms/:path*'],
+  matcher: ['/home/:path*', '/about/:path*', '/contact/:path*', '/security/:path*', '/cdn/:path*', '/terms/:path*'],
 };

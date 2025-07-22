@@ -16,7 +16,7 @@ export default function Home() {
     const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
     const load = async () => {
       const Comp = isMobile
-        ? (await import('./mobile/home/page')).default
+        ? (await import('./pc/home/page')).default
         : (await import('./pc/home/page')).default;
       setComponent(<Comp />);
     };

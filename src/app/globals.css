@@ -1,5 +1,6 @@
 @import "tailwindcss";
-
+@import "@fontsource/inter/index.css";
+@import "@fontsource/noto-sans-sc/index.css";
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,20 +25,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.ant-dropdown-menu{
+  border: 1px solid #9f3edc;
+  border-radius: 10px;
+  background-color: #000 !important;
+
+}
+.ant-dropdown-menu-sub{
+  border: 0;
+
+
+}
 .ant-dropdown-menu-title-content{
-  color: orange !important;
+  color: white !important;
   font-size: 16px;
+  font-weight: 600;
+  padding: 5px 10px;
+  
 }
 .ant-dropdown-menu-title-content:hover{
-  color: grey !important;
-}
-.ant-dropdown-menu-item{
-  color: orange !important;
+  color: #f45ff2 !important;
 }
 
+
 .ant-dropdown-menu-item:hover {
-  background-color: #fff6f1 !important;
-  color: grey !important;
+  border:0;
 }
 
 .flip-card {
@@ -107,5 +119,10 @@ body {
 
 /* 改变子菜单背景为白色 */
 .nav-menu .ant-menu-submenu .ant-menu {
-  background-color: white !important;
+  
 }
+
+.test{
+  color:#8a094e
+}
+
