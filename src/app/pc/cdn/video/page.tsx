@@ -160,7 +160,7 @@ const StaticPage = () => {
                   hover:shadow-[0_0_30px_rgba(52,211,153,0.5)] 
                   hover:-translate-y-2 hover:scale-[1.02]
                   ">
-          <Icon className="text-emerald-300 text-3xl mb-3 mx-auto" />
+                                    <Icon className="text-purple-50 bg-gradient-to-r from-purple-200 to-cyan-50 bg-clip-text drop-shadow-[5px_5px_10px_rgba(101,84,220,0.8)] text-4xl mb-3 mx-auto" />
           <h1 className="font-mono text-2xl font-bold  bg-clip-text mb-5 text-emerald-300 ">
               {t(item.title)}
           </h1>

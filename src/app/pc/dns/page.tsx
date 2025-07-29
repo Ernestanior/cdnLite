@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import s1 from '@/app/assets/security/ssl1.jpeg'
+import s1 from '@/app/assets/dns/dns1.jpeg'
 import sslShopping from '@/app/assets/security/sslShopping.jpg'
 import sslEnterprise from '@/app/assets/security/sslEnterprise.jpg'
 import sslMobile from '@/app/assets/security/sslMobile.jpg'
@@ -10,16 +10,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from "@/app/pc/components/navbar";
 import Footer from "@/app/pc/components/footer";
 import { useLanguage } from "@/context/languageContext";
-import { RevealOnScroll } from "../../about/animate";
-import TypewriterText from "../../about/typer";
-import { motion, useAnimation } from "framer-motion";
+import { RevealOnScroll } from "../about/animate";
+import TypewriterText from "../about/typer";
+import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from "react";
 import { FaSyncAlt, FaLock, FaChartLine, FaMobileAlt, FaMousePointer, FaHandshake } from 'react-icons/fa';
-import TypingText from "../../home/writer";
-import AnimatedBorderButton from "../../components/AnimatedButton";
+import TypingText from "../home/writer";
+import AnimatedBorderButton from "../components/AnimatedButton";
 import { useRouter } from "next/navigation";
-import { CountUp } from "../../components/countUp";
+import { CountUp } from "../components/countUp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,68 +58,70 @@ const StaticPage = () => {
   }, [inView]);
 
   const cards = [
-    { num: 95, rightString: "%", label: t("主流浏览器兼容性") },
-    { num: 100, rightString: "%", label: t("自动续签成功率") },
-    { num: 5, rightString: "+", label: t("合作CA品牌") },
-    { num: 0, rightString: "", label: t("手动维护成本") }
+    { num: 99.9, rightString: "%", label: t("解析成功率") },
+    { num: 100, rightString: "%", label: t("故障切换自动化率") },
+    { num: 500, rightString: "+", label: t("全球节点数量") },
+    { num: 0, rightString: "", label: t("维护操作复杂度") }
   ];
   const advantage = [
     {
-      title: "知名品牌合作",
-      icon: FaHandshake,
-      desc: "与全球领先证书颁发机构（CA）合作，签发安全可靠的SSL证书。"
-    },
-    {
-      title: "一键申请证书",
-      icon: FaMousePointer,
-      desc: "集成式申请流程，支持一键签发与自动绑定，简化部署流程。"
-    },
-    {
-      title: "自动续签",
+      title: "智能调度引擎",
       icon: FaSyncAlt,
-      desc: "通过Greypanel平台申请的证书支持自动续签，无需人工干预。"
+      desc: "实时分析访问数据，智能选择最优解析结果，保障业务高可用。"
     },
     {
-      title: "HTTPS加密防篡改",
+      title: "秒级DNS更新",
+      icon: FaMousePointer,
+      desc: "支持快速生效，减少业务中断时间。"
+    },
+    {
+      title: "高可用集群",
       icon: FaLock,
-      desc: "启用HTTPS加密，防止数据被中间人窃取或修改，保护用户隐私。"
+      desc: "多活架构自动故障切换，避免单点风险。"
     },
     {
-      title: "提升搜索排名",
+      title: "数据驱动优化",
       icon: FaChartLine,
-      desc: "启用SSL证书可提升搜索引擎排名，增强品牌信任度。"
+      desc: "通过访问数据分析，不断优化调度策略，提升响应速度。"
     },
     {
-      title: "全平台兼容",
+      title: "全球节点加速",
       icon: FaMobileAlt,
-      desc: "支持所有主流浏览器、iOS与Android设备，覆盖全面。"
+      desc: "覆盖全球的智能解析节点，提升全球访问体验。"
+    },
+    {
+      title: "兼容多种协议",
+      icon: FaHandshake,
+      desc: "支持IPv6、DoH、DoT等多种协议，灵活适配不同网络需求。"
     }
   ];
+
   return (
-    <div style={{backgroundColor:"#030d20"}}>
+    <div style={{backgroundColor:"#1c0911"}}>
       <Navbar />
-      <div className="relative w-full h-[500px] bg-cover bg-center bg-[url('@/app/assets/security/wafBg.jpeg')]">
+      <div className="relative w-full h-[500px] bg-cover bg-center bg-[url('@/app/assets/dns/bg.jpeg')]">
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center">
-          <TypingText texts={['为网站和应用加密传输', '一键申请SSL证书', '保障数据安全可信']}></TypingText>
+          <TypingText texts={['智能DNS解析服务', '全网加速，自动容灾', '保障访问快速与稳定']}></TypingText>
         </div>
       </div>
-      <div ref={section1Ref} className="flex justify-around items-center py-20" style={{backgroundColor:"#030d20"}} >
+      <div ref={section1Ref} className="flex justify-around items-center py-20"  style={{ background:'#090f20', }}>
         <div className="text-white font-bold flex flex-col">
           <RevealOnScroll>
             <h1 className="font-mono text-5xl mb-10 font-bold bg-gradient-to-r from-purple-100 to-cyan-50 text-transparent bg-clip-text drop-shadow-[5px_5px_10px_rgba(101,84,220,0.8)]">
-              {t("SSL证书")}
+              {t("智能解析DNS")}
             </h1>
           </RevealOnScroll>
 
-          <TypewriterText text="证书方案提供一站式 HTTPS 加密服务。支持证书申请、上传、自动续签与集中管理，覆盖主流浏览器与移动端，保护用户数据不被窃听或篡改，提升访问安全与搜索排名。" />
+          <TypewriterText text="通过智能DNS解析技术，提供稳定快速的域名解析体验。支持全网节点、实时调度、容灾切换，确保用户访问不中断，助力业务全球拓展。" />
         </div>
-        <Image ref={image1Ref} src={s1} alt="SSL证书保护网站通信安全" className="h-auto w-125 hidden lg:block" />
+        <Image ref={image1Ref} src={s1} alt="智能DNS服务" className="h-auto w-125 hidden lg:block" />
       </div>
+
       <div className="flex flex-col justify-center items-center py-20 ">
         <h1 className="font-mono text-5xl mb-10 font-bold bg-gradient-to-r from-purple-100 to-cyan-50 text-transparent bg-clip-text drop-shadow-[5px_5px_10px_rgba(101,84,220,0.8)]">
-          {t("方案介绍")}
+          {t("服务概览")}
         </h1>
-        <div className="w-50 md:w-180 text-center font-bold text-base/9">通过遍布全球的边缘节点，和各节点间多条高速直连线路，结合智能调度技术，既满足了客户的扩展需求，缓解了源站压力，同时又保证用户就近访问，提高网页响应速度，为终端用户提供更优的访问体验，并有效预防单节点故障影响全局访问。</div>
+        <div className="w-50 md:w-180 text-center font-bold text-base/9">通过智能调度和高速DNS解析平台，实现域名实时生效、就近解析、负载均衡和自动故障切换，帮助企业降低网络中断风险，提升用户访问体验。</div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-28 mt-30">
           {cards.map((item) => <RevealOnScroll key={item.num} delay={.2}><div
             className="flex flex-col items-center 
@@ -137,9 +139,10 @@ const StaticPage = () => {
           </div></RevealOnScroll>)}
         </div>
       </div>
+
       <section className="flex flex-col justify-center items-center py-20">
         <h1 className="font-mono text-5xl  font-bold bg-gradient-to-r from-purple-100 to-cyan-50 text-transparent bg-clip-text drop-shadow-[5px_5px_10px_rgba(101,84,220,0.8)]">
-          {t("方案优势")}
+          {t("服务优势")}
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-8 pt-15">
           {advantage.map((item, index) => {
@@ -158,8 +161,8 @@ const StaticPage = () => {
                   transition-all duration-300 ease-in-out
                   hover:border-emerald-300 
                   hover:shadow-[0_0_30px_rgba(52,211,153,0.5)] 
-                  hover:-translate-y-2 hover:scale-[1.02]
-                  ">
+                  hover:-translate-y-2 hover:scale-[1.02]"
+              >
                 <Icon className="text-purple-50 bg-gradient-to-r from-purple-200 to-cyan-50 bg-clip-text drop-shadow-[5px_5px_10px_rgba(101,84,220,0.8)] text-4xl mb-3 mx-auto" />
                 <h1 className="font-mono text-2xl font-bold  bg-clip-text mb-5 text-emerald-300 ">
                   {t(item.title)}
@@ -170,44 +173,43 @@ const StaticPage = () => {
               </div></motion.div>
           })}
         </div>
-
       </section>
+
       <section className="flex flex-col justify-center items-center py-20 px-10 md:px-30 " >
         <h1 className="font-mono text-5xl mb-15 font-bold bg-gradient-to-r from-purple-100 to-cyan-50 text-transparent bg-clip-text drop-shadow-[5px_5px_10px_rgba(101,84,220,0.8)]">
-          {t("使用场景")}
+          {t("适用场景")}
         </h1>
         <RevealOnScroll delay={.2}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <div className="bg-slate-950 text-white p-5 rounded-xl transition-all hover:shadow-[0_0_15px_rgba(255,255,255,255)]  shadow-[0_0_5px_rgba(255,255,255,5)]">
-              <h3 className="text-xl font-bold text-emerald-300 mb-2">企业官网 / 品牌站</h3>
-              <p className="text-sm opacity-80 mb-4">保障官网安全访问，建立企业信任感</p>
-              <Image src={sslEnterprise} alt="static site" className="h-50 w-full object-cover rounded-md" />
+              <h3 className="text-xl font-bold text-emerald-300 mb-2">多分支办公</h3>
+              <p className="text-sm opacity-80 mb-4">保障企业各地办公网络稳定互联</p>
+              <Image src={sslShopping} alt="企业办公" className="h-50 w-full object-cover rounded-md" />
             </div>
             <div className="bg-slate-950 text-white p-5 rounded-xl transition-all hover:shadow-[0_0_15px_rgba(255,255,255,255)]  shadow-[0_0_5px_rgba(255,255,255,5)]">
-              <h3 className="text-xl font-bold text-emerald-300 mb-2">在线商城 / SaaS平台</h3>
-              <p className="text-sm opacity-80 mb-4">保护支付与用户敏感数据传输，防劫持防泄露</p>
-              <Image src={sslShopping} alt="video delivery" className="h-50 w-full object-cover rounded-md " />
+              <h3 className="text-xl font-bold text-emerald-300 mb-2">全球网站访问加速</h3>
+              <p className="text-sm opacity-80 mb-4">智能解析分发用户请求，提升访问速度</p>
+              <Image src={sslEnterprise} alt="全球加速" className="h-50 w-full object-cover rounded-md " />
             </div>
             <div className="bg-slate-950 text-white p-5 rounded-xl transition-all hover:shadow-[0_0_15px_rgba(255,255,255,255)]  shadow-[0_0_5px_rgba(255,255,255,5)]">
-              <h3 className="text-xl font-bold text-emerald-300 mb-2">移动APP接口加密</h3>
-              <p className="text-sm opacity-80 mb-4">移动端 API 与服务器通信加密，阻断监听</p>
-              <Image src={sslMobile} alt="image acceleration" className="h-50 w-full object-cover rounded-md" />
+              <h3 className="text-xl font-bold text-emerald-300 mb-2">移动应用连接优化</h3>
+              <p className="text-sm opacity-80 mb-4">提升APP接口响应速度与可用性</p>
+              <Image src={sslMobile} alt="移动优化" className="h-50 w-full object-cover rounded-md" />
             </div>
           </div>
         </RevealOnScroll>
         <div className="text-center pt-30 ">
           <h1 className="font-mono text-5xl mb-10 font-bold bg-gradient-to-r from-purple-100 to-cyan-50 text-transparent bg-clip-text drop-shadow-[5px_5px_10px_rgba(101,84,220,0.8)]">
-            {t("为您的网站启用全站加密")}
+            {t("立即启用智能解析")}
           </h1>
 
-          <p className="text-lg text-white/70 mb-8">一站式证书申请、部署与续签服务</p>
+          <p className="text-lg text-white/70 mb-8">快速配置，弹性扩展，保障业务持续在线</p>
           <AnimatedBorderButton onClick={() => {
             router.push('/contact');
           }}>
-            马上启用 SSL
+            启用智能DNS
           </AnimatedBorderButton>
         </div>
-
       </section>
 
       <Footer />

@@ -98,7 +98,7 @@ const StaticPage = () => {
   return (
     <div style={{backgroundColor:"#030d20"}}>
       <Navbar />
-      <div className="relative w-full h-[500px] bg-cover bg-center bg-[url('@/app/assets/security/sslBg.jpeg')]">
+      <div className="relative w-full h-[500px] bg-cover bg-center bg-[url('@/app/assets/security/wafBg.jpeg')]">
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center">
           <TypingText texts={['为网站和应用加密传输', '一键申请SSL证书', '保障数据安全可信']}></TypingText>
         </div>

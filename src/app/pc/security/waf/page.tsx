@@ -1,9 +1,9 @@
 'use client'
 import Image from "next/image";
-import s1 from '@/app/assets/security/ssl1.jpeg'
-import sslShopping from '@/app/assets/security/sslShopping.jpg'
-import sslEnterprise from '@/app/assets/security/sslEnterprise.jpg'
-import sslMobile from '@/app/assets/security/sslMobile.jpg'
+import s1 from '@/app/assets/security/waf1.jpeg'
+import waf2 from '@/app/assets/security/waf2.jpg'
+import waf3 from '@/app/assets/security/waf3.jpg'
+import waf4 from '@/app/assets/security/waf4.jpg'
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,10 +12,10 @@ import Footer from "@/app/pc/components/footer";
 import { useLanguage } from "@/context/languageContext";
 import { RevealOnScroll } from "../../about/animate";
 import TypewriterText from "../../about/typer";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef, useState } from "react";
-import { FaSyncAlt, FaLock, FaChartLine, FaMobileAlt, FaMousePointer, FaHandshake } from 'react-icons/fa';
+import {FaBell, FaCogs, FaExclamationTriangle, FaFilter, FaRetweet, FaShieldAlt } from 'react-icons/fa';
 import TypingText from "../../home/writer";
 import AnimatedBorderButton from "../../components/AnimatedButton";
 import { useRouter } from "next/navigation";
@@ -58,62 +58,63 @@ const StaticPage = () => {
   }, [inView]);
 
   const cards = [
-    { num: 95, rightString: "%", label: t("主流浏览器兼容性") },
-    { num: 100, rightString: "%", label: t("自动续签成功率") },
-    { num: 5, rightString: "+", label: t("合作CA品牌") },
-    { num: 0, rightString: "", label: t("手动维护成本") }
+    { num: 100, rightString: "%", label: t("非法域名识别准确率") },
+    { num: 0, rightString: "", label: t("误判合法流量") },
+    { num: 5, rightString: "min", label: t("策略生效时间") },
+    { num: 24, rightString: "h", label: t("持续监控防护") }
   ];
   const advantage = [
     {
-      title: "知名品牌合作",
-      icon: FaHandshake,
-      desc: "与全球领先证书颁发机构（CA）合作，签发安全可靠的SSL证书。"
+      title: "拦截非法访问",
+      icon: FaShieldAlt,
+      desc: "自动识别未授权域名访问请求，拦截并跳转至安全地址。"
     },
     {
-      title: "一键申请证书",
-      icon: FaMousePointer,
-      desc: "集成式申请流程，支持一键签发与自动绑定，简化部署流程。"
+      title: "品牌防钓鱼",
+      icon: FaExclamationTriangle,
+      desc: "有效防止第三方仿站、恶意钓鱼，保护用户信任。"
     },
     {
-      title: "自动续签",
-      icon: FaSyncAlt,
-      desc: "通过Greypanel平台申请的证书支持自动续签，无需人工干预。"
+      title: "统一跳转策略",
+      icon: FaRetweet,
+      desc: "可设置统一跳转页面或首页，引导访问至正规入口。"
     },
     {
-      title: "HTTPS加密防篡改",
-      icon: FaLock,
-      desc: "启用HTTPS加密，防止数据被中间人窃取或修改，保护用户隐私。"
+      title: "快速配置",
+      icon: FaCogs,
+      desc: "简单设置即可上线，无需代码改动，兼容各类服务。"
     },
     {
-      title: "提升搜索排名",
-      icon: FaChartLine,
-      desc: "启用SSL证书可提升搜索引擎排名，增强品牌信任度。"
+      title: "灵活匹配规则",
+      icon: FaFilter,
+      desc: "支持泛域名、关键词、子域名等多种规则匹配拦截。"
     },
     {
-      title: "全平台兼容",
-      icon: FaMobileAlt,
-      desc: "支持所有主流浏览器、iOS与Android设备，覆盖全面。"
+      title: "实时监控与告警",
+      icon: FaBell,
+      desc: "系统实时监控非法跳转行为并支持告警通知。"
     }
-  ];
+  ]
+  
   return (
     <div style={{backgroundColor:"#030d20"}}>
       <Navbar />
       <div className="relative w-full h-[500px] bg-cover bg-center bg-[url('@/app/assets/security/wafBg.jpeg')]">
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center">
-          <TypingText texts={['为网站和应用加密传输', '一键申请SSL证书', '保障数据安全可信']}></TypingText>
+          <TypingText texts={['拒绝恶意跳转，守护品牌安全', '屏蔽无效域名访问', '精准引导合法流量']}></TypingText>
         </div>
       </div>
       <div ref={section1Ref} className="flex justify-around items-center py-20" style={{backgroundColor:"#030d20"}} >
         <div className="text-white font-bold flex flex-col">
           <RevealOnScroll>
             <h1 className="font-mono text-5xl mb-10 font-bold bg-gradient-to-r from-purple-100 to-cyan-50 text-transparent bg-clip-text drop-shadow-[5px_5px_10px_rgba(101,84,220,0.8)]">
-              {t("SSL证书")}
+              {t("屏蔽域名跳转")}
             </h1>
           </RevealOnScroll>
 
-          <TypewriterText text="证书方案提供一站式 HTTPS 加密服务。支持证书申请、上传、自动续签与集中管理，覆盖主流浏览器与移动端，保护用户数据不被窃听或篡改，提升访问安全与搜索排名。" />
+          <TypewriterText text="屏蔽域名跳转服务可帮助企业防止恶意解析、钓鱼伪站和非法跳转，通过智能识别与统一跳转策略，将非法访问流量重定向至指定地址，有效保障品牌形象与业务安全。" />
         </div>
-        <Image ref={image1Ref} src={s1} alt="SSL证书保护网站通信安全" className="h-auto w-125 hidden lg:block" />
+        <Image ref={image1Ref} src={s1} alt="WAF" className="h-auto w-125 hidden lg:block" />
       </div>
       <div className="flex flex-col justify-center items-center py-20 ">
         <h1 className="font-mono text-5xl mb-10 font-bold bg-gradient-to-r from-purple-100 to-cyan-50 text-transparent bg-clip-text drop-shadow-[5px_5px_10px_rgba(101,84,220,0.8)]">
@@ -179,32 +180,32 @@ const StaticPage = () => {
         <RevealOnScroll delay={.2}>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <div className="bg-slate-950 text-white p-5 rounded-xl transition-all hover:shadow-[0_0_15px_rgba(255,255,255,255)]  shadow-[0_0_5px_rgba(255,255,255,5)]">
-              <h3 className="text-xl font-bold text-emerald-300 mb-2">企业官网 / 品牌站</h3>
-              <p className="text-sm opacity-80 mb-4">保障官网安全访问，建立企业信任感</p>
-              <Image src={sslEnterprise} alt="static site" className="h-50 w-full object-cover rounded-md" />
+              <h3 className="text-xl font-bold text-emerald-300 mb-2">品牌保护</h3>
+              <p className="text-sm opacity-80 mb-4">防止域名被冒用造成信任损失，提升正规访问占比</p>
+              <Image src={waf3} alt="static site" className="h-50 w-full object-cover rounded-md" />
             </div>
             <div className="bg-slate-950 text-white p-5 rounded-xl transition-all hover:shadow-[0_0_15px_rgba(255,255,255,255)]  shadow-[0_0_5px_rgba(255,255,255,5)]">
-              <h3 className="text-xl font-bold text-emerald-300 mb-2">在线商城 / SaaS平台</h3>
-              <p className="text-sm opacity-80 mb-4">保护支付与用户敏感数据传输，防劫持防泄露</p>
-              <Image src={sslShopping} alt="video delivery" className="h-50 w-full object-cover rounded-md " />
+              <h3 className="text-xl font-bold text-emerald-300 mb-2">安全合规需求</h3>
+              <p className="text-sm opacity-80 mb-4">满足政府监管要求，禁止跳转至非法或海外站点</p>
+              <Image src={waf2} alt="video delivery" className="h-50 w-full object-cover rounded-md " />
             </div>
             <div className="bg-slate-950 text-white p-5 rounded-xl transition-all hover:shadow-[0_0_15px_rgba(255,255,255,255)]  shadow-[0_0_5px_rgba(255,255,255,5)]">
-              <h3 className="text-xl font-bold text-emerald-300 mb-2">移动APP接口加密</h3>
-              <p className="text-sm opacity-80 mb-4">移动端 API 与服务器通信加密，阻断监听</p>
-              <Image src={sslMobile} alt="image acceleration" className="h-50 w-full object-cover rounded-md" />
+              <h3 className="text-xl font-bold text-emerald-300 mb-2">防止恶意流量劫持</h3>
+              <p className="text-sm opacity-80 mb-4">拦截来自非法 DNS 的访问请求，保护核心资源</p>
+              <Image src={waf4} alt="image acceleration" className="h-50 w-full object-cover rounded-md" />
             </div>
           </div>
         </RevealOnScroll>
         <div className="text-center pt-30 ">
           <h1 className="font-mono text-5xl mb-10 font-bold bg-gradient-to-r from-purple-100 to-cyan-50 text-transparent bg-clip-text drop-shadow-[5px_5px_10px_rgba(101,84,220,0.8)]">
-            {t("为您的网站启用全站加密")}
+            {t("为您的网站部署域名跳转防护")}
           </h1>
 
-          <p className="text-lg text-white/70 mb-8">一站式证书申请、部署与续签服务</p>
+          <p className="text-lg text-white/70 mb-8">立即启用屏蔽跳转策略，保护品牌与用户安全</p>
           <AnimatedBorderButton onClick={() => {
             router.push('/contact');
           }}>
-            马上启用 SSL
+            启用跳转防护
           </AnimatedBorderButton>
         </div>
 
