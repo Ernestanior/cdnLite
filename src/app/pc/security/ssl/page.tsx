@@ -1,10 +1,10 @@
 'use client'
 import Image from "next/image";
-import s1 from '@/app/assets/security/ssl1.jpeg'
+import s1 from '@/app/assets/security/sslShopping.jpg'
 import sslShopping from '@/app/assets/security/sslShopping.jpg'
 import sslEnterprise from '@/app/assets/security/sslEnterprise.jpg'
 import sslMobile from '@/app/assets/security/sslMobile.jpg'
-
+import wafBg from '@/app/assets/security/wafBg.jpeg'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from "@/app/pc/components/navbar";
@@ -98,7 +98,7 @@ const StaticPage = () => {
   return (
     <div style={{backgroundColor:"#030d20"}}>
       <Navbar />
-      <div className="relative w-full h-[500px] bg-cover bg-center bg-[url('@/app/assets/security/wafBg.jpeg')]">
+      <div className="relative w-full h-[500px] bg-cover bg-center" style={{backgroundImage:`url(${wafBg.src})`}}>
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center">
           <TypingText texts={['为网站和应用加密传输', '一键申请SSL证书', '保障数据安全可信']}></TypingText>
         </div>
@@ -145,6 +145,7 @@ const StaticPage = () => {
           {advantage.map((item, index) => {
             const Icon = item.icon;
             return <motion.div
+            key={item.title}
               ref={ref}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}

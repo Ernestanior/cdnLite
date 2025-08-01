@@ -4,6 +4,7 @@ import s1 from '@/app/assets/dns/dns1.jpeg'
 import sslShopping from '@/app/assets/security/sslShopping.jpg'
 import sslEnterprise from '@/app/assets/security/sslEnterprise.jpg'
 import sslMobile from '@/app/assets/security/sslMobile.jpg'
+import wafBg from '@/app/assets/dns/bg.jpeg'
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -99,7 +100,7 @@ const StaticPage = () => {
   return (
     <div style={{backgroundColor:"#1c0911"}}>
       <Navbar />
-      <div className="relative w-full h-[500px] bg-cover bg-center bg-[url('@/app/assets/dns/bg.jpeg')]">
+      <div className="relative w-full h-[500px] bg-cover bg-center" style={{backgroundImage:`url(${wafBg.src})`}}>
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center">
           <TypingText texts={['智能DNS解析服务', '全网加速，自动容灾', '保障访问快速与稳定']}></TypingText>
         </div>
@@ -148,6 +149,7 @@ const StaticPage = () => {
           {advantage.map((item, index) => {
             const Icon = item.icon;
             return <motion.div
+            key={item.title}
               ref={ref}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}

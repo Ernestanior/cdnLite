@@ -13,7 +13,7 @@ export function middleware(request: NextRequest) {
 
   for (const path of targetPaths) {
     if (pathname === path || pathname.startsWith(path + '/')) {
-      const newPath = isMobile ? `/mobile${pathname}` : `/pc${pathname}`;
+      const newPath = isMobile ? `/pc${pathname}` : `/pc${pathname}`;
       return NextResponse.rewrite(new URL(newPath, request.url));
     }
   }

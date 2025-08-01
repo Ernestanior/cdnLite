@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import ccBg from '@/app/assets/security/ccBg.jpeg';
 import ccOverview from '@/app/assets/security/cc1.jpeg'
 import ccBusiness from '@/app/assets/security/sslEnterprise.jpg'
 import ccGaming from '@/app/assets/security/sslEnterprise.jpg'
@@ -100,7 +101,7 @@ const CcProtectionPage = () => {
   return (
     <div style={{backgroundColor:"#000"}}>
       <Navbar />
-      <div className="relative w-full h-[500px] bg-cover bg-center bg-[url('@/app/assets/security/ccBg.jpeg')]">
+      <div className="relative w-full h-[500px] bg-cover bg-center" style={{backgroundImage:`url(${ccBg.src})`}}>
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center">
           <TypingText texts={["一站式CC攻击防护", "智能识别，精准拦截", "保障业务连续稳定"]}></TypingText>
         </div>
@@ -134,7 +135,7 @@ const CcProtectionPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-10 pt-15">
           {advantage.map((item, index) => {
             const Icon = item.icon;
-            return <motion.div ref={ref} initial={{ opacity: 0, scale: 0.5 }} animate={hasAnimated ? { opacity: 1, scale: 1 } : {}} transition={{ duration: 0.9 }}>
+            return <motion.div key={item.title} ref={ref} initial={{ opacity: 0, scale: 0.5 }} animate={hasAnimated ? { opacity: 1, scale: 1 } : {}} transition={{ duration: 0.9 }}>
               <div className="px-6 border-[3px] border-stone-50 w-80 h-65 rounded-xl font-bold flex flex-col justify-center text-center transition-all duration-300 ease-in-out hover:border-emerald-300 hover:shadow-[0_0_30px_rgba(52,211,153,0.5)] hover:-translate-y-2 hover:scale-[1.02]">
                 <Icon className="text-purple-50 bg-gradient-to-r from-purple-200 to-cyan-50 bg-clip-text drop-shadow-[5px_5px_10px_rgba(101,84,220,0.8)] text-4xl mb-3 mx-auto" />
                 <h1 className="font-mono text-2xl font-bold text-emerald-300 ">{t(item.title)}</h1>

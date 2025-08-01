@@ -4,7 +4,7 @@ import s1 from '@/app/assets/security/ddos1.jpeg'
 import ddosGame from '@/app/assets/security/ddosGame.jpeg'
 import ddosShop from '@/app/assets/security/ddosShop.jpeg'
 import ddosFinance from '@/app/assets/security/ddosFinance.jpeg'
-
+import ddosBg from '@/app/assets/security/ddosBg.jpeg'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from "@/app/pc/components/navbar";
@@ -99,7 +99,7 @@ const DDoSProtectionPage = () => {
   return (
     <div style={{ backgroundColor: "#000" }} className="bg-gradient-to-tr from-[#7f5cff]/10 via-[#00ffd1]/10 to-transparent">
       <Navbar />
-      <div className="relative w-full h-[500px] bg-cover bg-center bg-[url('@/app/assets/security/ddosBg.jpeg')]">
+      <div className="relative w-full h-[500px] bg-cover bg-center" style={{backgroundImage:`url(${ddosBg.src})`}}>
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center">
           <TypingText texts={['超强DDoS防护', '守护网站与服务稳定', '让攻击无所遁形']}></TypingText>
         </div>
@@ -147,6 +147,7 @@ const DDoSProtectionPage = () => {
           {advantage.map((item, index) => {
             const Icon = item.icon;
             return <motion.div
+            key={item.title}
               ref={ref}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}

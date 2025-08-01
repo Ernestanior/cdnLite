@@ -4,7 +4,7 @@ import s2 from '@/app/assets/cdn/video1.jpeg'
 import staticFile from '@/app/assets/cdn/staticFile.jpg'
 import staticVideo from '@/app/assets/cdn/staticVideo.jpg'
 import staticWebsite from '@/app/assets/cdn/staticWebsite.jpg'
-
+import videoBg from '@/app/assets/cdn/videoBg.jpg'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from "@/app/pc/components/navbar";
@@ -98,7 +98,7 @@ const StaticPage = () => {
   return (
     <div style={{ backgroundColor: "#000" }} >
       <Navbar />
-      <div className="relative w-full h-[500px] bg-cover bg-center bg-[url('@/app/assets/cdn/videoBg.jpg')]">
+      <div className="relative w-full h-[500px] bg-cover bg-center" style={{backgroundImage:`url(${videoBg.src})`}}>
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center">
           <TypingText texts={['提供高质量视频播放', '降低卡顿与延迟', '保障全球流畅体验']}></TypingText>
         </div>
@@ -145,6 +145,7 @@ const StaticPage = () => {
           {advantage.map((item,index)=>{
             const Icon = item.icon;
             return <motion.div
+            key={item.title}
             ref={ref}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}

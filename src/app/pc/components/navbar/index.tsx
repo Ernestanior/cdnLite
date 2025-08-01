@@ -62,10 +62,10 @@ const Navbar = () => {
         </Link>
       <ul className="flex space-x-5 sm:space-x-10 lg:space-x-20 items-center ">
         <li >
-          <Link href="/home" className="text-lg font-bold text-white hover:text-fuchsia-400 hidden lg:block w-10">{t('HOME')}</Link>
+          <Link href="/home" className="text-lg font-bold text-white hover:text-fuchsia-400 hidden lg:block w-10">{t('主页')}</Link>
         </li>
         <li>
-          <Link href="/about" className="text-lg font-bold text-white hover:text-fuchsia-400 hidden lg:block w-20">{t('ABOUT_US')}</Link>
+          <Link href="/about" className="text-lg font-bold text-white hover:text-fuchsia-400 hidden lg:block w-20">{t('关于我们')}</Link>
         </li>
         <li>
           <Dropdown menu={{ items:products }}>
@@ -80,11 +80,11 @@ const Navbar = () => {
                 <GlobalOutlined style={{marginRight:10}}/>{lang === 'en' ? '中文' : 'English'}
             </div>
         </li> */}
-        <li>
+        {/* <li>
           <div className=" py-1 border-2 rounded-3xl bg-white hover:bg-black text-black text-center  hover:text-white w-25 hidden md:block">
-            <Link href="/contact" className="text-base font-bold ">{t('CONTACT_US')}</Link>
+            <Link href="/contact" className="text-base font-bold ">{t('联系我们')}</Link>
           </div>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

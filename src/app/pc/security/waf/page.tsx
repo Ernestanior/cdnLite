@@ -4,6 +4,7 @@ import s1 from '@/app/assets/security/waf1.jpeg'
 import waf2 from '@/app/assets/security/waf2.jpg'
 import waf3 from '@/app/assets/security/waf3.jpg'
 import waf4 from '@/app/assets/security/waf4.jpg'
+import wafBg from '@/app/assets/security/wafBg.jpeg'
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -99,7 +100,7 @@ const StaticPage = () => {
   return (
     <div style={{backgroundColor:"#030d20"}}>
       <Navbar />
-      <div className="relative w-full h-[500px] bg-cover bg-center bg-[url('@/app/assets/security/wafBg.jpeg')]">
+      <div className="relative w-full h-[500px] bg-cover bg-center" style={{backgroundImage:`url(${wafBg.src})`}}>
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center">
           <TypingText texts={['拒绝恶意跳转，守护品牌安全', '屏蔽无效域名访问', '精准引导合法流量']}></TypingText>
         </div>
@@ -146,6 +147,7 @@ const StaticPage = () => {
           {advantage.map((item, index) => {
             const Icon = item.icon;
             return <motion.div
+            key={item.title}
               ref={ref}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}

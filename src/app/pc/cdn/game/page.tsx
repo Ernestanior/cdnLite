@@ -4,7 +4,7 @@ import s1 from '@/app/assets/cdn/game3.jpeg'
 import g1 from '@/app/assets/cdn/gameMMO.jpg'
 import g2 from '@/app/assets/cdn/gameMobile.jpg'
 import g3 from '@/app/assets/cdn/gamePatch.jpg'
-
+import gameBg from '@/app/assets/cdn/gameBg.jpg'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from "@/app/pc/components/navbar";
@@ -98,7 +98,7 @@ const GamePage = () => {
   return (
     <div style={{ backgroundColor: "#000" }} >
       <Navbar />
-      <div className="relative w-full h-[500px] bg-cover bg-center bg-[url('@/app/assets/cdn/gameBg.jpg')]">
+      <div className="relative w-full h-[500px] bg-cover bg-center " style={{backgroundImage:`url(${gameBg.src})`}}>
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center">
           <TypingText texts={['全球游戏加速部署', '降低延迟与丢包', '保障流畅稳定体验']}></TypingText>
         </div>
@@ -146,6 +146,7 @@ const GamePage = () => {
           {advantage.map((item, index) => {
             const Icon = item.icon;
             return <motion.div
+              key={item.title}
               ref={ref}
               initial={{ opacity: 0, scale: 0.25,y:90  }}
               animate={hasAnimated ? { opacity: 1, scale: 1 } : {}}
